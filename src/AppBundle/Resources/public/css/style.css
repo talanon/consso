@@ -1,0 +1,594 @@
+body {
+    background: rgba(97, 110, 95, 0.35);
+}
+
+.content {
+
+}
+#sidebar{
+    width: 25%;
+    float:right;
+    margin-top: 40px;
+}
+.header {
+    width: 100%;
+    min-height: 20px;
+    background: white;
+    text-align: center;
+}
+.header img {
+    width: 750px;
+    height: auto;
+    background: white;
+}
+#center {
+    margin: 0 auto;
+    width:90%;
+}
+.footer {
+      color:black;
+      font-family: "Calibri Light";
+      text-align: center;
+      margin-top: 35px;
+  }
+
+.footer input[type=submit]{
+    color:white;
+    font-family: "Calibri Light";
+    background: black;
+    border: none;
+}
+ul#menu a:hover li div.white, ul#menu a:hover li div.white_up{
+    background: rgb(225, 225, 225);
+}
+
+ul#menu li{
+    display: inline-block;
+    float:left;
+    margin: 1.5%;
+    width: 30%;
+    text-align: center;
+}
+ul#navigation li {
+    display: inline-block;
+    float:right;
+    font-family: "Calibri Light";
+    color : black;
+    margin: 1.5%;
+    text-align: center;
+}
+.window {
+    /* margin-top: 50px; */
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+}
+.window p{
+    font-family: Calibri Light;
+}
+.window label {
+    font-family: Calibri Light;
+}
+.window input {
+    margin: 10px 5px 20px 15px;
+    font-family: Calibri Light;
+}
+.myAddBtn {
+    background: #222222;
+    border: none;
+    padding: 5px;
+    color: white;
+}
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    margin-bottom: 0px;
+    float: left;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+.window button, #suite{
+    background: black;
+    border: none;
+    float: right;
+    padding: 5px;
+    color: white;
+}
+.solution h1 {
+    background: #4CAF50;
+    color: white;
+    padding: 5px;
+}
+.solution p {
+    background: white;
+    font-family: Calibri Light;
+    padding: 10px;
+    height: 80px;
+}
+.red_desc, .green_desc{
+    float:right;
+}
+.red_desc {
+    color:#C82829;
+}
+.green_desc {
+    color:#6b9311;
+}
+#suite {
+    background: #218BC3;
+}
+.window select {
+    margin: 0px 0px 0px 10px;
+}
+.window input[type=number] {
+    width: 80px;
+}
+ul#tableau li {
+    display: inline-block;
+    float: left;
+    margin: 1.5%;
+    width: 20%;
+    text-align: center;
+}
+#room_add:hover {
+    background-color: #AAAAAA;
+}
+#room_add {
+    background-color: #C82829;
+    color: white;
+    font-size: 23px;
+    font-family: "Calibri Light";
+    padding-top: 30px;
+    text-align: center;
+    padding-bottom: 30px;
+    width:95%;
+}
+#room_content ul li {
+    width: 98%;
+    text-align: left;
+    display: block;
+    float:none;
+}
+#tableau {
+    width: 74%;
+    float:left;
+    margin: 20px auto;
+}
+.li_1 {
+    width: 35%;
+}
+.li_2 {
+    width: 20%;
+}
+.li_3 {
+    width: 22%;
+}
+ul#titre li {
+     display: inline-block;
+     color: white;
+     font-family: calibri;
+     background: #c82829;
+     padding: 10px;
+     margin-top: 10px;
+     text-align: center;
+ }
+ul.object li {
+    display: inline-block;
+    color: #C82829;
+    font-family: calibri;
+    background: #ffffff;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 12px;
+}
+ul#navigation a:hover li {
+    color : #e1e1e1;
+}
+ul#menu, ul#navigation, ul#tableau {
+    list-style-type : none;
+}
+#start {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 13%;
+    margin-bottom: 8%;
+}
+.add_object {
+    background-color: #C82829;
+    color:white;
+    border:none;
+    margin-top: 10px;
+    padding: 5px;
+}
+.add_object:hover {
+    background-color: #AAAAAA;
+}
+.more {
+    margin: 5px;
+    color: #858885;
+
+}
+
+.room_title {
+    background-color: #C82829;
+    color:white;
+    padding: 10px;
+    font-size: 20px;
+    font-family: "Calibri Light";
+}
+#room_content {
+    background-color: #ffffff;
+    padding: 10px;
+    font-size: 15px;
+    color:black;
+    font-family: "Calibri Light";
+}
+#start a{
+    border: none;
+    text-decoration: none;
+    border-radius: 25px;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    font-family: "Calibri Light";
+    background: black;
+    padding: 10px;
+    font-size: 2em;
+}
+.col4 {
+    width: 46%;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    float: left;
+    background: white;
+    font-family: Calibri;
+}
+.col4 h1 {
+    padding: 10px;
+    color:white;
+    background: #C82829;
+}
+.col4 ul li {
+    padding: 5px;
+}
+.col4 ul {
+    min-height: 220px;
+}
+.total {
+    background: #222222;
+    color: white;
+    padding: 5px;
+}
+.red {
+    background: #C82829;
+}
+.cdlt{
+    width: 50%;
+    float: left;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.btn_list button{
+    border: none;
+    border-radius: 5px;
+    margin: 0 auto;
+    color: white;
+    margin-top: 50px;
+    text-align: center;
+    font-family: "Calibri Light";
+    font-size: 2em;
+}
+#start button:hover, .btn_list button:hover{
+    background: rgb(199, 204, 199);
+}
+.colleft, .colright{
+    float: left;
+    width: 25%;
+    margin-top: 5px;
+}
+#first {
+    text-align: center;
+    margin-top: 50px;
+}
+.room {
+    list-style: none;
+}
+h1 {
+    font-family: "Calibri Light";
+    font-size: 2em;
+}
+.col3 {
+    width: 33%;
+    float: left;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.price {
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+.price h1 {
+    background: #218BC3;
+    color:white;
+    text-align: center;
+    font-size: 20px;
+}
+.orange h1{
+    background: #ff5722;
+}
+.actual {
+    background: white;
+    padding: 15px;
+    font-family: Calibri;
+}
+#demo {
+    margin-top:20px;
+    font-family: "Calibri Light";
+    font-size: 12px;
+}
+.help {
+    width: 50%;
+    height: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    background: #99CDD8;
+    color: #000;
+    font-family: "Calibri Light";
+    margin: 15px auto;
+}
+.help span {
+   font-family: "Calibri Light";
+}
+.add_object {
+    background-color: #C82829;
+    color: #ffffff;
+    font-family: Calibri;
+    width: 70px;
+    padding: 10px;
+    border: none;
+    margin-top: 10px;
+}
+.add_object:hover {
+    background-color: #AAAAAA;
+}
+ul#menu li div.title {
+    display: inline-block;
+    width: 70%;
+    padding: 10px;
+    color:white;
+    font-family: "Calibri Light";
+}
+#logo {
+    font-family: "Calibri Light";
+    color:black;
+    padding: 10px;
+    text-decoration: none;
+}
+.right {
+    float: right;
+    width: 60%;
+}
+.left {
+    float:left;
+}
+.blue {
+    background: #59B7AD;
+}
+.orange {
+    background: #EC6649;
+}
+.yellow {
+    background: #FBE45C;
+}
+ul#menu li div.white {
+    display: inline-block;
+    width: 65%;
+    height: 25px;
+    margin-left: 6px;
+    background: white;
+}
+
+ul#menu li div.white_up {
+    display: inline-block;
+    width: 65%;
+    height: 200px;
+    margin-left: 6px;
+    background: white;
+}
+
+.white_up img{
+    width: 170px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.room {
+    color:red;
+}
+
+.ecrou{
+    background-image: url('../images/ecrou.png');
+    background-size: 17px auto;
+    width: 17px;
+    height: 17px;
+    float: right;
+    opacity: 0.5;
+
+}
+.croix:hover, .ecrou:hover{
+    opacity: 0.7;
+}
+.croix{
+    background-image: url('../images/croix.png');
+    background-size: 17px auto;
+    width: 17px;
+    height: 15px;
+    margin-top: 2px;
+    margin-left: 2px;
+    float: right;
+    opacity: 0.5;
+}
+
+.Cuisine, .Cuisine button {
+    background: #000;
+}
+.Cuisine_img {
+    background-image: url("../images/cuisine.png");
+    background-size: 165px auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.Salle_a_manger{
+    background: #8bc34a;
+}
+.Salle_a_manger_img{
+    background-image: url("../images/Salle_a_manger.png");
+    background-size: 165px auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.Salon{
+    background: #ffc107;
+}
+.Salon_img{
+    background-image: url("../images/salon.png");
+    background-size: 165px auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.Salle_de_bain{
+    background: #00bcd4;
+}.Salle_de_bain_img{
+    /*background-image: url("../images/salle_de_bain.png");
+    background-size: 165px auto;
+    background-repeat: no-repeat;
+    background-position: center;*/
+}
+.Chambre_parentale{
+    background: #673ab7;
+}.Chambre_parentale_img{
+    background-image: url("../images/chambre.png");
+    background-size: 165px auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.Chambre_enfant{
+    background: #9c27b0;
+}.Chambre_enfant_img{
+    background-image: url("../images/chambre_enfant.png");
+    background-size: 165px auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.Bureau{
+    background: #ff5722;
+}.Bureau_img{
+    background-image: url("../images/bureau.png");
+    background-size: 165px auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.Other{
+    /*background: #000;*/
+}
+#room_content ul {
+    min-height: 130px;
+}
+@font-face {
+    font-family: superHero;
+    src: url(superHero.ttf);
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+
+    opacity: 1;
+
+}
+
+input[type=number]{
+     width: 35px;
+     margin-right: 5px;
+ }
+input[type=text]{
+    width: 58px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+}
+.modal-content h1 {
+    background: #C82829;
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+#myForm {
+    padding: 10px;
+    font-family: Calibri;
+}
+#myForm input {
+    margin-left: 10px;
+    width: 20%;
+    margin-bottom: 10px;
+}
+#myForm input[type=submit]{
+    color: white;
+    background: #C82829;
+    border: none;
+    width: 55px;
+    padding: 5px;
+    float: right;
+}
+#myForm input[type=submit]:hover{
+    background: #c85f58;
+}
+input#myName {
+    margin-left: 10px;
+    width: 75%;
+}
+
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+ {% block stylesheets %}
+ {% endblock %}
+
+{% block body %}
+    <div class="wrapper">
+        <div class="header clearfix">
+            <div class="left"><a href="/"><div id="logo">CONSSO.FR</div></a></div>
+            <div class="right">
+                <ul id="navigation" class="clearfix">
+                    <a href=""><li>A propos</li></a>
+                    <a href=""><li>Références</li></a>
+                    <a href=""><li>Objectifs</li></a>
+                    <a href=""><li>Contact</li></a>
+                </ul>
+            </div>
+
+        </div>
+        <div class="content clearfix">
+            <div class="col3">
+                <div class="price">
+                    <h1>EDF</h1>
+                    <div class="actual">0,15 640 €</div>
+                </div>
+                <div class="price">
+                    <h1>ENGIE</h1>
+                    <div class="actual">0,16 200 €</div>
+                </div>
+                <div class="price">
+                    <h1>DIRECT ENERGIE</h1>
+                    <div class="actual">0,14 980 €</div>
+                </div>
+                <div class="price">
+                    <h1>LAMPIRIS</h1>
+                    <div class="actual">0,14 470 €</div>
+                </div>
+            </div>
+            <div class="col3">
+                <div class="window clearfix">
+                    <h1>{{ title }}</h1>
+                    <br><br>
+                    {{ form_start(form) }}
+                    {{ form_widget(form) }}
+                    {{ form_end(form) }}
+                </div>
+            </div>
+            <div class="col3"></div>
+        </div>
+        <div class="footer">
+            Vous souhaitez consulter ou modifier des informations ultérieurement? Voici votre nouveau code : {{ name }}
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {% javascripts'@AppBundle/Resources/public/js/*' %}<script src="{{ asset_url }}"></script>{% endjavascripts %}
+{% endblock %}

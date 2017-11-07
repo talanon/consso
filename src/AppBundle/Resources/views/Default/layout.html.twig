@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+ {% block stylesheets %}
+ {% endblock %}
+
+{% block body %}
+    <div class="consso_mainPage">
+        {% image '@AppBundle/Resources/public/images/mascotte.png' %}
+        <img src="{{ asset_url }}" alt="Example" />
+        {% endimage %}
+    </div>
+    <div class="consso_mainPage_text"></div>
+    <div class="wrapper">
+        <div class="header">
+            {% image '@AppBundle/Resources/public/images/background.png' %}
+            <img src="{{ asset_url }}" alt="background" />
+            {% endimage %}
+        </div>
+        <div class="content">
+            <ul id="menu" class="clearfix">
+
+                <a href="/app_dev.php/maconso"><li id="maConso">
+
+                    <div class="white_up">
+                        {% image '@AppBundle/Resources/public/images/gifconso.png' %}
+                        <img src="{{ asset_url }}" alt="background" />
+                        {% endimage %}
+                    </div>
+                    <div class="title blue">
+                        1. Ma Conso.
+                    </div>
+                    <div class="white"></div>
+                </li></a>
+
+                <a href="/app_dev.php/risques"><li id="lesRisques">
+
+                    <div class="white_up">
+                        {% image '@AppBundle/Resources/public/images/gifrisque.png' %}
+                        <img src="{{ asset_url }}" alt="background" />
+                        {% endimage %}
+                    </div>
+                    <div class="title orange">
+                        2. Les risques
+                    </div>
+                    <div class="white"></div>
+                </li></a>
+
+                <a href="/app_dev.php/actions"><li id="mesActions">
+
+                    <div class="white_up">
+                        {% image '@AppBundle/Resources/public/images/gifeco.png' %}
+                        <img src="{{ asset_url }}" alt="background" />
+                        {% endimage %}
+                    </div>
+                    <div class="title yellow">
+                        3. Économiser
+                    </div>
+                    <div class="white"></div>
+                </li></a>
+            </ul>
+        </div>
+        <div class="footer">
+            Vous souhaitez consulter ou modifier des informations ? Saisissez votre code : <input type="text"> <input type="submit" value="ok">
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {% javascripts'@AppBundle/Resources/public/js/*' %}<script src="{{ asset_url }}"></script>{% endjavascripts %}
+{% endblock %}

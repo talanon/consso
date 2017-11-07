@@ -1,0 +1,426 @@
+{% extends 'base.html.twig' %}
+
+ {% block stylesheets %}
+ {% endblock %}
+
+{% block body %}
+    <div class="wrapper">
+        <div class="header clearfix">
+            <div class="left"><a href="/"><div id="logo">CONSSO.FR</div></a></div>
+            <div class="right">
+                <ul id="navigation" class="clearfix">
+                    <a href=""><li>A propos</li></a>
+                    <a href=""><li>Références</li></a>
+                    <a href=""><li>Objectifs</li></a>
+                    <a href=""><li>Contact</li></a>
+                </ul>
+            </div>
+
+        </div>
+        <div class="content clearfix">
+            <div class="col3">
+                <div class="price">
+                    <h1>EDF</h1>
+                    <div class="actual">0,15 640 €</div>
+                </div>
+                <div class="price">
+                    <h1>ENGIE</h1>
+                    <div class="actual">0,16 200 €</div>
+                </div>
+                <div class="price">
+                    <h1>DIRECT ENERGIE</h1>
+                    <div class="actual">0,14 980 €</div>
+                </div>
+                <div class="price">
+                    <h1>LAMPIRIS</h1>
+                    <div class="actual">0,14 470 €</div>
+                </div>
+            </div>
+            <div class="col3">
+                <div class="window">
+                    <h1>Avant de commencer...</h1>
+                    <br><br>
+                    <p><span style="font-weight:bold;">Durée :</span> 5min </p><br>
+                    <p><span style="font-weight:bold;">Objectif :</span>Ce questionnaire à pour objectif de vous aider à établir une structure pré-établie afin de vous permettre de renseigner le moins d'éléments possibles par la suite.
+                    Une fois votre tableau de bord finalisé vous pourrez comparer vos résultats avec d'autres utilisateurs anonymes.</p>
+                    <div id="start">
+                        <button id="btn_start">COMMENCER</button>
+                        <div id="demo">Voir un exemple</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col3"></div>
+
+
+            <div id="first" class="btn_list">
+                <h1>Combien de pièces avez vous dans votre logement ?</h1>
+                <button class="room" value="1" >1</button>
+                <button class="room" value="2" >2</button>
+                <button class="room" value="3" >3</button>
+                <button class="room" value="4" >4</button>
+                <button class="room" value="5" >5</button>
+                <button class="room" value="6" >6</button>
+                <button class="room" value="7" >7</button>
+                <button class="room" value="8" >8</button>
+                <button class="room" value="9" >9 et +</button>
+            </div>
+            <div id="center" class="clearfix">
+            <ul id="tableau" class="clearfix">
+            </ul>
+            <div id="sidebar">
+                <div id="side_add">
+
+                </div>
+                <ul id="titre">
+                    <li class="li_1">Objets</li>
+                    <li class="li_2">Puissance</li>
+                    <li class="li_3">Utilisation</li>
+                </ul>
+                <ul id="object_0" class="object">
+                    <li class="li_1" ><input type="number" id='0_0' value="2" width="10px">Ampoule(s)</li>
+                    <li class="li_2" ><input type="number" id='0_1' value="60" width="34px">W</li>
+                    <li class="li_3" ><input type="number" id='0_2'value="3" width="34px">h/j</li>
+                </ul>
+                <button id="add_object">Ajouter</button>
+            </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Vous souhaitez consulter ou modifier des informations ultérieurement? Voici votre nouveau code : {{ name }}
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {% javascripts'@AppBundle/Resources/public/js/*' %}<script src="{{ asset_url }}"></script>{% endjavascripts %}
+    <script>
+
+        function localGet(key) {
+            return JSON.parse(window.localStorage.getItem(key));
+        }
+
+        /*
+        * CREATION D'UN PRE OBJET
+        */
+
+        $("#add_object").on('click', function () {
+            $("#object_"+nextObj).after('<ul class="object" id="object_'+(nextObj+1)+'">' +
+                    '<li class="li_1" style="margin-right: 3px;" ><input type="number" id="'+(nextObj+1)+'_0" value="1" width="10px"><input type="text" id="'+(nextObj+1)+'_0_0" value="Divers" width="10px"></li>'+
+                    '<li class="li_2" style="margin-right: 3px;" ><input type="number" id="'+(nextObj+1)+'_1" value="0" width="34px">W</li>'+
+                    '<li class="li_3" style="margin-right: 3px;" ><input type="number" id="'+(nextObj+1)+'_2" value="0" width="34px">h/j</li>'+
+                    '</ul>');
+            nextObj++;
+        })
+
+        /*
+        *  DECLARATION DES VARIABLES TRANSIMES EN BDD
+        */
+        var nextObj = 0;
+        var validator = 0;
+
+        if(localStorage.getItem('room_name')){
+            predictable_room=localGet('room_name');
+            validator++;
+        }
+        else {
+            predictable_room = ['Cuisine', 'Salle a manger', 'Salon', 'Salle de bain',  'Chambre parentale', 'Chambre enfant', 'Bureau'];
+        }
+
+        if(localStorage.getItem('quantity')){
+            predictable_quantity=localGet('quantity');
+            validator++;
+        }
+        else {
+            predictable_quantity = [
+                [1, 1, 1],
+                [1],
+                [1, 1, 1, 1],
+                [1, 1],
+                [1,1, 1],
+                [1, 1],
+                [1, 1, 1]
+            ];
+        }
+
+        if(localStorage.getItem('cosommation')){
+            predictable_consommation=localGet('cosommation');
+            validator++;
+        }
+        else {
+            predictable_consommation = [
+                ['80','80','80'],
+                ['80'],
+                ['80','80','80','80'],
+                ['80','80'],
+                ['80','80','80'],
+                ['80','80'],
+                ['80','80','80'],
+            ];
+        }
+
+        if(localStorage.getItem('use')){
+            predictable_use=localGet('use');
+            validator++;
+        }
+        else {
+            predictable_use = [
+                ['2','4','1'],
+                ['2'],
+                ['4','1','2','3'],
+                ['1','4'],
+                ['3','2','1'],
+                ['1','4'],
+                ['3','2','2'],
+            ];
+        }
+
+        if(localStorage.getItem('object')){
+            predictable_object=localGet('object');
+            validator++;
+        }
+        else {
+            predictable_object = [
+                ['ampoule', 'four', 'plaque'],
+                ['ampoule'],
+                ['télévision', 'sono', 'console', 'ampoule'],
+                ['chauffage', 'ampoule'],
+                ['ampoule','télévision', 'lampe'],
+                ['ampoule', 'lampe'],
+                ['ordinateur', 'ampoule', 'lampe']
+            ];
+        }
+
+
+        room_number=0;
+
+       function tableaudebord(room) {
+            for(var i = 0 ; i<room;i++){
+
+                if(i>=predictable_room.length){
+                    predictable_room[i]='Autre';
+                }
+
+                switch(predictable_room[i]){
+                    case 'Cuisine':
+                        maClasse = 'Cuisine';
+                        break;
+                    case 'Salle a manger':
+                        maClasse = 'Salle_a_manger';
+                        break;
+                    case 'Salon':
+                        maClasse = 'Salon';
+                        break;
+                    case 'Salle de bain':
+                        maClasse = 'Salle_de_bain';
+                        break;
+                    case 'Chambre parentale':
+                        maClasse = 'Chambre_parentale';
+                        break;
+                    case 'Chambre enfant':
+                        maClasse = 'Chambre_enfant';
+                        break;
+                    case 'Bureau':
+                        maClasse = 'Bureau';
+                        break;
+                    default :
+                        maClasse = 'Other';
+                        break;
+                }
+
+                document.getElementById("tableau").innerHTML += "<li class='room' id='room_"+(i+1)+"'>"+
+                        "<div class='room_title "+maClasse+"' id='room_title_"+(i+1)+"' onclick='room_click(this.id)'>" +
+                            predictable_room[i]+
+                                "<div class='more'> - =</div>"+
+                        "</div>" +
+                        "<div id='room_content' class='clearfix'>"+
+                        "<ul class='clearfix "+maClasse+"_img' id='room_content_"+(i+1)+"'></ul></div>"+
+                        "</li>";
+                room_number++;
+            }
+
+           for(var j = 0 ; j<predictable_room.length && j<room;j++){
+
+               switch(predictable_room[j]){
+                   case 'Cuisine':
+                       maClasse = 'Cuisine';
+                       break;
+                   case 'Salle a manger':
+                       maClasse = 'Salle_a_manger';
+                       break;
+                   case 'Salon':
+                       maClasse = 'Salon';
+                       break;
+                   case 'Salle de bain':
+                       maClasse = 'Salle_de_bain';
+                       break;
+                   case 'Chambre parentale':
+                       maClasse = 'Chambre_parentale';
+                       break;
+                   case 'Chambre enfant':
+                       maClasse = 'Chambre_enfant';
+                       break;
+                   case 'Bureau':
+                       maClasse = 'Bureau';
+                       break;
+                   default :
+                       maClasse = 'Other';
+                       break;
+               }
+
+               var name = 'room_content_'+(j+1);
+               for(var k = 0 ; k<=predictable_object[j].length;k++){
+                   document.getElementById(name).innerHTML+="<li id='room_list_"+j+"_"+k+"' onclick='object_click(this.id)'> "+predictable_quantity[j][k]+" "+predictable_object[j][k]+"<div class='more'> "+predictable_consommation[j][k]+"W "+predictable_use[j][k]+"heure/jour <div  onclick='delete_object(this.id)' class='croix' id='"+j+"_"+k+"'></div><div  class='ecrou' id='"+j+"_"+k+"'></div></div></li>";
+               }
+               document.getElementById(name).innerHTML+="<li> <button onclick='' class='add_object "+maClasse+"' id='"+j+"'>ajouter</button></li>";
+
+           }
+
+           document.getElementById("side_add").innerHTML += "<li id='add' class='room' >"+
+                   "<div id='room_add' onclick='room_click(this.id)'> Nouvelle Pièce" +
+                   "</div>" +
+                   "</li>";
+
+           $(".more").hide();
+        }
+
+
+        // AJOUT D'UN OBJET COMPLET
+        /*
+        predictable_object[0][predictable_object[0].length]=['sono'];
+        predictable_consommation[0][predictable_consommation[0].length]=['90'];
+        predictable_use[0][predictable_use[0].length]=['2'];
+        */
+
+        var total = 0;
+        kh_price = 0.14490/1000;
+        for(var i = 0; i < predictable_object.length;i++){
+            for(var j = 0; j < predictable_object[i].length;j++){
+                total += predictable_consommation[i][j]*predictable_use[i][j]*kh_price;
+            }
+        }
+        //document.getElementById("tableau").innerHTML += 'Total = ' + Math.round(total*100)/100 + 'euro/jour';
+
+
+    function room_click(clicked_id) {
+        if(clicked_id=='room_add'){
+
+            room_number++;
+            localStorage.setItem('room', room_number);
+            var name = 'room_content_'+room_number;
+            predictable_room[room_number-1]='Nouvelle pièce';
+            localStorage.setItem('room_name', JSON.stringify(predictable_room));
+            predictable_quantity[room_number-1]=new Array(nextObj);
+            predictable_object[room_number-1]=new Array(nextObj);
+            predictable_consommation[room_number-1]=new Array(nextObj);
+            predictable_use[room_number-1]=new Array(nextObj);
+
+            document.getElementById("tableau").innerHTML += "<li class='room' id='room_"+room_number+"'>"+
+                    "<div class='room_title' id='room_title_"+room_number+"' onclick='room_click(this.id)'>" +
+                    predictable_room[room_number-1]+
+                    "<div class='more'> - =</div>"+
+                    "</div>" +
+                    "<div id='room_content' class='clearfix'>"+
+                    "<ul class='clearfix' id='room_content_"+room_number+"'></ul></div>"+
+                    "</li>";
+
+            for(var i =0;i<=nextObj;i++){
+                if(i==0){
+                    var object_name= 'Ampoule(s)';
+                }
+                else {
+                    var object_name= $("#"+i+"_0_0").val();
+                }
+                var object_quantity = $("#"+i+"_0").val();
+                var object_power = $("#"+i+"_1").val();
+                var object_user = $("#"+i+"_2").val();
+
+                if(object_quantity>0 && object_power>0 && object_user>0){
+
+
+                    predictable_quantity[room_number-1][i]=object_quantity;
+                     predictable_object[room_number-1][i]=object_name;
+                     predictable_consommation[room_number-1][i]=object_power;
+                     predictable_use[room_number-1][i]=object_user;
+                    //console.log(transpose(predictable_quantity));
+                    localStorage.setItem('quantity', JSON.stringify(predictable_quantity));
+                    localStorage.setItem('object', JSON.stringify(predictable_object));
+                    localStorage.setItem('consommation', JSON.stringify(predictable_consommation));
+                    localStorage.setItem('use', JSON.stringify(predictable_use));
+
+                    document.getElementById(name).innerHTML+="<li id='room_list_"+(room_number-1)+"_"+i+"' onclick='object_click(this.id)'> "+object_quantity+" "+object_name+"<div class='more'> "+object_power+"W "+object_user+"heure/jour <button>+</button> <button>x</button></div></li>";
+                }
+
+            }
+            document.getElementById(name).innerHTML+="<li> <button onclick='add_object(this.id)' class='add_object' id='"+room_number+"'>ajouter</button></li>";
+            $(".more").hide();
+            $(".valid_obj").hide();
+
+        }
+        else{
+            var number = clicked_id.replace("room_title_","");
+            var i = number;
+            $(".more").not("#"+clicked_id+" .more").hide();
+            $(".valid_obj").hide();
+            $("#"+clicked_id+" .more").toggle();
+        }
+        //alert(real_room[i-1]);
+    }
+
+    function object_click(clicked_id) {
+        var number = clicked_id.replace("room_list_","");
+        var j = number.charAt(0);
+        var k = number.charAt(2);
+        $(".more").not("#"+clicked_id+" .more").hide();
+        $(".valid_obj").hide();
+        $("#"+clicked_id+" .more").toggle();
+        //alert(real_object[j][k]);
+    }
+
+    function add_object(clicked_id) {
+        $("#"+clicked_id).hide();
+        var num = 1+parseInt(clicked_id);
+        console.log("id"+(num)+"  "+"room_list_"+(num-1)+"_"+(predictable_object[num-1].length));
+        document.getElementById('room_content_'+num).innerHTML+="<li class='valid_obj' id='room_list_"+(num-1)+"_"+(predictable_object[num-1].length)+"' onclick='object_click(this.id)'  style='border: 1px solid #ff6545;padding: 5px;width: 145px;'>Quantité :<input type='number' value='1' ><br> Nom : <input type='text' value='Divers'><br>Puissance :<input type='number' value='60' >Watt<br>Utilisation :<input type='number' value='1' >heures/jours</li>";
+        document.getElementById('room_content_'+num).innerHTML+="<li><button class='add_object valid_obj' id='"+room_number+"' onclick='valid_object(this.id)' style='border: 1px solid #ff6545;padding: 5px;width: 156px;'>valider</button></li>";
+    }
+
+    function delete_object(clicked_id) {
+        $('#room_list_'+clicked_id).remove();
+        var i = parseInt(clicked_id);
+        var j =  clicked_id.replace(clicked_id+"_", "");
+        predictable_object[i].splice(j,1);
+        predictable_use[i].splice(j,1);
+        predictable_consommation[i].splice(j,1);
+        predictable_quantity[i].splice(j,1);
+        localStorage.setItem('quantity', JSON.stringify(predictable_quantity));
+        localStorage.setItem('object', JSON.stringify(predictable_object));
+        localStorage.setItem('consommation', JSON.stringify(predictable_consommation));
+        localStorage.setItem('use', JSON.stringify(predictable_use));
+    }
+
+    if(localStorage.getItem('room')){
+        tableaudebord(localStorage.getItem('room'));
+        $("#first").hide();
+        $("#start").hide();
+        $("#sidebar").show();
+    }
+    else {
+        $("#first").hide();
+        $("#sidebar").hide()
+        $("#btn_start").on('click', function () {
+            $("#start").hide();
+            $("#first").show();
+        })
+        $(".room").on('click', function () {
+            localStorage.setItem('room', this.value);
+            console.log(this.value);
+            $("#first").fadeOut();
+            tableaudebord(this.value);
+            $("#sidebar").show()
+
+        });
+    }
+
+    </script>
+{% endblock %}

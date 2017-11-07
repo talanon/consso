@@ -1,0 +1,251 @@
+{% extends 'base.html.twig' %}
+
+ {% block stylesheets %}
+ {% endblock %}
+
+{% block body %}
+    <div class="wrapper">
+        <div class="header clearfix">
+            <div class="left"><a href="/"><div id="logo">CONSSO.FR</div></a></div>
+            <div class="right">
+                <ul id="navigation" class="clearfix">
+                    <a href=""><li>A propos</li></a>
+                    <a href=""><li>Références</li></a>
+                    <a href=""><li>Objectifs</li></a>
+                    <a href=""><li>Contact</li></a>
+                </ul>
+            </div>
+
+        </div>
+        <div class="content clearfix">
+
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <h1>Ajouter ou modifier une pièce <span class="close">&times;</span></h1>
+                    <form class="clearfix" name="form_room" method="post" id="myForm">
+                        <br><br>
+                        <label>Le nom :</label><input type="text" name="name" id="myName">
+                        <br><br><br><hr /><br>
+                        1.
+                        <input type="text" id="quantity_0" name="quantities[]" placeholder="Quantité" value="1">
+                        <input type="text" id="name_0" name="names[]" placeholder="Nom" value="Ampoule">
+                        <input type="text" id="power_0" name="powers[]" placeholder="Puissance" value="60">
+                        <input type="text" id="use_0" name="uses[]" placeholder="Utilisation par heure" value="2">
+
+                        <br>
+                        <div id="zone"></div>
+                        <button type="button" id="add_object">Ajouter un objet</button>
+                        <input type="submit" value="valider" name="submit">
+
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="colleft">
+                {% for company in companies %}
+                    <div class="price">
+                        <h1>{{ company.name }}</h1>
+                        <div class="actual"> 1kWh = {{ company.price }} €</div>
+                    </div>
+                {% endfor %}
+                <div class="price">
+                    <h1>Quelques exemples</h1>
+                    <div class="actual">
+                        <ul>
+                            <li>
+                                Ampoule normal <br> 60w - 2h/j<br><br>
+                            </li>
+                            <li>
+                                Télévision <br> 150w 4h/j<br><br>
+                            </li>
+                            <li>
+                               Ordinateur fixe <br> 75w 4h/j<br><br>
+                            </li>
+                            <li>
+                                Fer à repasser <br> 800w - 0.75h/j<br><br>
+                            </li>
+                            <li>
+                                Aspirateur <br> 700w - 0.20h/j<br><br>
+                            </li>
+                            <li>
+                                Aquarium <br> 200w - 24h/j<br><br>
+                            </li>
+                            <li>
+                                Chauffage d'appoint <br> 1500w - 0.5h/j<br><br>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="price">
+                    <h1>Liens utiles</h1>
+                    <div class="actual">
+                        <ul>
+                            <li>
+                                <a href="https://www.energuide.be/fr/questions-reponses/combien-les-appareils-electromenagers-consomment-ils/71/">www.energuide.be</a>
+                            </li>
+                            <li>
+                                <a href="http://www.energiedouce.com/content/12-conseils-faq-consommation-electrique-des-appareils-electromenagers">www.energiedouce.com</a>
+                            </li>
+                            <li>
+                                <a href="https://prix-elec.com/cours/consommation">www.prix-elec.com/</a>
+                            </li>
+                            <li>
+                                <a href="https://www.monenergie.net/consommation-moyenne-d-electricite-d-une-maison.php">www.monenergie.net</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="cdlt clearfix">
+                {% set i=0 %}
+                {% set total=0 %}
+                {% set highttotal=0 %}
+                {% for room in rooms %}
+                    <div class="col4" id="room_{{ i }}">
+                        <h1>{{ room.name }}</h1>
+                        <ul id="list_{{ i }}">
+                            {% for object in objects[i] %}
+                                {% set total = total + (object.power*object.utilisation) %}
+                                {% set highttotal = highttotal + (object.power*object.utilisation) %}
+                                <li>
+                                    <i class="material-icons" onclick="obj_delete({{ object.id }})" >delete_forever</i> {{ object.quantity }}x {{ object.name }} <span class="description"> {{ object.power }} Watt - {{ object.utilisation }} heures/jour</span>
+                                </li>
+                            {% endfor %}
+                            <li><button class="myAddBtn" id="{{ i }}" onclick="room_click(this.id)">Ajouter</button></li>
+                        </ul>
+                        <div class="total">Total en kwatt/h: {{ total/1000 }}</div>
+                    </div>
+                    {% set total=0 %}
+                    {% set i = i+1 %}
+                {% endfor %}
+                <div class="col4 red" id="myBtn">
+                    <h1><center>Nouvelle pièce</center></h1>
+                    <ul></ul>
+                </div>
+            </div>
+            <div class="colright">
+                <div class="price">
+                    <h1>Ma consommation mensuelle en kWh</h1>
+                    {% if chauffage == 0 %}
+                        {% set average =   4900 /12 %}
+                        {% set finaltotal = (30.5)*highttotal/1000  %}
+                    {% else %}
+                        {% set average =   (((28*surface)-(28*(surface/10)))/12)/0.1564 %}
+                        {% set finaltotal = ((30.5)*highttotal/1000)+(chauffage*24*30.5/1000)  %}
+                    {% endif %}
+                    {% set finalaverage = (((average/finaltotal)*100)-100)|round(1, 'floor') %}
+                    {% set finalaverage2 = (((finaltotal/average)*100)-100)|round(1, 'floor') %}
+                    <div class="actual">{{ finaltotal|round(1, 'floor') }} kWh{% if finaltotal>=average %}<span class="red_desc">+{{ finalaverage2 }}%</span>{% else %}<span class="green_desc">-{{ finalaverage }}%</span>{% endif %}</div>
+                </div>
+                <div class="price orange">
+                    <h1>Ma consommation mensuelle en €</h1>
+                    <div class="actual">{{ (finaltotal*0.1564)|round(1, 'floor') }} €{% if finaltotal>=average %}<span class="red_desc">+{{ finalaverage2 }}%</span>{% else %}<span class="green_desc">-{{ finalaverage }}%</span>{% endif %}</div>
+                </div>
+                <div class="price">
+                    <h1>Mon chauffage</h1>
+                    <div class="actual clearfix">
+                        {{ chauffage }}Watt soit {{ (chauffage*24*30.5*0.1564/1000)|round(1, 'floor') }} € par mois
+                    </div>
+                </div>
+                <div class="price">
+                    <h1>Consomation mensuelle d'un foyer lambda</h1>
+                    <div class="actual clearfix">
+                        {{ average|round(1, 'floor') }} kWh - {{ (average*0.1564)|round(1, 'floor') }} €
+                    </div>
+                </div>
+                <div class="price">
+                    <h1>Comment réduire ma consommation ?</h1>
+                    <div class="actual clearfix">
+                        Pour avoir des solutions concrètes et personnalisés pour votre ménage.<br><br>
+                        <a href="/app_dev.php/solution" id="btn_start">COMMENCER</a>
+                    </div>
+                </div>
+                <div class="price">
+                    <h1>AIDE</h1>
+                    <div class="actual clearfix">
+                        Une fois la construction de votre tableau de bord achevé nous vous invitons à passer à la suite du contenu.
+                        En cliquant sur le bouton ci-dessous.<br><br>
+                        <button id="suite" type="button">suite</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            Vous souhaitez consulter ou modifier des informations ultérieurement? Voici votre nouveau code : {{ name }}
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {% javascripts'@AppBundle/Resources/public/js/*' %}<script src="{{ asset_url }}"></script>{% endjavascripts %}
+    <script type="text/javascript">
+        // Get the modal
+        var modal = document.getElementById('myModal');
+        var i=1;
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+        var addObj = document.getElementById("add_object");
+        var myAddBtn = document.getElementById("myAddBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on the button, open the modal
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        addObj.onclick = function() {
+            i++;
+            $("#zone").append(
+                    i+'.<input type="text" id="quantity_'+i+'" name="quantities[]" placeholder="Quantité"> <input type="text" id="name_'+i+'" name="names[]" placeholder="Nom" > <input type="text" id="power_'+i+'" name="powers[]" placeholder="Puissance" > <input type="text" id="use_'+i+'" name="uses[]" placeholder="Utilisation par heure" ><br>');
+            return null;
+        }
+
+        function obj_delete(obj) {
+
+            var form = document.createElement("form");
+            var element1 = document.createElement("input");
+
+            form.method = "POST";
+            form.action = "/app_dev.php/tableaudebord";
+
+            element1.value=obj;
+            element1.name="obj";
+            form.appendChild(element1);
+
+
+            document.body.appendChild(form);
+            console.log(obj);
+            form.submit();
+
+        }
+        function room_click(clicked_id) {
+            modal.style.display = "block";
+            $("#myName").val($("#room_"+clicked_id+" h1").text());
+            //var ul = document.getElementById("list_"+clicked_id);
+            //var items = ul.getElementsByTagName("li");
+            //$("#name_0").val(items[0].innerHTML);
+            /*for (var i = 1; i < items.length; ++i) {
+                $("#zone").append(i+'.<input type="text" id="quantity_'+i+'" name="quantities[]" placeholder="Quantité"> <input type="text" id="name_'+i+'" name="names[]" placeholder="Nom" value="'+items[i].innerHTML+'" > <input type="text" id="power_'+i+'" name="powers[]" placeholder="Puissance" > <input type="text" id="use_'+i+'" name="uses[]" placeholder="Utilisation par heure" ><br>');
+            }*/
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+            $("#myName").val("");
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                $("#myName").val("");
+            }
+        }
+    </script>
+{% endblock %}
