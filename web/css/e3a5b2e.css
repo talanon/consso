@@ -115,7 +115,9 @@ body {
 }
 
 .content {
-
+    width: 980px;
+    margin: 0 auto;
+    margin-top: 50px;
 }
 #sidebar{
     width: 25%;
@@ -129,7 +131,7 @@ body {
     text-align: center;
 }
 .header img {
-    width: 980px;
+    width: 750px;
     height: auto;
     background: white;
 }
@@ -165,11 +167,85 @@ ul#navigation li {
     display: inline-block;
     float:right;
     font-family: "Calibri Light";
-    color : white;
+    color : black;
     margin: 1.5%;
     text-align: center;
 }
-
+.window {
+    /* margin-top: 50px; */
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+}
+.window p{
+    font-family: Calibri Light;
+}
+.window label {
+    font-family: Calibri Light;
+}
+.window input {
+    margin: 10px 5px 20px 15px;
+    font-family: Calibri Light;
+}
+.myAddBtn {
+    background: #222222;
+    border: none;
+    padding: 5px;
+    color: white;
+}
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    margin-bottom: 0px;
+    float: left;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+.window button, #suite{
+    background: black;
+    border: none;
+    float: right;
+    padding: 5px;
+    color: white;
+}
+.solution h1 {
+    background: #4CAF50;
+    color: white;
+    padding: 5px;
+}
+.solution p {
+    background: white;
+    font-family: Calibri Light;
+    padding: 10px;
+    height: 80px;
+}
+.red_desc, .green_desc{
+    float:right;
+}
+.red_desc {
+    color:#C82829;
+}
+.green_desc {
+    color:#6b9311;
+}
+#suite {
+    background: #218BC3;
+}
+.window select {
+    margin: 0px 0px 0px 10px;
+}
+.window input[type=number] {
+    width: 80px;
+}
 ul#tableau li {
     display: inline-block;
     float: left;
@@ -256,6 +332,7 @@ ul#menu, ul#navigation, ul#tableau {
     color: #858885;
 
 }
+
 .room_title {
     background-color: #C82829;
     color:white;
@@ -270,16 +347,50 @@ ul#menu, ul#navigation, ul#tableau {
     color:black;
     font-family: "Calibri Light";
 }
-#start button{
+#start a{
     border: none;
+    text-decoration: none;
     border-radius: 25px;
     margin: 0 auto;
     color: white;
     text-align: center;
     font-family: "Calibri Light";
-    background: #EC6649;
+    background: black;
     padding: 10px;
     font-size: 2em;
+}
+.col4 {
+    width: 46%;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    float: left;
+    background: white;
+    font-family: Calibri;
+}
+.col4 h1 {
+    padding: 10px;
+    color:white;
+    background: #C82829;
+}
+.col4 ul li {
+    padding: 5px;
+}
+.col4 ul {
+    min-height: 220px;
+}
+.total {
+    background: #222222;
+    color: white;
+    padding: 5px;
+}
+.red {
+    background: #C82829;
+}
+.cdlt{
+    width: 50%;
+    float: left;
+    margin: 0 auto;
+    margin-top: 20px;
 }
 .btn_list button{
     border: none;
@@ -292,7 +403,12 @@ ul#menu, ul#navigation, ul#tableau {
     font-size: 2em;
 }
 #start button:hover, .btn_list button:hover{
-    background: #ff6545;
+    background: rgb(199, 204, 199);
+}
+.colleft, .colright{
+    float: left;
+    width: 25%;
+    margin-top: 5px;
 }
 #first {
     text-align: center;
@@ -304,6 +420,31 @@ ul#menu, ul#navigation, ul#tableau {
 h1 {
     font-family: "Calibri Light";
     font-size: 2em;
+}
+.col3 {
+    width: 33%;
+    float: left;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.price {
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+.price h1 {
+    background: #218BC3;
+    color:white;
+    text-align: center;
+    font-size: 20px;
+}
+.orange h1{
+    background: #ff5722;
+}
+.actual {
+    background: white;
+    padding: 15px;
+    font-family: Calibri;
 }
 #demo {
     margin-top:20px;
@@ -323,7 +464,7 @@ h1 {
 .help span {
    font-family: "Calibri Light";
 }
-#add_object {
+.add_object {
     background-color: #C82829;
     color: #ffffff;
     font-family: Calibri;
@@ -332,7 +473,7 @@ h1 {
     border: none;
     margin-top: 10px;
 }
-#add_object:hover {
+.add_object:hover {
     background-color: #AAAAAA;
 }
 ul#menu li div.title {
@@ -344,8 +485,9 @@ ul#menu li div.title {
 }
 #logo {
     font-family: "Calibri Light";
-    color:white;
+    color:black;
     padding: 10px;
+    text-decoration: none;
 }
 .right {
     float: right;
@@ -377,6 +519,12 @@ ul#menu li div.white_up {
     height: 200px;
     margin-left: 6px;
     background: white;
+}
+
+.white_up img{
+    width: 170px;
+    margin: 0 auto;
+    margin-top: 10px;
 }
 .room {
     color:red;
@@ -489,4 +637,72 @@ input[type=number]{
  }
 input[type=text]{
     width: 58px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+}
+.modal-content h1 {
+    background: #C82829;
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+#myForm {
+    padding: 10px;
+    font-family: Calibri;
+}
+#myForm input {
+    margin-left: 10px;
+    width: 20%;
+    margin-bottom: 10px;
+}
+#myForm input[type=submit]{
+    color: white;
+    background: #C82829;
+    border: none;
+    width: 55px;
+    padding: 5px;
+    float: right;
+}
+#myForm input[type=submit]:hover{
+    background: #c85f58;
+}
+input#myName {
+    margin-left: 10px;
+    width: 75%;
+}
+
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }

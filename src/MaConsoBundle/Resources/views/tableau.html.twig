@@ -1,0 +1,129 @@
+{% extends 'base.html.twig' %}
+
+ {% block stylesheets %}
+ {% endblock %}
+
+{% block body %}
+    <div class="wrapper">
+        <div class="header clearfix">
+            <div class="left"><a href="/"><div id="logo">CONSSO.FR</div></a></div>
+            <div class="right">
+                <ul id="navigation" class="clearfix">
+                    <a href=""><li>A propos</li></a>
+                    <a href=""><li>Références</li></a>
+                    <a href=""><li>Objectifs</li></a>
+                    <a href=""><li>Contact</li></a>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content clearfix">
+            <div class="block">
+                <div class="quart-block">
+                    <h1>Mon bien</h1>
+                    <div class="slider">
+                        <p>{{ client.surface }} m²</p>
+                        <p>{{ client.piece }} pièces</p>
+                    </div>
+                </div>
+                <div class="threequart-block">
+                    <h1>Nos conseils</h1>
+                    <p>
+                        <ul>
+                        {% for advice in advices %}
+                            <li>
+                               {{ advice }}
+                            </li>
+                        {% endfor %}
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="block">
+                <div class="threequart-block">
+                    <h1>Les fournisseurs</h1>
+                    <p>GOOGLE CHART</p>
+                </div>
+                <div class="quart-blockk">
+                    <h1>Ma Consommation</h1>
+                    <p>{{ consommation }}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Vous souhaitez consulter ou modifier des informations ultérieurement? Voici votre nouveau code : {{ client.name }}
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {% javascripts'@AppBundle/Resources/public/js/*' %}<script src="{{ asset_url }}"></script>{% endjavascripts %}
+    <script type="text/javascript">
+        // Get the modal
+        var modal = document.getElementById('myModal');
+        var i=1;
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+        var addObj = document.getElementById("add_object");
+        var myAddBtn = document.getElementById("myAddBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on the button, open the modal
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        addObj.onclick = function() {
+            i++;
+            $("#zone").append(
+                    i+'.<input type="text" id="quantity_'+i+'" name="quantities[]" placeholder="Quantité"> <input type="text" id="name_'+i+'" name="names[]" placeholder="Nom" > <input type="text" id="power_'+i+'" name="powers[]" placeholder="Puissance" > <input type="text" id="use_'+i+'" name="uses[]" placeholder="Utilisation par heure" ><br>');
+            return null;
+        }
+
+        function obj_delete(obj) {
+
+            var form = document.createElement("form");
+            var element1 = document.createElement("input");
+
+            form.method = "POST";
+            form.action = "/app_dev.php/tableaudebord";
+
+            element1.value=obj;
+            element1.name="obj";
+            form.appendChild(element1);
+
+
+            document.body.appendChild(form);
+            console.log(obj);
+            form.submit();
+
+        }
+        function room_click(clicked_id) {
+            modal.style.display = "block";
+            $("#myName").val($("#room_"+clicked_id+" h1").text());
+            //var ul = document.getElementById("list_"+clicked_id);
+            //var items = ul.getElementsByTagName("li");
+            //$("#name_0").val(items[0].innerHTML);
+            /*for (var i = 1; i < items.length; ++i) {
+                $("#zone").append(i+'.<input type="text" id="quantity_'+i+'" name="quantities[]" placeholder="Quantité"> <input type="text" id="name_'+i+'" name="names[]" placeholder="Nom" value="'+items[i].innerHTML+'" > <input type="text" id="power_'+i+'" name="powers[]" placeholder="Puissance" > <input type="text" id="use_'+i+'" name="uses[]" placeholder="Utilisation par heure" ><br>');
+            }*/
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+            $("#myName").val("");
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                $("#myName").val("");
+            }
+        }
+    </script>
+{% endblock %}
