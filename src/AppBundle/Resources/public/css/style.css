@@ -653,7 +653,7 @@ input#myName {
     padding:10px;
 }
 
-.tool p, .advice ul li, .company h1, .consommation p {
+.tool p, .advice ul li, .advice p, .company h1, .company p, .consommation p {
     padding:10px;
 }
 
@@ -668,17 +668,42 @@ input#myName {
     font-size: 3em;
 }
 
-#mask_tool {
+#mask_tool, #mask_advice, #mask_consommation {
     position: absolute;
     overflow: hidden;
     display: none;
-    background: #49b844;
-    width: 240px;
     color:white;
     height: 190px;
 }
+.advice h2 {
+    color:white;
+}
+.advice ul li a {
+    font-size: 24px;
+    text-decoration: none;
+}
 
-#mask_tool h1 {
+#mask_tool {
+    background: #49b844;
+    width: 240px;
+}
+
+#mask_consommation {
+    background: #fe5815;
+    width: 240px;
+}
+
+#mask_consommation a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#mask_advice {
+    background: #005bbb;
+    width: 735px;
+}
+
+#mask_tool h1, #mask_advice h1 {
     color: white;
 }
 
@@ -707,7 +732,6 @@ input#myName {
     margin-top: 5px;
     margin-right: 5px;
 }
-
 
 .close:hover,
 .close:focus {
