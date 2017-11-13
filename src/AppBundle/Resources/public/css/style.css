@@ -3,7 +3,9 @@ body {
 }
 
 .content {
-
+    width: 980px;
+    margin: 0 auto;
+    margin-top:50px;
 }
 #sidebar{
     width: 25%;
@@ -26,11 +28,11 @@ body {
     width:90%;
 }
 .footer {
-      color:black;
-      font-family: "Calibri Light";
-      text-align: center;
-      margin-top: 35px;
-  }
+    color:black;
+    font-family: "Calibri Light";
+    text-align: center;
+    margin-top: 35px;
+}
 
 .footer input[type=submit]{
     color:white;
@@ -173,14 +175,14 @@ ul#tableau li {
     width: 22%;
 }
 ul#titre li {
-     display: inline-block;
-     color: white;
-     font-family: calibri;
-     background: #c82829;
-     padding: 10px;
-     margin-top: 10px;
-     text-align: center;
- }
+    display: inline-block;
+    color: white;
+    font-family: calibri;
+    background: #c82829;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
 ul.object li {
     display: inline-block;
     color: #C82829;
@@ -348,7 +350,7 @@ h1 {
     margin: 15px auto;
 }
 .help span {
-   font-family: "Calibri Light";
+    font-family: "Calibri Light";
 }
 .add_object {
     background-color: #C82829;
@@ -470,35 +472,35 @@ ul#menu li div.white_up {
 .Salle_de_bain{
     background: #00bcd4;
 }.Salle_de_bain_img{
-    /*background-image: url("../images/salle_de_bain.png");
-    background-size: 165px auto;
-    background-repeat: no-repeat;
-    background-position: center;*/
-}
+     /*background-image: url("../images/salle_de_bain.png");
+     background-size: 165px auto;
+     background-repeat: no-repeat;
+     background-position: center;*/
+ }
 .Chambre_parentale{
     background: #673ab7;
 }.Chambre_parentale_img{
-    background-image: url("../images/chambre.png");
-    background-size: 165px auto;
-    background-repeat: no-repeat;
-    background-position: center;
-}
+     background-image: url("../images/chambre.png");
+     background-size: 165px auto;
+     background-repeat: no-repeat;
+     background-position: center;
+ }
 .Chambre_enfant{
     background: #9c27b0;
 }.Chambre_enfant_img{
-    background-image: url("../images/chambre_enfant.png");
-    background-size: 165px auto;
-    background-repeat: no-repeat;
-    background-position: center;
-}
+     background-image: url("../images/chambre_enfant.png");
+     background-size: 165px auto;
+     background-repeat: no-repeat;
+     background-position: center;
+ }
 .Bureau{
     background: #ff5722;
 }.Bureau_img{
-    background-image: url("../images/bureau.png");
-    background-size: 165px auto;
-    background-repeat: no-repeat;
-    background-position: center;
-}
+     background-image: url("../images/bureau.png");
+     background-size: 165px auto;
+     background-repeat: no-repeat;
+     background-position: center;
+ }
 .Other{
     /*background: #000;*/
 }
@@ -518,9 +520,9 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 input[type=number]{
-     width: 35px;
-     margin-right: 5px;
- }
+    width: 35px;
+    margin-right: 5px;
+}
 input[type=text]{
     width: 58px;
 }
@@ -584,6 +586,121 @@ input#myName {
     float: right;
     font-size: 28px;
     font-weight: bold;
+}
+
+.block {
+    width:100%;
+    margin-top: 20px;
+    font-family: "frutiger-light",sans-serif;
+}
+
+.l1-block {
+    width: 12.5%;
+    float:left;
+}
+
+.l2-block {
+    width: 25%;
+    float:left;
+}
+
+.l3-block {
+    width: 37.5%;
+    float:left;
+}
+
+.l4-block {
+    width: 50%;
+    float:left;
+}
+
+.l5-block {
+    width: 62.5%;
+    float:left;
+}
+
+.l6-block {
+    width: 75%;
+    float:left;
+}
+
+.l7-block {
+    width: 87.5%;
+    float:left;
+}
+
+.l8-block {
+    width: 100%;
+    float:left;
+}
+.in-block{
+    width: 98%;
+    box-shadow: #6c6159;
+}
+.left{
+    float: left;
+}
+.right {
+    float: right;
+}
+
+.tool .in-block, .advice .in-block , .company .in-block , .consommation .in-block  {
+    background: white;
+    height: 190px;
+}
+
+.tool h1, .advice h1, .company h1, .consommation h1 {
+    padding:10px;
+}
+
+.tool p, .advice ul li, .company h1, .consommation p {
+    padding:10px;
+}
+
+.tool h1 {
+    color: white;
+    background: #49b844;
+}
+
+.slider {
+    color: #49b844;
+    text-align: center;
+    font-size: 3em;
+}
+
+#mask_tool {
+    position: absolute;
+    overflow: hidden;
+    display: none;
+    background: #49b844;
+    width: 240px;
+    color:white;
+    height: 190px;
+}
+
+#mask_tool h1 {
+    color: white;
+}
+
+.advice h1 {
+    color: white;
+    background: #005bbb;
+}
+
+.company h1 {
+    color: white;
+    background: #d89c14;
+}
+
+.consommation h1 {
+    color: white;
+    background: #fe5815;
+}
+
+.conso-price {
+    color: #fe5815;
+    text-align: center;
+    font-size: 5em;
 }
 
 .close:hover,
