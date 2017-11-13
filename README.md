@@ -1,28 +1,60 @@
+Installation du projet.
+========================
+Cloner le projet
+------------------------
+* Installer git bash for windows
+
+* git bash on www repository
+
+* run :  git clone https://github.com/talanon/consso.git
+
+Installer composer sur windows
+-------------------------------
+
+https://www.hostinger.fr/tutoriels/installer-utiliser-composer/
+
+(N'oubliez pas de relancer git bash apres avoir installer composer)
+
+Initialiser le projet
+-------------------------
+
+* git bash to the consso repository
+* run : composer install
+* During composer : they will ask you to parameter database. Just go to phpmyadmin and create a database called consso. Then let all parameters by default and just modify le name of database (was symfony, just write consso).
+* Now we will set some alias that will save some times. In bash just run :
+
+alias sf2=bin/console
+
+alias sfcc='bin/console cache:clear'
+
+Ok run sf2 to see all possible command.
+When you need to clear cache just run sfcc.
+If alias do not work after setting them just reload git bash.
+
+* run : sf2 doctrine:schema:update --force
+* If you are using wamp or easyPHP : rename the folder of the project to : local.www.consso.fr
+* Now go to localhost and add a virtualhost.
+
+Name of the virtualhost :local.www.consso.fr
+
+Absolute path : (should be like that, modify if your path is different) c:/wamp64/www/local.www.consso.fr/web
+
+* Restart apache. If you are using wamp or easyPHP you can use the software tool Reload DNS.
+
+* Open your browser and type http://local.www.consso.fr/. Everything should be ok to start.
+
+* If you want to dev with the debug mode just write app_dev.php after the url. (http://local.www.consso.fr/app_dev.php/)
+
+(Don't forget 2 point, develop on the develop branch or create a feature. And don't forget to reopen git on the new repository.)
+
 Symfony Standard Edition
 ========================
 
 Welcome to the Symfony Standard Edition - a fully-functional Symfony
 application that you can use as the skeleton for your new applications.
 
-For details on how to download and get started with Symfony, see the
-[Installation][1] chapter of the Symfony Documentation.
-
 What's inside?
 --------------
-
-The Symfony Standard Edition is configured with the following defaults:
-
-  * An AppBundle you can use to start coding;
-
-  * Twig as the only configured template engine;
-
-  * Doctrine ORM/DBAL;
-
-  * Swiftmailer;
-
-  * Annotations enabled for everything.
-
-It comes pre-configured with the following bundles:
 
   * **FrameworkBundle** - The core Symfony framework bundle
 
@@ -53,10 +85,6 @@ It comes pre-configured with the following bundles:
   * **DebugBundle** (in dev/test env) - Adds Debug and VarDumper component
     integration
 
-All libraries and bundles included in the Symfony Standard Edition are
-released under the MIT or BSD license.
-
-Enjoy!
 
 [1]:  https://symfony.com/doc/3.2/setup.html
 [6]:  https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html
