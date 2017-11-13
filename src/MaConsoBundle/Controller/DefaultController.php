@@ -395,4 +395,12 @@ class DefaultController extends Controller
                 //'form' => $form->createView(),
             ));
     }
+
+    /**
+     * @Route("/vote/{code}/{response}",name="estimate")
+     */
+    public function estimateAction(Request $request, $code = null)
+    {
+
+    }
 }

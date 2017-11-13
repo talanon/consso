@@ -21,15 +21,22 @@
             <div class="block clearfix">
                 <div class="l2-block tool">
                     <div id="show" class="in-block left">
-                        <h1>Mon bien</h1>
+                        <h1>{% if client.completed == null %}<i class="material-icons">warning</i>{% endif %}Mon bien</h1>
                         <div class="slider">
                             <p id="p1">{{ client.surface }} m²</p>
                             <p id="p2">{{ client.piece }} pièces</p>
                         </div>
                     </div>
-                    <a href="{{ path('configuration') }}" ><div id="mask_tool"  class="in-block left">
+                    <a href="{{ path('configuration') }}" >
+                        <div id="mask_tool"  class="in-block left">
                         <p><h1> > Modifier</h1></p>
-                        </div></a>
+                            {% if client.completed == null %}
+                                <p>
+                                    Il semble que vous n'avez pas finalisé la configuration de votre tableau.
+                                </p>
+                            {% endif %}
+                        </div>
+                    </a>
                 </div>
                 <div class="l6-block advice">
                     <div class="in-block right">
@@ -44,6 +51,18 @@
                             </ul>
                         </p>
                     </div>
+                    <div id="mask_advice"  class="in-block right">
+                        <ul>
+                            <li>
+                                <a href="#"><h2> > Accéder à tous nos conseils</h2></a>
+                                <p>Une liste de tous nos conseils filtrable selon certains critère.</p>
+                            </li>
+                            <li>
+                                <a href="#"><h2> > Déposer un conseil</h2></a>
+                                <p>Faite bénéficer les consommateurs de vos bons conseils.</p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="block clearfix">
@@ -52,11 +71,17 @@
                         <h1>Ma Conso.</h1>
                         <p class="conso-price">{{ consommation }}€</p>
                     </div>
+                    <div id="mask_consommation"  class="in-block left">
+                        <p>Il s'agit d'une estimation basée sur votre configuration située plus haut.</p>
+                        <center><p>Notre estimation est-elle correct ? (à 1€ près)</p>
+                        <a href="{{ path('estimate', {code: client.name, response: 'yes'}) }}">> Oui</a>
+                        <a href="{{ path('estimate', {code: client.name, response: 'non'}) }}">Non <</a></center>
+                    </div>
                 </div>
                 <div class="l6-block company">
                     <div class="in-block right">
-                        <h1>Les fournisseurs</h1>
-                        <div id="chart_div"></div>
+                        <h1>Vos consommation anormales</h1>
+                        <p>Aucune consommation anormale, félicitation !</p>
                     </div>
                 </div>
             </div>
@@ -75,7 +100,14 @@
     <script type="text/javascript">
         $(".tool").hover(function () {
             $("#mask_tool").toggle('slide','left',400);
-            //$("#show").toggle();
+        })
+
+        $(".advice").hover(function () {
+            $("#mask_advice").toggle('slide','left',400);
+        })
+
+        $(".consommation").hover(function () {
+            $("#mask_consommation").toggle('slide','left',400);
         })
     </script>
 {% endblock %}
