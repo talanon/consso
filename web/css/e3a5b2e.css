@@ -117,7 +117,7 @@ body {
 .content {
     width: 980px;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top:50px;
 }
 #sidebar{
     width: 25%;
@@ -698,6 +698,117 @@ input#myName {
     float: right;
     font-size: 28px;
     font-weight: bold;
+}
+
+.block {
+    width:100%;
+    margin-top: 20px;
+    font-family: "frutiger-light",sans-serif;
+}
+
+.l1-block {
+    width: 12.5%;
+    float:left;
+}
+
+.l2-block {
+    width: 25%;
+    float:left;
+}
+
+.l3-block {
+    width: 37.5%;
+    float:left;
+}
+
+.l4-block {
+    width: 50%;
+    float:left;
+}
+
+.l5-block {
+    width: 62.5%;
+    float:left;
+}
+
+.l6-block {
+    width: 75%;
+    float:left;
+}
+
+.l7-block {
+    width: 87.5%;
+    float:left;
+}
+
+.l8-block {
+    width: 100%;
+    float:left;
+}
+.in-block{
+    width: 98%;
+    box-shadow: #6c6159;
+}
+.left{
+    float: left;
+}
+.right {
+    float: right;
+}
+
+.tool .in-block, .advice .in-block , .company .in-block , .consommation .in-block  {
+    background: white;
+    height: 190px;
+}
+
+.tool h1, .advice h1, .company h1, .consommation h1 {
+    padding:10px;
+}
+
+.tool p, .advice ul li, .company h1, .consommation p {
+    padding:10px;
+}
+
+.tool h1 {
+     color: #49b844;
+ }
+
+.slider {
+    color: #49b844;
+    text-align: center;
+    font-size: 3em;
+}
+
+#mask_tool {
+    position: absolute;
+    overflow: hidden;
+    display: none;
+    background: #49b844;
+    width: 240px;
+    color:white;
+    height: 190px;
+}
+
+#mask_tool h1 {
+    color: white;
+}
+
+.advice h1 {
+    color: #005bbb;
+}
+
+.company h1 {
+    color: #f4fe60;
+}
+
+.consommation h1 {
+    color: #fe5815;
+}
+
+.conso-price {
+    color: #fe5815;
+    text-align: center;
+    font-size: 5em;
 }
 
 .close:hover,

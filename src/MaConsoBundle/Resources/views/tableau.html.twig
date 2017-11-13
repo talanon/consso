@@ -18,35 +18,46 @@
         </div>
 
         <div class="content clearfix">
-            <div class="block">
-                <div class="quart-block">
-                    <h1>Mon bien</h1>
-                    <div class="slider">
-                        <p>{{ client.surface }} m²</p>
-                        <p>{{ client.piece }} pièces</p>
+            <div class="block clearfix">
+                <div class="l2-block tool">
+                    <div id="show" class="in-block left">
+                        <h1>Mon bien</h1>
+                        <div class="slider">
+                            <p id="p1">{{ client.surface }} m²</p>
+                            <p id="p2">{{ client.piece }} pièces</p>
+                        </div>
+                    </div>
+                    <a href="{{ path('configuration') }}" ><div id="mask_tool"  class="in-block left">
+                        <p><h1> > Modifier</h1></p>
+                        </div></a>
+                </div>
+                <div class="l6-block advice">
+                    <div class="in-block right">
+                        <h1>Nos conseils</h1>
+                        <p>
+                            <ul>
+                            {% for advice in advices %}
+                                <li>
+                                   {{ advice }}
+                                </li>
+                            {% endfor %}
+                            </ul>
+                        </p>
                     </div>
                 </div>
-                <div class="threequart-block">
-                    <h1>Nos conseils</h1>
-                    <p>
-                        <ul>
-                        {% for advice in advices %}
-                            <li>
-                               {{ advice }}
-                            </li>
-                        {% endfor %}
-                        </ul>
-                    </p>
-                </div>
             </div>
-            <div class="block">
-                <div class="threequart-block">
-                    <h1>Les fournisseurs</h1>
-                    <p>GOOGLE CHART</p>
+            <div class="block clearfix">
+                <div class="l2-block consommation">
+                    <div class="in-block left">
+                        <h1>Ma Conso.</h1>
+                        <p class="conso-price">{{ consommation }}€</p>
+                    </div>
                 </div>
-                <div class="quart-blockk">
-                    <h1>Ma Consommation</h1>
-                    <p>{{ consommation }}</p>
+                <div class="l6-block company">
+                    <div class="in-block right">
+                        <h1>Les fournisseurs</h1>
+                        <div id="chart_div"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -59,71 +70,12 @@
 
 {% block javascripts %}
     {% javascripts'@AppBundle/Resources/public/js/*' %}<script src="{{ asset_url }}"></script>{% endjavascripts %}
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script type="text/javascript">
-        // Get the modal
-        var modal = document.getElementById('myModal');
-        var i=1;
-        // Get the button that opens the modal
-        var btn = document.getElementById("myBtn");
-        var addObj = document.getElementById("add_object");
-        var myAddBtn = document.getElementById("myAddBtn");
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks on the button, open the modal
-        btn.onclick = function() {
-            modal.style.display = "block";
-        }
-
-        addObj.onclick = function() {
-            i++;
-            $("#zone").append(
-                    i+'.<input type="text" id="quantity_'+i+'" name="quantities[]" placeholder="Quantité"> <input type="text" id="name_'+i+'" name="names[]" placeholder="Nom" > <input type="text" id="power_'+i+'" name="powers[]" placeholder="Puissance" > <input type="text" id="use_'+i+'" name="uses[]" placeholder="Utilisation par heure" ><br>');
-            return null;
-        }
-
-        function obj_delete(obj) {
-
-            var form = document.createElement("form");
-            var element1 = document.createElement("input");
-
-            form.method = "POST";
-            form.action = "/app_dev.php/tableaudebord";
-
-            element1.value=obj;
-            element1.name="obj";
-            form.appendChild(element1);
-
-
-            document.body.appendChild(form);
-            console.log(obj);
-            form.submit();
-
-        }
-        function room_click(clicked_id) {
-            modal.style.display = "block";
-            $("#myName").val($("#room_"+clicked_id+" h1").text());
-            //var ul = document.getElementById("list_"+clicked_id);
-            //var items = ul.getElementsByTagName("li");
-            //$("#name_0").val(items[0].innerHTML);
-            /*for (var i = 1; i < items.length; ++i) {
-                $("#zone").append(i+'.<input type="text" id="quantity_'+i+'" name="quantities[]" placeholder="Quantité"> <input type="text" id="name_'+i+'" name="names[]" placeholder="Nom" value="'+items[i].innerHTML+'" > <input type="text" id="power_'+i+'" name="powers[]" placeholder="Puissance" > <input type="text" id="use_'+i+'" name="uses[]" placeholder="Utilisation par heure" ><br>');
-            }*/
-        }
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-            modal.style.display = "none";
-            $("#myName").val("");
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-                $("#myName").val("");
-            }
-        }
+        $(".tool").hover(function () {
+            $("#mask_tool").toggle('slide','left',400);
+            //$("#show").toggle();
+        })
     </script>
 {% endblock %}

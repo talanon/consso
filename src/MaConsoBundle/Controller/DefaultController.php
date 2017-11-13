@@ -25,6 +25,11 @@ class DefaultController extends Controller
     {
         $repository = $this->getDoctrine()->getRepository("AppBundle:Client");
         $rep_company = $this->getDoctrine()->getRepository("AppBundle:Company");
+        $session = $this->get('session');
+        if($session->get('name')) {
+           return $this->redirectToRoute('tableau');
+        }
+
 
         $em = $this->getDoctrine()->getEntityManager();
         $session = $this->get('session');
@@ -81,7 +86,7 @@ class DefaultController extends Controller
             $em->persist($client);
             $em->flush();
 
-            return $this->redirectToRoute('mon-tableau');
+            return $this->redirectToRoute('tableau');
 
         }
 
@@ -111,6 +116,7 @@ class DefaultController extends Controller
     public function tableauAction(Request $request, $code = null)
     {
         $repository_client = $this->getDoctrine()->getRepository("AppBundle:Client");
+        $repository_companies = $this->getDoctrine()->getRepository("AppBundle:Company");
         $em = $this->getDoctrine()->getEntityManager();
         $session = $this->get('session');
 
@@ -136,14 +142,15 @@ class DefaultController extends Controller
 
         return $this->render('MaConsoBundle::tableau.html.twig',
             array(
-                'client'=>$client,
-                'advices'=>$advices,
-                'consommation'=>$consomation,
+                'client'=> $client,
+                'advices'=> $advices,
+                'consommation'=> $consomation,
+                'companies'=> $repository_companies->findAll()
             ));
     }
 
     /**
-     * @Route("/tableau-de-bord/configuration", name="configuration")
+     * @Route("/configuration", name="configuration")
      */
     public function tableauEditAction(Request $request, $code = null)
     {
@@ -312,7 +319,7 @@ class DefaultController extends Controller
         }
 
 
-        return $this->render('MaConsoBundle:Default:tableau.html.twig',
+        return $this->render('MaConsoBundle::configuration.html.twig',
             array(
                 'name'=>$client->getName(),
                 'rooms'=>$rooms,
