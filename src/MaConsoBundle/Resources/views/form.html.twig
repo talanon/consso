@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+ {% block stylesheets %}
+ {% endblock %}
+
+{% block body %}
+    <div class="wrapper">
+        <div class="header clearfix">
+            <div class="left"><a href="/"><div id="logo">CONSSO.FR</div></a></div>
+            <div class="right">
+                <ul id="navigation" class="clearfix">
+                    <a href=""><li>A propos</li></a>
+                    <a href=""><li>Références</li></a>
+                    <a href=""><li>Objectifs</li></a>
+                    <a href=""><li>Contact</li></a>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="window clearfix">
+                <h1>Merci de prendre le temps de répondre...</h1>
+                <br><br>
+                {{ form_start(form) }}
+                {{ form_widget(form) }}
+                {{ form_end(form) }}
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="footer">
+            Vous souhaitez consulter ou modifier des informations ultérieurement? Voici votre nouveau code : {{ name }}
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {% javascripts'@AppBundle/Resources/public/js/*' %}<script src="{{ asset_url }}"></script>{% endjavascripts %}
+{% endblock %}

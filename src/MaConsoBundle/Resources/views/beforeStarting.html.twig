@@ -18,24 +18,17 @@
 
         </div>
         <div class="content clearfix">
-            <div class="col3">
-                {% for company in companies %}
-                <div class="price">
-                    <h1>{{ company.name }}</h1>
-                    <div class="actual">{{ company.price }} €</div>
-                </div>
-                {% endfor %}
-            </div>
-            <div class="col3">
-                <div class="window">
-                    <h1>Avant de commencer...</h1>
-                    <br><br>
-                    <p><span style="font-weight:bold;">Durée :</span> 5min </p><br>
-                    <p><span style="font-weight:bold;">Objectif :</span> Ce questionnaire à pour objectif de vous aider à établir une structure pré-établie afin de vous permettre de renseigner le moins d'éléments possibles par la suite.
-                    Une fois votre tableau de bord finalisé vous pourrez comparer vos résultats avec d'autres utilisateurs anonymes.</p>
-                    <div id="start">
-                        <a href="/app_dev.php/maconso/1" id="btn_start">COMMENCER</a>
-                    </div>
+            <div class="window">
+                <h1>Avant de commencer...</h1>
+                <br><br>
+                <p><span style="font-weight:bold;">Durée :</span> 5min </p><br>
+                <p><span style="font-weight:bold;">Objectif :</span> Ce questionnaire à pour objectif de vous aider à établir une structure pré-établie afin de vous permettre de renseigner le moins d'éléments possibles par la suite.
+                Une fois votre tableau de bord finalisé vous pourrez comparer vos résultats avec d'autres utilisateurs anonymes.</p>
+                <br>
+                <p><span style="font-weight:bold;">Votre code : {{ name }}</span></p>
+                <p>Utilisez se code pour retrouver a tout moment votre tableau de bord, notez le bien.</p>
+                <div id="start">
+                    <a href="{{ path('questionnaire') }}" id="btn_start">COMMENCER</a>
                 </div>
             </div>
             <div class="col3"></div>

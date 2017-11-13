@@ -27,7 +27,7 @@
                         {% endimage %}
                     </div>
                     <div class="title blue">
-                        1. Ma Conso.
+                        1. Ma Consommation
                     </div>
                     <div class="white"></div>
                 </li></a>
@@ -40,7 +40,7 @@
                         {% endimage %}
                     </div>
                     <div class="title orange">
-                        2. Les risques
+                        2. Les statistiques
                     </div>
                     <div class="white"></div>
                 </li></a>
@@ -53,18 +53,25 @@
                         {% endimage %}
                     </div>
                     <div class="title yellow">
-                        3. Économiser
+                        3. Les bons gestes
                     </div>
                     <div class="white"></div>
                 </li></a>
             </ul>
         </div>
         <div class="footer">
-            Vous souhaitez consulter ou modifier des informations ? Saisissez votre code : <input type="text"> <input type="submit" value="ok">
+            Vous souhaitez consulter ou modifier des informations ? Saisissez votre code : <input id="code" type="text"> <input type="submit" id="code_submit" value="ok">
         </div>
     </div>
 {% endblock %}
 
 {% block javascripts %}
     {% javascripts'@AppBundle/Resources/public/js/*' %}<script src="{{ asset_url }}"></script>{% endjavascripts %}
+    <script>
+        $("#code_submit").on('click', function () {
+            var code = $("#code").val();
+            alert(code);
+            window.location.replace('{{ path('tableau') }}/'+code);
+        })
+    </script>
 {% endblock %}

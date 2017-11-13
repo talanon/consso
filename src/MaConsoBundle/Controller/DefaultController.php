@@ -6,10 +6,12 @@ use AppBundle\Entity\Chinois;
 use AppBundle\Entity\Client;
 use AppBundle\Entity\Object;
 use AppBundle\Entity\Room;
+use AppBundle\Form\ClientType;
 use Doctrine\DBAL\Types\IntegerType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Form;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -23,10 +25,13 @@ class DefaultController extends Controller
     {
         $repository = $this->getDoctrine()->getRepository("AppBundle:Client");
         $rep_company = $this->getDoctrine()->getRepository("AppBundle:Company");
-        $dachen = new Chinois();
+        $session = $this->get('session');
+        if($session->get('name')) {
+           return $this->redirectToRoute('tableau');
+        }
+
 
         $em = $this->getDoctrine()->getEntityManager();
-        $dachen->setName('Dachen');
         $session = $this->get('session');
         $mot=array('MLH', 'BAL', 'FAC', 'BIS', 'CAC', 'DPS');
 
@@ -54,7 +59,7 @@ class DefaultController extends Controller
 
         $companies = $rep_company->findAll();
 
-        return $this->render('MaConsoBundle:Default:layout.html.twig',
+        return $this->render('MaConsoBundle::beforeStarting.html.twig',
             array(
                 'name'=>$client->getName(),
                 'companies'=>$companies,
@@ -62,86 +67,33 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/maconso/{number}", name="question")
+     * @Route("/maconso/questionnaire", name="questionnaire")
      */
-    public function formAction(Request $request, $number)
+    public function formAction(Request $request)
     {
         $repository = $this->getDoctrine()->getRepository("AppBundle:Client");
         $em = $this->getDoctrine()->getEntityManager();
-        $session = $this->get('session');
 
+        $session = $this->get('session');
         $client = $repository->findOneBy(array('name'=>$session->get('name')));
 
-        if($number==1){
-            $title = 'Avant tout ...';
-            $form = $this->createFormBuilder($client)
-                ->add('chauffage', ChoiceType::class, array('label'=>'Chauffez-vous votre logement avec des radiateurs électriques ?','choices' => array("Oui"=>true, "Non"=>false),'expanded'=>true,'multiple'=>false,'required' => true,'data' => null))
-                ->add('save', SubmitType::class, array('label' => 'suivant'))
-                ->getForm();
-        }
-
-        if($number==2){
-            $title = 'A propos de votre logement...';
-            if($client->getChauffage()==true){
-                $form = $this->createFormBuilder($client)
-                    ->add('logement', ChoiceType::class, array('label'=>'Votre logement est ', 'choices' => array("Un appartement"=>"appartement", "Une maison"=>"maison"),'required' => true,'data' => null))
-                    ->add('age', ChoiceType::class, array('choices' => array("- de 10 ans"=>0, "10 à 15 ans"=>10, "16 à 30 ans"=>16, "+ de 30 ans"=>30),'required' => true,'data' => null))
-                    ->add('surface', \Symfony\Component\Form\Extension\Core\Type\IntegerType::class, array('label'=>'Votre surface ?','required' => true,'data' => null))
-                    ->add('save', SubmitType::class, array('label' => 'suivant'))
-                    ->getForm();
-            }
-            else {
-                $form = $this->createFormBuilder($client)
-                    ->add('logement', ChoiceType::class, array('label'=>'Votre logement est ', 'choices' => array("Un appartement"=>"appartement", "Une maison"=>"maison"),'required' => true,'data' => null))
-                    ->add('save', SubmitType::class, array('label' => 'suivant'))
-                    ->getForm();
-            }
-
-        }
-
-        if($number==3){
-            $title = 'A propos de votre équipement...';
-            $form = $this->createFormBuilder($client)
-                ->add('ampoule', ChoiceType::class, array('label'=>'Avez-vous des ampoules basses consommation ?','choices' => array("Oui"=>true, "Non"=>false),'expanded'=>true,'multiple'=>false,'required' => true,'data' => null))
-                ->add('four', ChoiceType::class, array('label'=>'Avez-vous un four éléctrique ?','choices' => array("Oui"=>true, "Non"=>false),'expanded'=>true,'multiple'=>false,'required' => true,'data' => null))
-                ->add('plaque', ChoiceType::class, array('label'=>'Avez-vous un des plaques éléctriques ?','choices' => array("Oui"=>true, "Non"=>false),'expanded'=>true,'multiple'=>false,'required' => true,'data' => null))
-                ->add('linge', ChoiceType::class, array('label'=>'Avez-vous un sèche linge ?','choices' => array("Oui"=>true, "Non"=>false),'expanded'=>true,'multiple'=>false,'required' => true,'data' => null))
-                ->add('save', SubmitType::class, array('label' => 'suivant'))
-                ->getForm();
-        }
-
-        if($number==4){
-            $title = 'A propos de votre foyer...';
-                $form = $this->createFormBuilder($client)
-                    ->add('foyer',  \Symfony\Component\Form\Extension\Core\Type\IntegerType::class, array('label'=>'De combien de personnes est composé votre foyer ?','required' => true,'data' => null))
-                    ->add('piece',  \Symfony\Component\Form\Extension\Core\Type\IntegerType::class, array('label'=>'De combien de pièces est composé votre foyer ?','required' => true,'data' => null))
-                    ->add('save', SubmitType::class, array('label' => 'suivant'))
-                    ->getForm();
-        }
-
+        $form = $this->createForm(ClientType::class, $client);
         $form->handleRequest($request);
-        $fin=4;
 
         if ($form->isSubmitted() && $form->isValid()) {
 
             $client = $form->getData();
-            if($number==$fin){
-                $client->setCompleted(true);
-            }
             $em->persist($client);
             $em->flush();
-            if($number==$fin){
-                return $this->redirectToRoute('tableau');
-            }
-            return $this->redirectToRoute('question', array('number'=>$number+1));
+
+            return $this->redirectToRoute('tableau');
+
         }
 
-        return $this->render('MaConsoBundle:Default:form.html.twig',
+        return $this->render('MaConsoBundle::form.html.twig',
             array(
                 'name'=>$client->getName(),
                 'form' => $form->createView(),
-                'title' =>$title,
-                'number' => $number,
             ));
     }
 
@@ -159,9 +111,48 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/tableaudebord", name="tableau")
+     * @Route("/tableau-de-bord/{code}",name="tableau")
      */
-    public function tableauAction(Request $request)
+    public function tableauAction(Request $request, $code = null)
+    {
+        $repository_client = $this->getDoctrine()->getRepository("AppBundle:Client");
+        $repository_companies = $this->getDoctrine()->getRepository("AppBundle:Company");
+        $em = $this->getDoctrine()->getEntityManager();
+        $session = $this->get('session');
+
+        //TODO calculer la consommation d'un utilisateur
+        $consomation=37;
+
+        //TODO creer les conseils et les implémenter dans advice
+        $advices = [
+            0=>'Fermez les volets pour conserver la chaleur',
+            1=>'Utilisez un thermosat intelligent'
+        ];
+
+        //TODO creer une fonction qui verfie si l'utilisateur existe et qu'il a tout parametré
+        if($session->get('name')) {
+            $client = $repository_client->findOneBy(array('name'=>$session->get('name')));
+        }
+        else if ($code != null){
+            $client = $repository_client->findOneBy(array('name'=>$code));
+        }
+        else{
+            return $this->redirectToRoute('questionnaire');
+        }
+
+        return $this->render('MaConsoBundle::tableau.html.twig',
+            array(
+                'client'=> $client,
+                'advices'=> $advices,
+                'consommation'=> $consomation,
+                'companies'=> $repository_companies->findAll()
+            ));
+    }
+
+    /**
+     * @Route("/configuration", name="configuration")
+     */
+    public function tableauEditAction(Request $request, $code = null)
     {
         $repository_client = $this->getDoctrine()->getRepository("AppBundle:Client");
         $repository_room = $this->getDoctrine()->getRepository("AppBundle:Room");
@@ -171,7 +162,17 @@ class DefaultController extends Controller
 
         $predictable_room = ['Cuisine', 'Salle de bain', 'Chambre parentale', 'Chambre enfant','Salon', 'Bureau'];
 
-        $client = $repository_client->findOneBy(array('name'=>$session->get('name')));
+        if($session->get('name')) {
+            $client = $repository_client->findOneBy(array('name'=>$session->get('name')));
+        }
+        elseif ($code != null){
+            $client = $repository_client->findOneBy(array('name'=>$code));
+        }
+
+        if(!isset($client )|| !$client->getPiece()) {
+            return $this->redirectToRoute('questionnaire');
+        }
+
 
         if(isset($_POST['obj']) && $_POST['obj']!=''){
             $obj = $repository_object->findOneById($_POST['obj']);
@@ -318,7 +319,7 @@ class DefaultController extends Controller
         }
 
 
-        return $this->render('MaConsoBundle:Default:tableau.html.twig',
+        return $this->render('MaConsoBundle::configuration.html.twig',
             array(
                 'name'=>$client->getName(),
                 'rooms'=>$rooms,
@@ -393,5 +394,13 @@ class DefaultController extends Controller
 
                 //'form' => $form->createView(),
             ));
+    }
+
+    /**
+     * @Route("/vote/{code}/{response}",name="estimate")
+     */
+    public function estimateAction(Request $request, $code = null)
+    {
+
     }
 }
