@@ -6,12 +6,16 @@ use AppBundle\Entity\Chinois;
 use AppBundle\Entity\Client;
 use AppBundle\Entity\Object;
 use AppBundle\Entity\Room;
+use AppBundle\Form\AddObjType;
+use AppBundle\Form\AddRoomType;
 use AppBundle\Form\ClientType;
+use AppBundle\Repository\RoomRepository;
 use Doctrine\DBAL\Types\IntegerType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Form;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -318,6 +322,9 @@ class DefaultController extends Controller
             $surface = 0;
         }
 
+        $form_obj = $this->createForm(AddObjType::class, null);
+        $form_room = $this->createForm(AddRoomType::class, null);
+
 
         return $this->render('MaConsoBundle::configuration.html.twig',
             array(
@@ -327,7 +334,8 @@ class DefaultController extends Controller
                 'companies' =>$companies,
                 'chauffage' =>$chauffage,
                 'surface' => $surface,
-                //'form' => $form->createView(),
+                'form_obj' => $form_obj->createView(),
+                'form_room' => $form_room->createView(),
             ));
     }
 
@@ -399,8 +407,82 @@ class DefaultController extends Controller
     /**
      * @Route("/vote/{code}/{response}",name="estimate")
      */
-    public function estimateAction(Request $request, $code = null)
+    public function estimateAction(Request $request, $code = null, $response)
     {
+        $repository_client = $this->getDoctrine()->getRepository("AppBundle:Client");
+        $em = $this->getDoctrine()->getEntityManager();
+        $session = $this->get('session');
+        if($session->get('name')) {
+            $client = $repository_client->findOneBy(array('name'=>$session->get('name')));
+        }
+        elseif ($code != null){
+            $client = $repository_client->findOneBy(array('name'=>$code));
+        }
 
+        if(!isset($client )|| !$client->getPiece()) {
+            return $this->redirectToRoute('questionnaire');
+        }
+        switch ($response){
+            case 'true':
+                $client->setHasVoted(true);
+                break;
+            case 'false':
+                $client->setHasVoted(false);
+                break;
+        }
+        $em->persist($client);
+        $em->flush();
+        return $this->redirectToRoute('tableau');
+    }
+
+    /**
+     * @Route("/ajax_addObj",name="add_object")
+     */
+    public function addObjAction(Request $request)
+    {
+        $repository_client = $this->getDoctrine()->getRepository("AppBundle:Client");
+        $repository_room = $this->getDoctrine()->getRepository("AppBundle:Room");
+        $em = $this->getDoctrine()->getEntityManager();
+        $session = $this->get('session');
+        $client = $repository_client->findOneBy(array('name'=>$session->get('name')));
+
+        $type = $request->get('type');
+
+        switch ($type){
+            case 'obj':
+                $id =  $request->get('id');
+                $name = $request->get('name');
+                $quantity = $request->get('quantity');
+                $utilisation = $request->get('utilisation');
+                $power = $request->get('power');
+
+                $obj = new Object();
+                $obj->setRoomId($id);
+                $obj->setName($name);
+                $obj->setQuantity($quantity);
+                $obj->setutilisation($utilisation);
+                $obj->setPower($power);
+                $em->persist($obj);
+                $em->flush();
+                return new JsonResponse(array('status'=>'TRUE'));
+                break;
+            case 'room':
+                $name = $request->get('name');
+                $room = new Room();
+                $room->setName($name);
+                $room->setClientId($client->getId());
+                $em->persist($room);
+                $em->flush();
+                return new JsonResponse(array('status'=>'TRUE'));
+                break;
+            case 'delete':
+                $room = $request->get('room');
+                $droom = $repository_room->findOneBy(array('id'=>$room));
+                $em->remove($droom);
+                $em->flush();
+                break;
+        }
+
+        return new JsonResponse(array('status'=>'FALSE'));
     }
 }

@@ -17,12 +17,12 @@
             </div>
         </div>
 
-        <div class="content clearfix">
-            <div class="block clearfix">
+        <div class="content ">
+            <div class="block ">
                 <div class="l2-block tool">
                     <div id="show" class="in-block left">
                         <h1>{% if client.completed == null %}<i class="material-icons">warning</i>{% endif %}Mon bien</h1>
-                        <div class="slider">
+                        <div class="bien">
                             <p id="p1">{{ client.surface }} m²</p>
                             <p id="p2">{{ client.piece }} pièces</p>
                         </div>
@@ -65,7 +65,8 @@
                     </div>
                 </div>
             </div>
-            <div class="block clearfix">
+            <div class="clearfix"></div>
+            <div class="block ">
                 <div class="l2-block consommation">
                     <div class="in-block left">
                         <h1>Ma Conso.</h1>
@@ -74,8 +75,8 @@
                     <div id="mask_consommation"  class="in-block left">
                         <p>Il s'agit d'une estimation basée sur votre configuration située plus haut.</p>
                         <center><p>Notre estimation est-elle correct ? (à 1€ près)</p>
-                        <a href="{{ path('estimate', {code: client.name, response: 'yes'}) }}">> Oui</a>
-                        <a href="{{ path('estimate', {code: client.name, response: 'non'}) }}">Non <</a></center>
+                        <a href="{{ path('estimate', {code: client.name, response: 'true'}) }}">> Oui</a>
+                        <a href="{{ path('estimate', {code: client.name, response: 'false'}) }}">Non <</a></center>
                     </div>
                 </div>
                 <div class="l6-block company">
@@ -84,9 +85,11 @@
                         <p>Aucune consommation anormale, félicitation !</p>
                     </div>
                 </div>
+                <div class="clearfix"></div>
             </div>
+            <div class="clearfix"></div>
         </div>
-
+        <div class="clearfix"></div>
         <div class="footer">
             Vous souhaitez consulter ou modifier des informations ultérieurement? Voici votre nouveau code : {{ client.name }}
         </div>

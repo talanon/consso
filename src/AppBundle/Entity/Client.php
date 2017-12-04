@@ -42,6 +42,11 @@ class Client
     private $age;
 
     /**
+     * @ORM\Column(type="integer", length=100, nullable=true)
+     */
+    private $etage;
+
+    /**
      * @ORM\Column(type="boolean", nullable=true)
      */
     private $chauffage;
@@ -79,12 +84,23 @@ class Client
     /**
      * @ORM\Column(type="boolean", nullable=true)
      */
+    private $seche;
+
+
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
     private $four;
 
     /**
      * @ORM\Column(type="boolean", nullable=true)
      */
     private $plaque;
+
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $hasVoted;
     
 
     /**
@@ -407,5 +423,77 @@ class Client
     public function getPlaque()
     {
         return $this->plaque;
+    }
+
+    /**
+     * Set etage
+     *
+     * @param integer $etage
+     *
+     * @return Client
+     */
+    public function setEtage($etage)
+    {
+        $this->etage = $etage;
+
+        return $this;
+    }
+
+    /**
+     * Get etage
+     *
+     * @return integer
+     */
+    public function getEtage()
+    {
+        return $this->etage;
+    }
+
+    /**
+     * Set seche
+     *
+     * @param boolean $seche
+     *
+     * @return Client
+     */
+    public function setSeche($seche)
+    {
+        $this->seche = $seche;
+
+        return $this;
+    }
+
+    /**
+     * Get seche
+     *
+     * @return boolean
+     */
+    public function getSeche()
+    {
+        return $this->seche;
+    }
+
+    /**
+     * Set hasVoted
+     *
+     * @param boolean $hasVoted
+     *
+     * @return Client
+     */
+    public function setHasVoted($hasVoted)
+    {
+        $this->hasVoted = $hasVoted;
+
+        return $this;
+    }
+
+    /**
+     * Get hasVoted
+     *
+     * @return boolean
+     */
+    public function getHasVoted()
+    {
+        return $this->hasVoted;
     }
 }
