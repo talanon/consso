@@ -128,9 +128,7 @@ ul#navigation li {
 #suite {
     background: #218BC3;
 }
-.window select {
-    margin: 0px 0px 0px 10px;
-}
+
 .window input[type=number] {
     width: 80px;
 }
@@ -251,8 +249,10 @@ ul#menu, ul#navigation, ul#tableau {
     width: 46%;
     margin-right: 25px;
     margin-bottom: 25px;
+    height: 300px;
     float: left;
     background: white;
+    /* display: table; */
     font-family: Calibri;
 }
 .col4 h1 {
@@ -262,9 +262,11 @@ ul#menu, ul#navigation, ul#tableau {
 }
 .col4 ul li {
     padding: 5px;
+    float:left;
 }
 .col4 ul {
-    min-height: 220px;
+    height: 220px;
+    overflow: auto;
 }
 .total {
     background: #222222;
@@ -512,21 +514,6 @@ ul#menu li div.white_up {
     src: url(superHero.ttf);
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-
-    opacity: 1;
-
-}
-
-input[type=number]{
-    width: 35px;
-    margin-right: 5px;
-}
-input[type=text]{
-    width: 58px;
-}
-
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
@@ -535,7 +522,7 @@ input[type=text]{
     left: 0;
     top: 0;
     width: 100%; /* Full width */
-    height: 100%; /* Full height */
+    height:100%;
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
@@ -553,30 +540,6 @@ input[type=text]{
     color: white;
     padding: 5px;
     text-align: center;
-}
-#myForm {
-    padding: 10px;
-    font-family: Calibri;
-}
-#myForm input {
-    margin-left: 10px;
-    width: 20%;
-    margin-bottom: 10px;
-}
-#myForm input[type=submit]{
-    color: white;
-    background: #C82829;
-    border: none;
-    width: 55px;
-    padding: 5px;
-    float: right;
-}
-#myForm input[type=submit]:hover{
-    background: #c85f58;
-}
-input#myName {
-    margin-left: 10px;
-    width: 75%;
 }
 
 
@@ -662,7 +625,7 @@ input#myName {
     background: #49b844;
 }
 
-.slider {
+.bien {
     color: #49b844;
     text-align: center;
     font-size: 3em;

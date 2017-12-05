@@ -20,8 +20,10 @@
         <div class="content">
             <div class="window clearfix">
                 <h1>Merci de prendre le temps de répondre...</h1>
+                <h2>Pour rappel, ces informations sont anonymes, consultable et modifiable à tous moments.</h2>
                 <br><br>
                 {{ form_start(form) }}
+                {% form_theme form 'materialize_layout.html.twig' %}
                 {{ form_widget(form) }}
                 {{ form_end(form) }}
             </div>

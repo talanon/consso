@@ -6,6 +6,7 @@
         {% stylesheets
         '@AppBundle/Resources/public/css/reset.css'
         '@AppBundle/Resources/public/css/consso.css'
+        '@AppBundle/Resources/public/css/materialize.css'
         'bundles/App/css/style.css'
         filter='cssrewrite' %}
         <link rel="stylesheet" href="{{ asset_url }}" type="text/css"/>
@@ -13,9 +14,12 @@
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
     <body>
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+            <script type="text/javascript" src="{{ asset('js/materialize.min.js') }}"></script>
+        {% endblock %}
     </body>
 </html>

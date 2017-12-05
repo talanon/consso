@@ -17,29 +17,35 @@
             </div>
 
         </div>
-        <div class="content clearfix">
+        <div class="clearfix">
 
-            <div id="myModal" class="modal">
+            <div id="objModal" class="modal">
 
                 <!-- Modal content -->
                 <div class="modal-content">
-                    <h1>Ajouter ou modifier une pièce <span class="close">&times;</span></h1>
-                    <form class="clearfix" name="form_room" method="post" id="myForm">
+                    <h1>Ajouter un composant </h1>
                         <br><br>
-                        <label>Le nom :</label><input type="text" name="name" id="myName">
-                        <br><br><br><hr /><br>
-                        1.
-                        <input type="text" id="quantity_0" name="quantities[]" placeholder="Quantité" value="1">
-                        <input type="text" id="name_0" name="names[]" placeholder="Nom" value="Ampoule">
-                        <input type="text" id="power_0" name="powers[]" placeholder="Puissance" value="60">
-                        <input type="text" id="use_0" name="uses[]" placeholder="Utilisation par heure" value="2">
+                        {{ form_start(form_obj) }}
+                        {% form_theme form_obj 'materialize_layout.html.twig' %}
+                        {{ form_widget(form_obj) }}
+                        {{ form_end(form_obj) }}
+                    <button onclick="addObj()">enregistrer</button>
 
-                        <br>
-                        <div id="zone"></div>
-                        <button type="button" id="add_object">Ajouter un objet</button>
-                        <input type="submit" value="valider" name="submit">
+                </div>
 
-                    </form>
+            </div>
+
+            <div id="roomModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <h1>Ajouter une pièce </h1>
+                        <br><br>
+                        {{ form_start(form_room) }}
+                        {% form_theme form_room 'materialize_layout.html.twig' %}
+                        {{ form_widget(form_room) }}
+                        {{ form_end(form_room) }}
+                    <button onclick="addRoom()">enregistrer</button>
                 </div>
 
             </div>
@@ -99,29 +105,30 @@
                     </div>
                 </div>
             </div>
-            <div class="cdlt clearfix">
+            <div class="cdlt">
                 {% set i=0 %}
                 {% set total=0 %}
                 {% set highttotal=0 %}
                 {% for room in rooms %}
                     <div class="col4" id="room_{{ i }}">
-                        <h1>{{ room.name }}</h1>
+                        <h1>{{ room.name }}<span style="float: right;"><button onclick="popObj({{ room.id }}, {{ i }});">+</button><button onclick="removeRoom({{ room.id }});">x</button></span></h1>
                         <ul id="list_{{ i }}">
                             {% for object in objects[i] %}
                                 {% set total = total + (object.power*object.utilisation) %}
                                 {% set highttotal = highttotal + (object.power*object.utilisation) %}
                                 <li>
-                                    <i class="material-icons" onclick="obj_delete({{ object.id }})" >delete_forever</i> {{ object.quantity }}x {{ object.name }} <span class="description"> {{ object.power }} Watt - {{ object.utilisation }} heures/jour</span>
+                                    <i class="material-icons" onclick="removeObj({{ object.id }})" >delete_forever</i> {{ object.quantity }}x {{ object.name }} <span class="description"> {{ object.power }} Watt - {{ object.utilisation }} heures/jour</span>
                                 </li>
                             {% endfor %}
-                            <li><button class="myAddBtn" id="{{ i }}" onclick="room_click(this.id)">Ajouter</button></li>
+                            {#<li><button class="myAddBtn" id="{{ i }}" onclick="room_click(this.id)">Ajouter</button></li>#}
                         </ul>
+                        <div class="clearfix"></div>
                         <div class="total">Total en kwatt/h: {{ total/1000 }}</div>
                     </div>
                     {% set total=0 %}
                     {% set i = i+1 %}
                 {% endfor %}
-                <div class="col4 red" id="myBtn">
+                <div class="col4 red" id="myBtn" onclick="popRoom()">
                     <h1><center>Nouvelle pièce</center></h1>
                     <ul></ul>
                 </div>
@@ -173,6 +180,7 @@
                 </div>
             </div>
         </div>
+        <div class="clearfix"></div>
         <div class="footer">
             Vous souhaitez consulter ou modifier des informations ultérieurement? Voici votre nouveau code : {{ name }}
         </div>
@@ -183,35 +191,71 @@
     {% javascripts'@AppBundle/Resources/public/js/*' %}<script src="{{ asset_url }}"></script>{% endjavascripts %}
     <script type="text/javascript">
         // Get the modal
-        var modal = document.getElementById('myModal');
+        var modal_obj = document.getElementById('objModal');
+        var modal_room = document.getElementById('roomModal');
         var i=1;
-        // Get the button that opens the modal
-        var btn = document.getElementById("myBtn");
-        var addObj = document.getElementById("add_object");
+        var obj=0;
+        var room=0;
         var myAddBtn = document.getElementById("myAddBtn");
-
-        // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];
 
-        // When the user clicks on the button, open the modal
-        btn.onclick = function() {
-            modal.style.display = "block";
+
+        function popObj(objt, roomt) {
+            modal_obj.style.display = "block";
+            obj = objt;
+            room = roomt;
         }
 
-        addObj.onclick = function() {
-            i++;
-            $("#zone").append(
-                    i+'.<input type="text" id="quantity_'+i+'" name="quantities[]" placeholder="Quantité"> <input type="text" id="name_'+i+'" name="names[]" placeholder="Nom" > <input type="text" id="power_'+i+'" name="powers[]" placeholder="Puissance" > <input type="text" id="use_'+i+'" name="uses[]" placeholder="Utilisation par heure" ><br>');
-            return null;
+        function popRoom() {
+            modal_room.style.display = "block";
         }
 
-        function obj_delete(obj) {
+        function addObj() {
+            var name = $("#add_obj_name").val();
+            var quantity = $("#add_obj_quantity").val();
+            var utilisation = $("#add_obj_utilisation").val();
+            var power = $("#add_obj_power").val();
+            $.ajax({
+                url:"{{ path('add_object') }}",
+                method: "post",
+                data: {type : 'obj', id : obj, name : name, quantity: quantity, utilisation: utilisation,power: power}
+            }).done(function (msg) {
+                refreshList();
+            })
+        }
+
+        function addRoom() {
+            var name = $("#add_room_name").val();
+            $.ajax({
+                url:"{{ path('add_object') }}",
+                method: "post",
+                data: {type : 'room', name : name}
+            }).done(function (msg) {
+                refreshList();
+            })
+        }
+
+        function removeRoom(room) {
+            $.ajax({
+                url:"{{ path('add_object') }}",
+                method: "post",
+                data: {type : 'delete', room : room}
+            }).done(function (msg) {
+                refreshList();
+            })
+        }
+
+        function refreshList(){
+            location.reload();
+        }
+
+        function removeObj(obj) {
 
             var form = document.createElement("form");
             var element1 = document.createElement("input");
 
             form.method = "POST";
-            form.action = "/app_dev.php/tableaudebord";
+            form.action = "/app_dev.php/configuration";
 
             element1.value=obj;
             element1.name="obj";
@@ -223,28 +267,19 @@
             form.submit();
 
         }
-        function room_click(clicked_id) {
-            modal.style.display = "block";
-            $("#myName").val($("#room_"+clicked_id+" h1").text());
-            //var ul = document.getElementById("list_"+clicked_id);
-            //var items = ul.getElementsByTagName("li");
-            //$("#name_0").val(items[0].innerHTML);
-            /*for (var i = 1; i < items.length; ++i) {
-                $("#zone").append(i+'.<input type="text" id="quantity_'+i+'" name="quantities[]" placeholder="Quantité"> <input type="text" id="name_'+i+'" name="names[]" placeholder="Nom" value="'+items[i].innerHTML+'" > <input type="text" id="power_'+i+'" name="powers[]" placeholder="Puissance" > <input type="text" id="use_'+i+'" name="uses[]" placeholder="Utilisation par heure" ><br>');
-            }*/
-        }
 
-        // When the user clicks on <span> (x), close the modal
+
         span.onclick = function() {
-            modal.style.display = "none";
+            modal_room.style.display = "none";
+            modal_obj.style.display = "none";
             $("#myName").val("");
-        }
+        };
 
-        // When the user clicks anywhere outside of the modal, close it
+
         window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-                $("#myName").val("");
+            if (event.target == modal_room || event.target == modal_obj) {
+                modal_room.style.display = "none";
+                modal_obj.style.display = "none";
             }
         }
     </script>

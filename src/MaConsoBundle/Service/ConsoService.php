@@ -8,7 +8,7 @@
 
 namespace MaConsoBundle\Service;
 
-
+use Doctrine\ORM\EntityManager;
 class ConsoService
 {
     protected $em;
@@ -19,7 +19,7 @@ class ConsoService
     }
 
     //TODO calculer la consommation d'un utilisateur
-    public function estimateConso($client)
+    public function calculateConso($client)
     {
         return 37;
     }
