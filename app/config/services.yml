@@ -7,3 +7,9 @@ services:
     #service_name:
     #    class: AppBundle\Directory\ClassName
     #    arguments: ['@another_service_name', 'plain_value', '%parameter_name%']
+    FormService:
+          class: MaConsoBundle\Service\FormService
+          arguments: ['@doctrine.orm.entity_manager', 'formService']
+    ConsoService:
+              class: MaConsoBundle\Service\ConsoService
+              arguments: ['@doctrine.orm.entity_manager', 'consoService']
