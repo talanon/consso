@@ -65,12 +65,7 @@ class Client
      * @ORM\Column(type="integer", nullable=true)
      */
     private $piece;
-
-    /**
-     * @ORM\Column(type="boolean", nullable=true)
-     */
-    private $completed;
-
+    
     /**
      * @ORM\Column(type="boolean", nullable=true)
      */
@@ -100,7 +95,7 @@ class Client
      * @ORM\Column(type="boolean", nullable=true)
      */
     private $hasVoted;
-    
+
 
     /**
      * Get id

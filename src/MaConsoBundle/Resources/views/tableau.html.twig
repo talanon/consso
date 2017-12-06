@@ -21,7 +21,7 @@
             <div class="block ">
                 <div class="l2-block tool">
                     <div id="show" class="in-block left">
-                        <h1>{% if client.completed == null %}<i class="material-icons">warning</i>{% endif %}Mon bien</h1>
+                        <h1>Mon bien</h1>
                         <div class="bien">
                             <p id="p1">{{ client.surface }} m²</p>
                             <p id="p2">{{ client.piece }} pièces</p>
@@ -30,11 +30,6 @@
                     <a href="{{ path('configuration') }}" >
                         <div id="mask_tool"  class="in-block left">
                         <p><h1> > Modifier</h1></p>
-                            {% if client.completed == null %}
-                                <p>
-                                    Il semble que vous n'avez pas finalisé la configuration de votre tableau.
-                                </p>
-                            {% endif %}
                         </div>
                     </a>
                 </div>
