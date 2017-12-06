@@ -13,7 +13,7 @@ namespace MaConsoBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
-class TestController extends Controller
+class StatisticController extends Controller
 {
     /**
      * @Route("/statistic", name="statistic")
