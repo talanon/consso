@@ -4,8 +4,6 @@
     <list default="true" id="32e12ab1-e029-4a96-a183-91f7a8615377" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Client.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Client.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/e3a5b2e.css" afterPath="$PROJECT_DIR$/web/css/e3a5b2e.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/fb1aa6f.css" afterPath="$PROJECT_DIR$/web/css/fb1aa6f.css" />
     </list>
     <ignored path="consso.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -91,8 +89,8 @@
       <file leaf-file-name="Client.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Client.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="87" column="4" selection-start-line="87" selection-start-column="4" selection-end-line="87" selection-end-column="4" />
+            <state relative-caret-position="493">
+              <caret line="104" column="7" selection-start-line="104" selection-start-column="4" selection-end-line="104" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -324,8 +322,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/wamp64/www/local.www.consso.fr/web/bundles/app/css/style.css" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -437,12 +436,12 @@
       <workItem from="1510561295616" duration="479000" />
       <workItem from="1510562149376" duration="525000" />
       <workItem from="1510562690298" duration="16316000" />
-      <workItem from="1512482807740" duration="1060000" />
+      <workItem from="1512482807740" duration="1204000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="170216000" />
+    <option name="totallyTimeSpent" value="170360000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -792,8 +791,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Client.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="87" column="4" selection-start-line="87" selection-start-column="4" selection-end-line="87" selection-end-column="4" />
+        <state relative-caret-position="493">
+          <caret line="104" column="7" selection-start-line="104" selection-start-column="4" selection-end-line="104" selection-end-column="7" />
           <folding />
         </state>
       </provider>
