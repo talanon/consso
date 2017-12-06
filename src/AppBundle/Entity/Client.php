@@ -96,7 +96,7 @@ class Client
      * @ORM\Column(type="boolean", nullable=true)
      */
     private $hasVoted;
-    
+
 
     /**
      * Get id
