@@ -2,37 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32e12ab1-e029-4a96-a183-91f7a8615377" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/css/a0ac138.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/css/a0ac138_consso_2.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/css/a0ac138_reset_1.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/css/a0ac138_style_3.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/css/compiled/app.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/css/compiled/app_consso_2.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/css/compiled/app_part_1_consso_1.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/css/compiled/app_part_1_reset_1.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/css/compiled/app_part_1_reset_2.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/css/compiled/app_part_1_style_2.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/css/compiled/app_part_1_style_3.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/css/compiled/app_reset_1.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/css/compiled/app_style_1.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/css/compiled/app_style_3.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/css/e3a5b2e.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/css/e3a5b2e_consso_2.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/css/e3a5b2e_reset_1.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/css/e3a5b2e_style_3.css" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Client.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Client.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Company.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Company.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Object.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Object.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Room.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Room.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Form/ClientType.php" afterPath="$PROJECT_DIR$/src/AppBundle/Form/ClientType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/css/style.css" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/public/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MaConsoBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/MaConsoBundle/Controller/DefaultController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MaConsoBundle/Resources/views/configuration.html.twig" afterPath="$PROJECT_DIR$/src/MaConsoBundle/Resources/views/configuration.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MaConsoBundle/Resources/views/form.html.twig" afterPath="$PROJECT_DIR$/src/MaConsoBundle/Resources/views/form.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MaConsoBundle/Resources/views/tableau.html.twig" afterPath="$PROJECT_DIR$/src/MaConsoBundle/Resources/views/tableau.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/e3a5b2e.css" afterPath="$PROJECT_DIR$/web/css/e3a5b2e.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/fb1aa6f.css" afterPath="$PROJECT_DIR$/web/css/fb1aa6f.css" />
     </list>
     <ignored path="consso.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Controller/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="458">
-              <caret line="470" column="35" lean-forward="true" selection-start-line="470" selection-start-column="35" selection-end-line="470" selection-end-column="35" />
+              <caret line="470" column="35" selection-start-line="470" selection-start-column="35" selection-end-line="470" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -66,11 +39,9 @@
       <file leaf-file-name="configuration.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Resources/views/configuration.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="614">
-              <caret line="243" column="30" lean-forward="true" selection-start-line="243" selection-start-column="30" selection-end-line="243" selection-end-column="30" />
-              <folding>
-                <element signature="e#4644#4665#0#HTML" expanded="true" />
-              </folding>
+            <state relative-caret-position="4131">
+              <caret line="243" column="30" selection-start-line="243" selection-start-column="30" selection-end-line="243" selection-end-column="30" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -78,8 +49,8 @@
       <file leaf-file-name="AddObjType.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/AddObjType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="12" lean-forward="false" selection-start-line="20" selection-start-column="12" selection-end-line="23" selection-end-column="25" />
+            <state relative-caret-position="204">
+              <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="23" selection-end-column="25" />
               <folding>
                 <element signature="e#34#62#0#PHP" expanded="true" />
               </folding>
@@ -91,7 +62,7 @@
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/AddRoomType.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="391">
-              <caret line="32" column="1" lean-forward="false" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+              <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -100,8 +71,8 @@
       <file leaf-file-name="materialize.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/public/css/materialize.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="5625" column="13" lean-forward="false" selection-start-line="5625" selection-start-column="13" selection-end-line="5625" selection-end-column="13" />
+            <state relative-caret-position="95625">
+              <caret line="5625" column="13" selection-start-line="5625" selection-start-column="13" selection-end-line="5625" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -110,18 +81,18 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1242">
-              <caret line="532" column="30" lean-forward="false" selection-start-line="532" selection-start-column="30" selection-end-line="532" selection-end-column="30" />
+            <state relative-caret-position="9044">
+              <caret line="532" column="30" selection-start-line="532" selection-start-column="30" selection-end-line="532" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Client.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Client.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Client.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="100" column="48" lean-forward="false" selection-start-line="100" selection-start-column="44" selection-end-line="100" selection-end-column="48" />
+            <state relative-caret-position="204">
+              <caret line="87" column="4" selection-start-line="87" selection-start-column="4" selection-end-line="87" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -131,7 +102,7 @@
         <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Resources/views/form.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="408">
-              <caret line="24" column="16" lean-forward="false" selection-start-line="24" selection-start-column="16" selection-end-line="27" selection-end-column="36" />
+              <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="27" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -222,7 +193,6 @@
         <option value="$PROJECT_DIR$/app/Resources/public/css/materialize.css" />
         <option value="$PROJECT_DIR$/app/Resources/public/css/materialize.min.css" />
         <option value="$PROJECT_DIR$/src/AppBundle/Form/ClientType.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Client.php" />
         <option value="$PROJECT_DIR$/src/MaConsoBundle/Resources/views/tableau.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/public/css/materialize.css" />
         <option value="$PROJECT_DIR$/src/AppBundle/Form/AddObjType.php" />
@@ -230,6 +200,7 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/public/css/style.css" />
         <option value="$PROJECT_DIR$/src/MaConsoBundle/Resources/views/configuration.html.twig" />
         <option value="$PROJECT_DIR$/src/MaConsoBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Client.php" />
       </list>
     </option>
   </component>
@@ -243,11 +214,18 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
     <ConfirmationsSetting value="1" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -264,88 +242,31 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="local.www.consso.fr" />
+              <option name="myItemId" value="consso" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="consso" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="local.www.consso.fr" />
+              <option name="myItemId" value="consso" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="local.www.consso.fr" />
+              <option name="myItemId" value="consso" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="local.www.consso.fr" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.www.consso.fr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.www.consso.fr" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bundles" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.www.consso.fr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.www.consso.fr" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bundles" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.www.consso.fr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.www.consso.fr" />
+              <option name="myItemId" value="consso" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -355,99 +276,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="local.www.consso.fr" />
+              <option name="myItemId" value="consso" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="local.www.consso.fr" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MaConsoBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.www.consso.fr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.www.consso.fr" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MaConsoBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.www.consso.fr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.www.consso.fr" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MaConsoBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.www.consso.fr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.www.consso.fr" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MaConsoBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controller" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.www.consso.fr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.www.consso.fr" />
+              <option name="myItemId" value="consso" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -461,149 +294,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="local.www.consso.fr" />
+              <option name="myItemId" value="consso" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="local.www.consso.fr" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Default" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.www.consso.fr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.www.consso.fr" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.www.consso.fr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.www.consso.fr" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.www.consso.fr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.www.consso.fr" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.www.consso.fr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.www.consso.fr" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Form" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.www.consso.fr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local.www.consso.fr" />
+              <option name="myItemId" value="consso" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -622,6 +317,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -660,23 +356,6 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CodeceptionConfigurationType" factoryName="Codeception">
-      <PhpTestRunnerSettings />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
-      <node-interpreter value="project" />
-      <working-dir value="" />
-      <envs />
-      <scope-kind value="ALL" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
-      <config-file value="" />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
@@ -694,10 +373,6 @@
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method />
     </configuration>
-    <configuration default="true" type="PhpSpecConfigurationType" factoryName="PHPSpec">
-      <PhpTestRunnerSettings />
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -708,7 +383,7 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run" />
+      <command value="run-script" />
       <scripts />
       <node-interpreter value="project" />
       <envs />
@@ -762,42 +437,33 @@
       <workItem from="1510561295616" duration="479000" />
       <workItem from="1510562149376" duration="525000" />
       <workItem from="1510562690298" duration="16316000" />
+      <workItem from="1512482807740" duration="1060000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169156000" />
+    <option name="totallyTimeSpent" value="170216000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23020834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22986823" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293919" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3284055" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293919" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23020834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3284055" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -827,7 +493,7 @@
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Repository/ClientRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -836,21 +502,21 @@
     <entry file="file://$PROJECT_DIR$/app/config/config_test.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="23" selection-end-column="39" />
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="23" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/autoload.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="5" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/public/js/typing.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -859,7 +525,7 @@
     <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Resources/views/Default/solution.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -867,7 +533,7 @@
     <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Entity/france.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
-          <caret line="42" column="5" lean-forward="false" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -875,36 +541,35 @@
     <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Repository/franceRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Resources/config/doctrine/france.orm.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="16" column="65" lean-forward="false" selection-start-line="16" selection-start-column="65" selection-end-line="16" selection-end-column="65" />
+          <caret line="16" column="65" selection-start-line="16" selection-start-column="65" selection-end-line="16" selection-end-column="65" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/MaConsoBundle.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/security.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -912,7 +577,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="442">
-            <caret line="38" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+            <caret line="38" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
           </first_editor>
           <second_editor />
         </state>
@@ -921,7 +586,7 @@
     <entry file="file://$PROJECT_DIR$/app/config/services.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="7" selection-start-column="41" selection-end-line="9" selection-end-column="0" />
+          <caret line="9" column="0" selection-start-line="7" selection-start-column="41" selection-end-line="9" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -929,36 +594,35 @@
     <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Resources/views/Default/layout2.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4743">
-          <caret line="279" column="67" lean-forward="false" selection-start-line="279" selection-start-column="48" selection-end-line="279" selection-end-column="67" />
+          <caret line="279" column="67" selection-start-line="279" selection-start-column="48" selection-end-line="279" selection-end-column="67" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/var/cache/dev/templates.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1411">
-          <caret line="83" column="107" lean-forward="false" selection-start-line="83" selection-start-column="107" selection-end-line="83" selection-end-column="107" />
-          <folding />
+          <caret line="83" column="107" selection-start-line="83" selection-start-column="107" selection-end-line="83" selection-end-column="107" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Repository/ClientRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/default/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Default/layout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
-          <caret line="39" column="38" lean-forward="false" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+          <caret line="39" column="38" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -966,28 +630,28 @@
     <entry file="file://$PROJECT_DIR$/app/config/parameters.yml.dist">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/public/css/consso.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="20" column="23" lean-forward="false" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -995,163 +659,51 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-          <folding />
+          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/public/js/materialize.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/public/js/materialize.js" />
     <entry file="file://$PROJECT_DIR$/web/bundles/app/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="129" column="1" lean-forward="false" selection-start-line="129" selection-start-column="1" selection-end-line="129" selection-end-column="1" />
-          <folding>
-            <marker date="1512404914205" expanded="true" signature="2331:2436" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="2453:2487" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="2498:2693" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="2714:2791" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="2801:2859" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="2866:2885" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="2892:2911" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="2918:2937" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="2950:3114" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="3128:3315" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="3440:3531" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="3544:3652" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="3671:3705" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="3712:3753" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="3767:3892" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="3907:4032" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="4041:4272" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="4279:4350" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="4423:4487" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="4579:4582" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="4592:4634" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="4642:4706" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="4712:4740" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="4746:4824" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="4841:5024" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="5127:5184" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="5192:5241" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="5248:5273" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="5277:5334" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="5341:5419" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="5427:5490" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="5501:5591" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="5602:5630" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="5639:5710" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="5717:5796" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="5803:5982" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="5994:6031" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="6044:6200" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="6219:6253" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="6275:6391" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="6398:6498" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="6506:6543" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="6550:6569" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="6576:6604" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="6613:6641" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="6650:6678" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="6700:6809" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="6835:6945" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="6960:7023" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="7030:7048" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="7056:7213" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="7268:7467" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="7534:7689" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="7706:7734" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="7754:7916" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="7923:7951" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="7962:8115" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="8130:8158" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="8176:8346" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="8183:8343" ph="/*...*/" />
-            <marker date="1512404914205" expanded="true" signature="8365:8393" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="8415:8575" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="8591:8619" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="8638:8805" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="8813:8841" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="8852:9011" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="9018:9047" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="9065:9091" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="9103:9163" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="9201:9564" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="9605:9795" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="9814:9902" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="9935:10018" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="10027:10114" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="10126:10163" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="10175:10210" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="10222:10259" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="10271:10306" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="10318:10355" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="10367:10402" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="10414:10451" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="10463:10499" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="10509:10553" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="10559:10579" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="10587:10608" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="10923:10969" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="10977:11044" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="11091:11195" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="11207:11227" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="11244:11295" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="11308:11354" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="11375:11421" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="11444:11491" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="11506:11552" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="11619:11665" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="11679:11725" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="11744:11790" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="11805:11872" ph="{...}" />
-            <marker date="1512404914205" expanded="true" signature="11890:11937" ph="{...}" />
-          </folding>
+          <caret line="129" column="1" selection-start-line="129" selection-start-column="1" selection-end-line="129" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/materialize_layout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
-          <caret line="31" column="32" lean-forward="true" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
-          <folding />
+          <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="349">
-          <caret line="41" column="40" lean-forward="false" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
-          <folding />
+          <caret line="41" column="40" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/public/css/materialize.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
-          <caret line="5791" column="17" lean-forward="false" selection-start-line="5791" selection-start-column="17" selection-end-line="5791" selection-end-column="17" />
-          <folding />
+          <caret line="5791" column="17" selection-start-line="5791" selection-start-column="17" selection-end-line="5791" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/public/css/materialize.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-5236">
-          <caret line="5" column="56363" lean-forward="false" selection-start-line="5" selection-start-column="56363" selection-end-line="5" selection-end-column="56363" />
-          <folding />
+          <caret line="5" column="56363" selection-start-line="5" selection-start-column="56363" selection-end-line="5" selection-end-column="56363" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="14" column="81" lean-forward="false" selection-start-line="14" selection-start-column="81" selection-end-line="14" selection-end-column="81" />
+          <caret line="14" column="81" selection-start-line="14" selection-start-column="81" selection-end-line="14" selection-end-column="81" />
           <folding />
         </state>
       </provider>
@@ -1159,25 +711,17 @@
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/ClientType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
-          <caret line="45" column="24" lean-forward="false" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+          <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
           <folding>
             <element signature="e#34#74#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Client.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="100" column="48" lean-forward="false" selection-start-line="100" selection-start-column="44" selection-end-line="100" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/public/css/materialize.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="5625" column="13" lean-forward="false" selection-start-line="5625" selection-start-column="13" selection-end-line="5625" selection-end-column="13" />
+        <state relative-caret-position="95625">
+          <caret line="5625" column="13" selection-start-line="5625" selection-start-column="13" selection-end-line="5625" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1185,23 +729,21 @@
     <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Resources/views/tableau.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1308">
-          <caret line="78" column="90" lean-forward="false" selection-start-line="78" selection-start-column="90" selection-end-line="78" selection-end-column="90" />
-          <folding />
+          <caret line="78" column="90" selection-start-line="78" selection-start-column="90" selection-end-line="78" selection-end-column="90" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Resources/views/beforeStarting.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
-          <caret line="26" column="20" lean-forward="false" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
-          <folding />
+          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Resources/views/form.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
-          <caret line="24" column="16" lean-forward="false" selection-start-line="24" selection-start-column="16" selection-end-line="27" selection-end-column="36" />
+          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="27" selection-end-column="36" />
           <folding />
         </state>
       </provider>
@@ -1209,15 +751,15 @@
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/AddRoomType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
-          <caret line="32" column="1" lean-forward="false" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+          <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/AddObjType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="12" lean-forward="false" selection-start-line="20" selection-start-column="12" selection-end-line="23" selection-end-column="25" />
+        <state relative-caret-position="204">
+          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="23" selection-end-column="25" />
           <folding>
             <element signature="e#34#62#0#PHP" expanded="true" />
           </folding>
@@ -1226,26 +768,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1242">
-          <caret line="532" column="30" lean-forward="false" selection-start-line="532" selection-start-column="30" selection-end-line="532" selection-end-column="30" />
+        <state relative-caret-position="9044">
+          <caret line="532" column="30" selection-start-line="532" selection-start-column="30" selection-end-line="532" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Resources/views/configuration.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="614">
-          <caret line="243" column="30" lean-forward="true" selection-start-line="243" selection-start-column="30" selection-end-line="243" selection-end-column="30" />
-          <folding>
-            <element signature="e#4644#4665#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="4131">
+          <caret line="243" column="30" selection-start-line="243" selection-start-column="30" selection-end-line="243" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Controller/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="458">
-          <caret line="470" column="35" lean-forward="true" selection-start-line="470" selection-start-column="35" selection-end-line="470" selection-end-column="35" />
+          <caret line="470" column="35" selection-start-line="470" selection-start-column="35" selection-end-line="470" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Client.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="87" column="4" selection-start-line="87" selection-start-column="4" selection-end-line="87" selection-end-column="4" />
           <folding />
         </state>
       </provider>
