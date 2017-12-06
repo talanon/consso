@@ -13,3 +13,6 @@ services:
     ConsoService:
               class: MaConsoBundle\Service\ConsoService
               arguments: ['@doctrine.orm.entity_manager', 'consoService']
+    StatisticService:
+                  class: MaConsoBundle\Service\StatisticService
+                  arguments: ['@doctrine.orm.entity_manager', 'statisticService']

@@ -37,13 +37,14 @@ Class ConsoController extends Controller
             $client_name = $formService->createClient()->getName();
             $session->set('name', $client_name);
             //If the client exists, redirect to the info page
-        }
-        $client_name = $formService->checkClient($session->get('name'));
-        if ($formService->checkClient($client_name) == null) {
-            return $this->redirectToRoute('tableau');
-            //If the client's name doesn't exist
-        }else {
-            $session->set('name', $client_name);
+        } else {
+            $client_name = $formService->checkClient($session->get('name'));
+            if ($client_name == null) {
+                return $this->redirectToRoute('tableau');
+                //If the client's name doesn't exist
+            } else {
+                $session->set('name', $client_name);
+            }
         }
         return $this->render('MaConsoBundle::beforeStarting.html.twig',
             array(
@@ -72,7 +73,8 @@ Class ConsoController extends Controller
             array(
                 'name' => $client->getName(),
                 'form' => $form->createView(),
-            ));
+            )
+        );
     }
 
     /**
@@ -92,6 +94,8 @@ Class ConsoController extends Controller
             if($client != null){
                 $consomation = $consoService->estimateConso($client);
                 $advices = $consoService->generateAdvices($client);
+                //Clear user name stored in the session
+                $session->remove('name');
                 return $this->render('MaConsoBundle::tableau.html.twig',
                     array(
                         'client' => $client,
@@ -113,6 +117,8 @@ Class ConsoController extends Controller
             $client = $formService->findClientByName($session->get('name'));
             $consomation = $consoService->calculateConso($client);
             $advices = $consoService->generateAdvices($client);
+
+
             return $this->render('MaConsoBundle::tableau.html.twig',
                 array(
                     'client' => $client,
@@ -149,6 +155,7 @@ Class ConsoController extends Controller
             return $this->redirectToRoute('questionnaire');
         }
 
+
         //Remove an object in the room
         if (isset($_POST['obj']) && $_POST['obj'] != '') {
             $formService->removeObj($_POST['obj']);
@@ -164,8 +171,6 @@ Class ConsoController extends Controller
         if ($rooms == null) {
             $rooms = $formService->initiateRooms($client);
         };
-
-        // TODO fermer la session
 
         $objects = $formService->findObjectsInRooms($rooms);
 
