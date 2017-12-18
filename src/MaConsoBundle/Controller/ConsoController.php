@@ -3,6 +3,7 @@
 namespace MaConsoBundle\Controller;
 
 
+use AppBundle\Entity\Gestes;
 use AppBundle\Entity\Room;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -85,6 +86,10 @@ Class ConsoController extends Controller
     {
         $formService = $this->get('formService');
         $consoService = $this->get('consoService');
+        $em = $this->getDoctrine()->getManager();
+        $gestes_repository = $em->getRepository(Gestes::class);
+        $tips = $gestes_repository->findAll();
+
         $session = $this->get('session');
 
         //If code is indicated in the URL
@@ -116,15 +121,13 @@ Class ConsoController extends Controller
         if ($client_name == null) {
             $client = $formService->findClientByName($session->get('name'));
             $consomation = $consoService->calculateConso($client);
-            $advices = $consoService->generateAdvices($client);
-
 
             return $this->render('MaConsoBundle::tableau.html.twig',
                 array(
                     'client' => $client,
-                    'advices' => $advices,
                     'consommation' => $consomation,
-                    'companies' => $formService->findCompanies()
+                    'companies' => $formService->findCompanies(),
+                    'tips' => $tips
                 )
             );
             //If the user name in the session doesn't exist, redirect to the form page
