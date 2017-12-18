@@ -17,7 +17,24 @@
             </div>
         </div>
 
-    Nombre du client: {{ client_number }}
+    Nombre total du client: {{ client_number }} <br/>
+    <table>
+	  <tr>
+	    <td></td>
+		<td>Appartement</td>
+		<td>Maison</td>
+	  </tr>
+	  <tr>
+	    <td>Nombre du clients</td>
+		<td>{{ client_appartement_number }}</td>
+		<td>{{ client_maison_number }}</td>
+	  </tr>
+	  <tr>
+	    <td>Surface moyenne</td>
+		<td>{{ surface_appartement }}</td>
+		<td>{{ surface_maison }}</td>
+	  </tr>
+	</table>
 {% endblock %}
 
 {% block javascripts %}
