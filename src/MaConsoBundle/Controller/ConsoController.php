@@ -63,6 +63,7 @@ Class ConsoController extends Controller
         $formService = $this->get('formService');
         $session = $this->get('session');
         $client = $formService->findClientByName($session->get('name'));
+        dump($client);
         $form = $this->createForm(ClientType::class, $client);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {

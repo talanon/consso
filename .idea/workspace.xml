@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7f62d22-e060-4be4-9794-6b9e76980447" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/MaConsoBundle/Controller/GestesController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/MaConsoBundle/Resources/views/tips.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Client.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Client.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Default/layout.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Default/layout.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MaConsoBundle/Controller/ConsoController.php" afterPath="$PROJECT_DIR$/src/MaConsoBundle/Controller/ConsoController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MaConsoBundle/Resources/views/tableau.html.twig" afterPath="$PROJECT_DIR$/src/MaConsoBundle/Resources/views/tableau.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MaConsoBundle/Resources/views/configuration.html.twig" afterPath="$PROJECT_DIR$/src/MaConsoBundle/Resources/views/configuration.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MaConsoBundle/Service/FormService.php" afterPath="$PROJECT_DIR$/src/MaConsoBundle/Service/FormService.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,8 +30,8 @@
       <file leaf-file-name="ConsoController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Controller/ConsoController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="92" column="41" lean-forward="false" selection-start-line="92" selection-start-column="41" selection-end-line="92" selection-end-column="41" />
+            <state relative-caret-position="374">
+              <caret line="65" column="22" lean-forward="false" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
               <folding>
                 <element signature="e#45#73#0#PHP" expanded="true" />
               </folding>
@@ -57,8 +54,8 @@
       <file leaf-file-name="tableau.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Resources/views/tableau.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="41" column="56" lean-forward="false" selection-start-line="41" selection-start-column="56" selection-end-line="41" selection-end-column="56" />
+            <state relative-caret-position="357">
+              <caret line="54" column="74" lean-forward="false" selection-start-line="54" selection-start-column="74" selection-end-line="54" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -97,8 +94,18 @@
       <file leaf-file-name="FormService.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Service/FormService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="106" column="32" lean-forward="false" selection-start-line="106" selection-start-column="32" selection-end-line="106" selection-end-column="32" />
+            <state relative-caret-position="604">
+              <caret line="172" column="26" lean-forward="false" selection-start-line="172" selection-start-column="26" selection-end-line="172" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="configuration.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Resources/views/configuration.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="765">
+              <caret line="138" column="84" lean-forward="false" selection-start-line="138" selection-start-column="84" selection-end-line="138" selection-end-column="84" />
               <folding />
             </state>
           </provider>
@@ -107,8 +114,8 @@
       <file leaf-file-name="ConsoService.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Service/ConsoService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="23" column="18" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+            <state relative-caret-position="510">
+              <caret line="35" column="1" lean-forward="false" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -130,6 +137,8 @@
       <find>accéd</find>
       <find>accéde</find>
       <find>accéder</find>
+      <find>sol</find>
+      <find>solution</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -138,12 +147,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/MaConsoBundle/Service/ConsoService.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Default/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/MaConsoBundle/Resources/views/tips.html.twig" />
         <option value="$PROJECT_DIR$/src/MaConsoBundle/Controller/GestesController.php" />
-        <option value="$PROJECT_DIR$/src/MaConsoBundle/Controller/ConsoController.php" />
         <option value="$PROJECT_DIR$/src/MaConsoBundle/Resources/views/tableau.html.twig" />
+        <option value="$PROJECT_DIR$/src/MaConsoBundle/Service/ConsoService.php" />
+        <option value="$PROJECT_DIR$/src/MaConsoBundle/Service/FormService.php" />
+        <option value="$PROJECT_DIR$/src/MaConsoBundle/Controller/ConsoController.php" />
+        <option value="$PROJECT_DIR$/src/MaConsoBundle/Resources/views/configuration.html.twig" />
       </list>
     </option>
   </component>
@@ -576,12 +587,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1513612061604</updated>
-      <workItem from="1513612066926" duration="3360000" />
+      <workItem from="1513612066926" duration="5187000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3360000" />
+    <option name="totallyTimeSpent" value="5187000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -617,22 +628,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Service/ConsoService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="23" column="18" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Service/FormService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="106" column="32" lean-forward="false" selection-start-line="106" selection-start-column="32" selection-end-line="106" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Entity/Gestes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -681,21 +676,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Service/ConsoService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="35" column="1" lean-forward="false" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Service/FormService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="604">
+          <caret line="172" column="26" lean-forward="false" selection-start-line="172" selection-start-column="26" selection-end-line="172" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Controller/StatisticController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Controller/ConsoController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="92" column="41" lean-forward="false" selection-start-line="92" selection-start-column="41" selection-end-line="92" selection-end-column="41" />
-          <folding>
-            <element signature="e#45#73#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -709,10 +710,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Resources/views/configuration.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="138" column="84" lean-forward="false" selection-start-line="138" selection-start-column="84" selection-end-line="138" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Controller/ConsoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="65" column="22" lean-forward="false" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
+          <folding>
+            <element signature="e#45#73#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Resources/views/tableau.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="41" column="56" lean-forward="false" selection-start-line="41" selection-start-column="56" selection-end-line="41" selection-end-column="56" />
+        <state relative-caret-position="357">
+          <caret line="54" column="74" lean-forward="false" selection-start-line="54" selection-start-column="74" selection-end-line="54" selection-end-column="74" />
           <folding />
         </state>
       </provider>

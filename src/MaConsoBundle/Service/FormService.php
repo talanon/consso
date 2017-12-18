@@ -121,22 +121,22 @@ Class FormService
             switch ($room->getName()) {
                 case "Cuisine":
                     if ($client->getAmpoule()) {
-                        $this->addObj($room->getId(), 'Ampoule', 1, 10, 4);
+                        $this->addObj($room->getId(), 'Ampoule', 1, 20, 5);
                     } else {
-                        $this->addObj($room->getId(), 'Ampoule', 1, 60, 4);
+                        $this->addObj($room->getId(), 'Ampoule', 1, 60, 5);
                     }
-                    $this->addObj($room->getId(), 'Réfrigirateur', 1, 250, 24);
-                    $this->addObj($room->getId(), 'Lave vaisselle', 1, 1500, 0.5);
+                    $this->addObj($room->getId(), 'Réfrigirateur', 1, 200, 24);
+                    $this->addObj($room->getId(), 'Lave vaisselle', 1, 625, 0.5);
                     $this->addObj($room->getId(), 'Hotte', 1, 150, 0.02);
                     $this->addObj($room->getId(), 'Microndes', 1, 800, 0.08);
                     $this->addObj($room->getId(), 'Machine à café', 1, 1000, 0.15);
                     $this->addObj($room->getId(), 'Grille pain', 1, 100, 0.01);
                     if ($client->getPlaque()) {
-                        $this->addObj($room->getId(), 'Plaques électriques', 1, 2000, 1);
+                        $this->addObj($room->getId(), 'Plaques électriques', 1, 2000, 0.5);
                     }
 
                     if ($client->getFour()) {
-                        $this->addObj($room->getId(), 'Four', 1, 2500, 0.20);
+                        $this->addObj($room->getId(), 'Four', 1, 2000, (1.5/7));
                     }
 
                     break;
@@ -146,9 +146,9 @@ Class FormService
                     } else {
                         $this->addObj($room->getId(), 'Ampoule', 1, 60, 4);
                     }
-                    $this->addObj($room->getId(), 'Lave linge', 1, 2200, 0.75);
+                    $this->addObj($room->getId(), 'Lave linge', 1, 2200, 4/7);
                     if ($client->getLinge()) {
-                        $this->addObj($room->getId(), 'Sèche linge', 1, 3000, 0.75);
+                        $this->addObj($room->getId(), 'Sèche linge', 1, 2500, 2/7);
                     }
                     $this->addObj($room->getId(), 'Sèche cheveux', 1, 600, 0.20);
                     //$this->addObj($room->getId(),'Chauffe eau',1,80,1);
