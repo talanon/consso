@@ -81,7 +81,6 @@ class Client
      */
     private $seche;
 
-
     /**
      * @ORM\Column(type="boolean", nullable=true)
      */
@@ -96,7 +95,7 @@ class Client
      * @ORM\Column(type="boolean", nullable=true)
      */
     private $hasVoted;
-    
+
 
     /**
      * Get id

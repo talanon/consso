@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+ {% block stylesheets %}
+ {% endblock %}
+
+{% block body %}
+    <div class="wrapper">
+        <div class="header clearfix">
+            <div class="left"><a href="/"><div id="logo">CONSSO.FR</div></a></div>
+            <div class="right">
+                <ul id="navigation" class="clearfix">
+                    <a href=""><li>A propos</li></a>
+                    <a href=""><li>Références</li></a>
+                    <a href=""><li>Objectifs</li></a>
+                    <a href=""><li>Contact</li></a>
+                </ul>
+            </div>
+
+        </div>
+        <div class="content clearfix">
+            <div class="window">
+                <div class="categories">
+                    <h1>Les catégories</h1>
+                    {% for category in categories %}
+                        <a href="/les-bons-gestes/{{ category }}"><div class="l2-block">{{ category }}</div></a>
+                    {% endfor %}
+                </div>
+                <div class="tips">
+                    <h1>Les conseils</h1>
+                {% for tip in tips %}
+                    <div class="l2-block">{{ tip.description }}</div>
+                {% endfor %}
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="col3"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {% javascripts'@AppBundle/Resources/public/js/*' %}<script src="{{ asset_url }}"></script>{% endjavascripts %}
+{% endblock %}

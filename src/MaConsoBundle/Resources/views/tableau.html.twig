@@ -38,10 +38,12 @@
                         <h1>Nos conseils</h1>
                         <p>
                             <ul>
-                            {% for advice in advices %}
+                            {% set i = 0 %}
+                            {% for tip in tips if i<2 %}
                                 <li>
-                                   {{ advice }}
+                                   {{ tip.description }}
                                 </li>
+                                {% set i = i+1 %}
                             {% endfor %}
                             </ul>
                         </p>
@@ -49,7 +51,7 @@
                     <div id="mask_advice"  class="in-block right">
                         <ul>
                             <li>
-                                <a href="#"><h2> > Accéder à tous nos conseils</h2></a>
+                                <a href="/les-bons-gestes"><h2> > Accéder à tous nos conseils</h2></a>
                                 <p>Une liste de tous nos conseils filtrable selon certains critère.</p>
                             </li>
                             <li>
