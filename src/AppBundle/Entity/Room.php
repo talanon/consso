@@ -35,6 +35,13 @@ class Room
      */
     private $name;
 
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="total", type="float")
+     */
+    private $total;
+
 
     /**
      * Get id
@@ -92,5 +99,29 @@ class Room
     public function getName()
     {
         return $this->name;
+    }
+
+    /**
+     * Set total
+     *
+     * @param float $total
+     *
+     * @return Room
+     */
+    public function setTotal($total)
+    {
+        $this->total = $total;
+
+        return $this;
+    }
+
+    /**
+     * Get total
+     *
+     * @return float
+     */
+    public function getTotal()
+    {
+        return $this->total;
     }
 }

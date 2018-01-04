@@ -16,4 +16,13 @@ class DefaultController extends Controller
         // replace this example code with whatever you need
         return $this->render('AppBundle:Default:layout.html.twig');
     }
+
+    /**
+     * @Route("/logout", name="logout")
+     */
+    public function logoutAction(Request $request)
+    {
+        session_destroy();
+        return $this->render('AppBundle:Default:layout.html.twig');
+    }
 }

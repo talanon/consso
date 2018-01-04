@@ -95,6 +95,11 @@ class Client
      */
     private $hasVoted;
 
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $hasCompleted = 0;
+
 
     /**
      * Get id
@@ -488,5 +493,29 @@ class Client
     public function getHasVoted()
     {
         return $this->hasVoted;
+    }
+
+    /**
+     * Set hasCompleted
+     *
+     * @param boolean $hasCompleted
+     *
+     * @return Client
+     */
+    public function setHasCompleted($hasCompleted)
+    {
+        $this->hasCompleted = $hasCompleted;
+
+        return $this;
+    }
+
+    /**
+     * Get hasCompleted
+     *
+     * @return boolean
+     */
+    public function getHasCompleted()
+    {
+        return $this->hasCompleted;
     }
 }

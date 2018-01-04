@@ -35,6 +35,13 @@ class Room
      */
     private $name;
 
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="total", type="float")
+     */
+    private $total;
+
 
     /**
      * Get id

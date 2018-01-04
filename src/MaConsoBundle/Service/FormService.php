@@ -172,7 +172,7 @@ Class FormService
                     $this->addObj($room->getId(), 'Radio reveil', 1, 10, 24);
                     break;
                 case "Salon":
-                    $this->addObj($room->getId(), 'Ampoule', 2, 60, 2);
+                    $this->addObj($room->getId(), 'Ampoule', 2, 60, 5);
                     $this->addObj($room->getId(), 'Télévision', 1, 200, 4);
                     $this->addObj($room->getId(), 'Sono', 1, 80, 4);
                     $this->addObj($room->getId(), 'Box internet', 1, 5, 24);
@@ -202,6 +202,13 @@ Class FormService
         $i = 0;
         foreach ($rooms as $room) {
             $objects[$i] = $this->repository_object->findBy(array('roomId' => $room->getId()));
+            $total = 0;
+            foreach ($objects[$i] as $object){
+                $total = $total+($object->getQuantity()*$object->getUtilisation()*$object->getPower());
+            }
+            $room->setTotal($total/1000);
+            $this->em->persist($room);
+            $this->em->flush();
             $i++;
         }
         return $objects;

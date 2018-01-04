@@ -42,7 +42,7 @@ class ConsoService
                 $sum += $object->getUtilisation()*$object->getPower()*$object->getQuantity();
             }
         }
-
+        dump($sum/1000);
         return round(($sum/1000)*0.1593*30.5);
     }
 

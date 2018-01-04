@@ -9,6 +9,7 @@
             <div class="left"><a href="/"><div id="logo">CONSSO.FR</div></a></div>
             <div class="right">
                 <ul id="navigation" class="clearfix">
+                    {% if client is defined %}<a href="/logout"><li>Se déconnecter</li></a>{% endif %}
                     <a href=""><li>A propos</li></a>
                     <a href=""><li>Références</li></a>
                     <a href=""><li>Objectifs</li></a>
@@ -21,7 +22,7 @@
             <div class="block ">
                 <div class="l2-block tool">
                     <div id="show" class="in-block left">
-                        <h1>Mon bien</h1>
+                        <h1>{% if not client.hasCompleted %}<i class="material-icons">warning</i>{% endif %}Mon bien</h1>
                         <div class="bien">
                             <p id="p1">{{ client.surface }} m²</p>
                             <p id="p2">{{ client.piece }} pièces</p>
@@ -29,7 +30,8 @@
                     </div>
                     <a href="{{ path('configuration') }}" >
                         <div id="mask_tool"  class="in-block left">
-                        <p><h1> > Modifier</h1></p>
+                            <p><h1> > Modifier</h1></p>
+                            {% if not client.hasCompleted %}<p>Il semblerait que vous n'avez pas encore compléter votre bien.</p>{% endif %}
                         </div>
                     </a>
                 </div>
@@ -70,8 +72,17 @@
                         <p class="conso-price">{{ consommation }}€</p>
                     </div>
                     <div id="mask_consommation"  class="in-block left">
-                        <p>Il s'agit d'une estimation basée sur votre configuration située plus haut.</p>
-                        <center><p>Notre estimation est-elle correct ? (à 1€ près)</p>
+                        {% if client.hasVoted is null %}
+                            <p>Il s'agit d'une estimation basée sur votre configuration située plus haut.</p>
+                        {% else %}
+                            {% if client.hasVoted == 0 %}
+                                <p>Vous avez signalé une mauvaise estimation. Nous nous excusons et vous remercions d'avoir participé à l'évolution de notre produit.</p>
+                            {% else %}
+                                <p>La dernière estimation était bonne. Nous vous remercions d'avoir participé à l'évolution de notre produit.</p>
+                            {% endif %}
+                        {% endif %}
+
+                        <center><p>Notre estimation est-elle correct ? (à 2€ près)</p>
                         <a href="{{ path('estimate', {code: client.name, response: 'true'}) }}">> Oui</a>
                         <a href="{{ path('estimate', {code: client.name, response: 'false'}) }}">Non <</a></center>
                     </div>
@@ -79,7 +90,28 @@
                 <div class="l6-block company">
                     <div class="in-block right">
                         <h1>Vos consommation anormales</h1>
-                        <p>Aucune consommation anormale, félicitation !</p>
+                        {% set alert = 0 %}
+                        {% for room in rooms %}
+                            {% if room.name == 'Cuisine' and room.total>=5.9 %}
+                                <p>Attention ! Votre cuisine semble consommer plus que la normale.</p>
+                                {% set alert = alert + 1 %}
+                            {% elseif room.name == 'Salle de bain' and room.total>=2.5 %}
+                                <p>Attention ! Votre salle de bain semble consommer plus que la normale.</p>
+                                {% set alert = alert + 1 %}
+                            {% elseif room.name == 'Salon' and room.total>=1.50 %}
+                                <p>Attention ! Votre salon semble consommer plus que la normale.</p>
+                                {% set alert = alert + 1 %}
+                            {% elseif room.name == 'Chambre parentale' and room.total>=0.75 %}
+                                <p>Attention ! Votre chambre parentale semble consommer plus que la normale.</p>
+                                {% set alert = alert + 1 %}
+                            {% elseif room.name == 'Chambre enfant' and room.total>=0.75 %}
+                                <p>Attention ! Votre chambre d'enfant semble consommer plus que la normale.</p>
+                                {% set alert = alert + 1 %}
+                            {% endif %}
+                        {% endfor %}
+                        {% if alert == 0 %}
+                            <p>Aucune consommation anormale, félicitation !</p>
+                        {% endif %}
                     </div>
                 </div>
                 <div class="clearfix"></div>

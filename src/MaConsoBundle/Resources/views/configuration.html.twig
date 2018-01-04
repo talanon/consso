@@ -9,6 +9,7 @@
             <div class="left"><a href="/"><div id="logo">CONSSO.FR</div></a></div>
             <div class="right">
                 <ul id="navigation" class="clearfix">
+                    {% if client is defined %}<a href="/logout"><li>Se déconnecter</li></a>{% endif %}
                     <a href=""><li>A propos</li></a>
                     <a href=""><li>Références</li></a>
                     <a href=""><li>Objectifs</li></a>
@@ -51,14 +52,37 @@
             </div>
 
             <div class="colleft">
-                {% for company in companies %}
-                    <div class="price">
-                        <h1>{{ company.name }}</h1>
-                        <div class="actual"> 1kWh = {{ company.price }} €</div>
-                    </div>
-                {% endfor %}
                 <div class="price">
-                    <h1>Quelques exemples</h1>
+                    <h1>Mon profil</h1>
+                     <div class="actual">
+                        <ul>
+                            <li>code d'accès : {{ client.name }}</li>
+                            <li>Votre départment : {{ client.region }}</li>
+                            <li>Type de logement : {{ client.logement }}</li>
+                            <li>Dernière rénovation : {{ client.age }}</li>
+                            <li>Chauffage éléctrique : {{ client.chauffage }}</li>
+                            <li>Votre surface : {{ client.surface }}m²</li>
+                            <li>Nombre d'habitant : {{ client.foyer }}</li>
+                            <li>Nombre de pièces : {{ client.piece }}</li>
+                            <li>Ampoules économiques : {{ client.ampoule }}</li>
+                            <li>Lave-linge : {{ client.linge }}</li>
+                            <li>Seche-linge : {{ client.seche }}</li>
+                            <li>Four éléctrique : {{ client.four }}</li>
+                            <li>Plaques éléctriques : {{ client.plaque }}</li>
+                        </ul>
+                     </div>
+                </div>
+                <div class="price">
+                    <a href="/maconso/questionnaire"><h1><br>Modifier mon profil<br><br></h1></a>
+                </div>
+                {#{% for company in companies %}#}
+                    {#<div class="price">#}
+                        {#<h1>{{ company.name }}</h1>#}
+                        {#<div class="actual"> 1kWh = {{ company.price }} €</div>#}
+                    {#</div>#}
+                {#{% endfor %}#}
+                <div class="price">
+                    <h1 style="background: #ababab">Quelques exemples</h1>
                     <div class="actual">
                         <ul>
                             <li>
@@ -86,7 +110,7 @@
                     </div>
                 </div>
                 <div class="price">
-                    <h1>Liens utiles</h1>
+                    <h1 style="background: #ababab">Liens utiles</h1>
                     <div class="actual">
                         <ul>
                             <li>
@@ -111,7 +135,18 @@
                 {% set highttotal=0 %}
                 {% for room in rooms %}
                     <div class="col4" id="room_{{ i }}">
-                        <h1>{{ room.name }}<span style="float: right;"><button onclick="popObj({{ room.id }}, {{ i }});">+</button><button onclick="removeRoom({{ room.id }});">x</button></span></h1>
+                        <h1
+                        {% if room.name == 'Cuisine' and room.total<5.9 %}
+                            style=" background:#49b844"
+                        {% elseif room.name == 'Salle de bain' and room.total<2.5 %}
+                            style=" background:#49b844"
+                        {% elseif room.name == 'Salon' and room.total<1.50 %}
+                            style=" background:#49b844"
+                        {% elseif room.name == 'Chambre parentale' and room.total<0.75 %}
+                            style=" background:#49b844"
+                        {% elseif room.name == 'Chambre enfant' and room.total<0.75 %}
+                            style=" background:#49b844"
+                        {% endif %}>{{ room.name }}<span style="float: right;"><button style="background: none;border: none;" onclick="popObj({{ room.id }}, {{ i }});"><i class="material-icons">add_box</i></button><button onclick="removeRoom({{ room.id }});" style="background: none;border: none;"><i class="material-icons">remove_circle</i></button></span></h1>
                         <ul id="list_{{ i }}">
                             {% for object in objects[i] %}
                                 {% set total = total + (object.power*object.utilisation) %}
@@ -136,15 +171,10 @@
 
             <div class="colright">
                 <div class="price">
-                    <a href="/maconso/questionnaire"><h1><br>Modifier mon profil<br></h1></a>
-                </div>
-                <div class="price">
                     <h1>Ma consommation mensuelle en kWh</h1>
                     {% if chauffage == 0 %}
-                        {% set average =   4900 /12 %}
                         {% set finaltotal = (30.5)*highttotal/1000  %}
                     {% else %}
-                        {% set average =   (((28*surface)-(28*(surface/10)))/12)/0.1564 %}
                         {% set finaltotal = ((30.5)*highttotal/1000)+(chauffage*24*30.5/1000)  %}
                     {% endif %}
                     {% set finalaverage = (((average/finaltotal)*100)-100)|round(1, 'floor') %}
@@ -156,12 +186,14 @@
                     <h1>Ma consommation mensuelle en €</h1>
                     <div class="actual">{{ (finaltotal*0.1564)|round(1, 'floor') }} €{% if finaltotal>=average %}<span class="red_desc">+{{ finalaverage2 }}%</span>{% else %}<span class="green_desc">-{{ finalaverage }}%</span>{% endif %}</div>
                 </div>
+                {% if chauffage > 0 %}
                 <div class="price">
                     <h1>Mon chauffage</h1>
                     <div class="actual clearfix">
                         {{ chauffage }}Watt soit {{ (chauffage*24*30.5*0.1564/1000)|round(1, 'floor') }} € par mois
                     </div>
                 </div>
+                {% endif %}
                 <div class="price">
                     <h1>Consomation mensuelle d'un foyer lambda</h1>
                     <div class="actual clearfix">
@@ -169,18 +201,10 @@
                     </div>
                 </div>
                 <div class="price">
-                    <h1>Comment réduire ma consommation ?</h1>
+                    <h1 style="background: #49b844">Comment réduire ma consommation ?</h1>
                     <div class="actual clearfix">
                         Pour avoir des solutions concrètes et personnalisés pour votre ménage.<br><br>
                         <a href="/app_dev.php/solution" id="btn_start">COMMENCER</a>
-                    </div>
-                </div>
-                <div class="price">
-                    <h1>AIDE</h1>
-                    <div class="actual clearfix">
-                        Une fois la construction de votre tableau de bord achevé nous vous invitons à passer à la suite du contenu.
-                        En cliquant sur le bouton ci-dessous.<br><br>
-                        <button id="suite" type="button">suite</button>
                     </div>
                 </div>
             </div>

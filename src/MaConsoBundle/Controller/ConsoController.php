@@ -3,6 +3,7 @@
 namespace MaConsoBundle\Controller;
 
 
+use AppBundle\AppBundle;
 use AppBundle\Entity\Gestes;
 use AppBundle\Entity\Room;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -88,9 +89,8 @@ Class ConsoController extends Controller
         $formService = $this->get('formService');
         $consoService = $this->get('consoService');
         $em = $this->getDoctrine()->getManager();
-        $gestes_repository = $em->getRepository(Gestes::class);
+        $gestes_repository = $em->getRepository('AppBundle:Gestes');
         $tips = $gestes_repository->findAll();
-
         $session = $this->get('session');
 
         //If code is indicated in the URL
@@ -98,15 +98,16 @@ Class ConsoController extends Controller
             $client = $formService->findClientByName($code);
             //If the client exists
             if($client != null){
-                $consomation = $consoService->estimateConso($client);
+                $consomation = $consoService->computeObject($client);
                 $advices = $consoService->generateAdvices($client);
-                //Clear user name stored in the session
-                $session->remove('name');
+                $session->set('name', $client->getName());
+                $rooms = $formService->findRooms($client);
                 return $this->render('MaConsoBundle::tableau.html.twig',
                     array(
                         'client' => $client,
-                        'advices' => $advices,
+                        'rooms' => $rooms,
                         'consommation' => $consomation,
+                        'tips' => $tips,
                         'companies' => $formService->findCompanies()
                     )
                 );
@@ -122,10 +123,12 @@ Class ConsoController extends Controller
         if ($client_name == null) {
             $client = $formService->findClientByName($session->get('name'));
             $consomation = $consoService->calculateConso($client);
+            $rooms = $formService->findRooms($client);
 
             return $this->render('MaConsoBundle::tableau.html.twig',
                 array(
                     'client' => $client,
+                    'rooms' => $rooms,
                     'consommation' => $consomation,
                     'companies' => $formService->findCompanies(),
                     'tips' => $tips
@@ -180,11 +183,23 @@ Class ConsoController extends Controller
 
         $companies = $formService->findCompanies();
         if ($client->getChauffage()) {
-            $chauffage = $client->getSurface() * 11.7;
+            $hauteur = 2.5;
+            $diffTemperature = 0.54;
+            $etatdulogement = 1.5; //1.5 ,1.6 -> 2
+            $chauffage = $client->getSurface() * $hauteur * $diffTemperature * $etatdulogement;
             $surface = $client->getSurface();
         } else {
             $chauffage = 0;
             $surface = 0;
+        }
+
+        if($client->getChauffage() == 1)
+        {
+            $average = 13000/12;
+        }
+        else {
+
+           $average =  3000/12;
         }
 
         $form_obj = $this->createForm(AddObjType::class, null);
@@ -192,6 +207,8 @@ Class ConsoController extends Controller
 
         return $this->render('MaConsoBundle::configuration.html.twig',
             array(
+                'average' => $average,
+                'client' => $client,
                 'name' => $client->getName(),
                 'rooms' => $rooms,
                 'objects' => $objects,
@@ -213,6 +230,9 @@ Class ConsoController extends Controller
         $em = $this->getDoctrine()->getEntityManager();
         $session = $this->get('session');
         $client = $repository_client->findOneBy(array('name' => $session->get('name')));
+        $client->setHasCompleted(true);
+        $em->persist($client);
+        $em->flush();
 
         $type = $request->get('type');
 
@@ -238,6 +258,7 @@ Class ConsoController extends Controller
                 $name = $request->get('name');
                 $room = new Room();
                 $room->setName($name);
+                $room->setTotal(0);
                 $room->setClientId($client->getId());
                 $em->persist($room);
                 $em->flush();
