@@ -40,7 +40,7 @@ class Room
      *
      * @ORM\Column(name="total", type="float")
      */
-    private $total;
+    private $total = 0;
 
 
     /**

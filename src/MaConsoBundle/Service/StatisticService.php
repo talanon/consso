@@ -39,14 +39,43 @@ Class StatisticService
         return $this->repository_client->findBy(array('logement' => $logement_type));
     }
 
-    public function findClientsByTypeAndSurface($logement_type,$surface_min,$surface_max)
+    public function findClientsByTypeAndSurface($type_logement,$surface_min,$surface_max)
     {
         $query = $this->repository_client->createQueryBuilder('c')
-            ->where('c.logement = :logement_type')
-            ->andWhere('c.surface >= :min')
+            ->where('c.surface >= :min')
             ->andWhere('c.surface < :max')
-            ->setParameters(array('logement_type' => $logement_type, 'min' => $surface_min, 'max' => $surface_max))
-            ->getQuery();
+            ->setParameters(array('min' => $surface_min, 'max' => $surface_max));
+        if(!empty($type_logement))
+        {
+            $query->andWhere('c.logement = :logement_type')
+                  ->setParameter('logement_type',$type_logement);
+        }
+        $query = $query->getQuery();
+        $clients = $query->getResult();
+        return $clients;
+    }
+
+    public function findClientsByType($type_logement, $type, $nombre)
+    {
+        $query = $this->repository_client->createQueryBuilder('c');
+        if(empty($type_logement))
+        {
+            if(!empty($type))
+            {
+                $query->where('c.'.$type.'= :nombre')
+                    ->setParameter('nombre',$nombre);
+            }
+        }else
+        {
+            $query->where('c.logement = :type_logement')
+                  ->setParameter('type_logement',$type_logement);
+            if(!empty($type))
+            {
+                $query->andWhere('c.'.$type.'= :nombre')
+                    ->setParameter('nombre',$nombre);
+            }
+        };
+        $query = $query->getQuery();
         $clients = $query->getResult();
         return $clients;
     }
@@ -68,11 +97,12 @@ Class StatisticService
 
     public function getObjectsQuantityStat($objectsArray,$client_number)
     {
-
         $result = array('Ampoule'=>0, 'Lampe de chevet'=>0,'Ordinateur'=>0, 'Télévision'=>0, 'Lave linge'=>0
                         ,'Réfrigirateur'=>0, 'Lave vaisselle'=>0,'Plaques électriques'=>0
                         ,'Hotte'=>0, 'Microndes'=>0, 'Machine à café'=>0, 'Grille pain'=>0
                         ,'Sèche linge'=>0, 'Autre'=>0);
+        if($client_number == 0)
+            return $result;
         foreach($objectsArray as $objects)
         {
             foreach($objects as $object)

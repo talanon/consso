@@ -60,18 +60,28 @@
                 <div class="divider"></div>
                 <div class="row section">
                     <h5>Recherche Avancé</h5>
-                    <div class="input-field col s2 ">
-                        <span>Type du logement</span><br/><br/>
-                        <select id="type" class="browser-default">
-                            <option value="" disabled selected>Choisir le type</option>
+                    <div class="input-field col s3 ">
+                        <label>Type du logement</label><br/><br/>
+                        <select id="type_logement" class="browser-default">
+                            <option value="" selected>N'import quel type</option>
                             <option value="appartement">Appartement</option>
                             <option value="maison">Maison</option>
                         </select>
                     </div>
 
+                    <div class="input-field col s3 ">
+                        <label>Type recherche</label><br/><br/>
+                        <select id="type" class="browser-default">
+                            <option value="" selected>N'import quel type</option>
+                            <option value="surface">Surface</option>
+                            <option value="foyer">Foyer</option>
+                            <option value="piece">Pièce</option>
+                        </select>
+                    </div>
+
                     <div class="input-field col s2">
-                        <span>Nombre Surface</span><br/><br/>
-                        <input type="number" id="surface" min="1" max="100" />
+                        <label>Valeur</label><br/><br/>
+                        <input type="number" id="nombre" min="1" max="100" />
                     </div>
 
                     <div class="input-field col s1">
@@ -105,10 +115,11 @@
     <script type="text/javascript">
         $(document).ready(function(){
             $("#commencer").click(function(){
+                var type_logement = $("#type_logement").val();
                 var type = $("#type").val();
-                var surface = $("#surface").val();
+                var nombre = $("#nombre").val();
                 $.post("statistic/getData"
-                    ,{type:type, surface:surface}
+                    ,{type_logement:type_logement, type:type, nombre:nombre}
                     ,function(data){
                         //alert(data.Ampoule);
                         drawObjectQuantityChart(data.object_quantity);
