@@ -81,6 +81,8 @@ Class FormService
         return $this->repository_room->findOneBy(array('clientId' => $client_id, 'name' => $room_name));
     }
 
+
+
     public function findRooms($client)
     {
         return $this->repository_room->findBy(array('clientId' => $client->getId()));
