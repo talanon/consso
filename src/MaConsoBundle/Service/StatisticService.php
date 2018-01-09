@@ -39,19 +39,123 @@ Class StatisticService
         return $this->repository_client->findBy(array('logement' => $logement_type));
     }
 
+    public function findClientsByTypeAndSurface($logement_type,$surface_min,$surface_max)
+    {
+        $query = $this->repository_client->createQueryBuilder('c')
+            ->where('c.logement = :logement_type')
+            ->andWhere('c.surface >= :min')
+            ->andWhere('c.surface < :max')
+            ->setParameters(array('logement_type' => $logement_type, 'min' => $surface_min, 'max' => $surface_max))
+            ->getQuery();
+        $clients = $query->getResult();
+        return $clients;
+    }
+
+    public function findObjectsByClients($clients)
+    {
+        $result = array();
+        foreach($clients as $client)
+        {
+            $rooms = $this->findRoomsByClientId($client);
+            foreach ($rooms as $room)
+            {
+                $objects = $this->findObjectsByRoomId($room);
+                array_push($result,$objects);
+            }
+        }
+        return $result;
+    }
+
+    public function getObjectsQuantityStat($objectsArray,$client_number)
+    {
+
+        $result = array('Ampoule'=>0, 'Lampe de chevet'=>0,'Ordinateur'=>0, 'Télévision'=>0, 'Lave linge'=>0
+                        ,'Réfrigirateur'=>0, 'Lave vaisselle'=>0,'Plaques électriques'=>0
+                        ,'Hotte'=>0, 'Microndes'=>0, 'Machine à café'=>0, 'Grille pain'=>0
+                        ,'Sèche linge'=>0, 'Autre'=>0);
+        foreach($objectsArray as $objects)
+        {
+            foreach($objects as $object)
+            {
+                if(array_key_exists($object->getName(), $result))
+                {
+                    $result[$object->getName()] += $object->getQuantity();
+                } else
+                {
+                    $result['Autre']  += $object->getQuantity();
+                }
+            }
+        }
+        foreach ($result as $item=>$item_value)
+        {
+            $result[$item] = floatval(number_format($item_value/$client_number,1));
+        }
+        return $result;
+    }
+
+    public function getElectricityStat($objectsArray,$client_number)
+    {
+        $result = array('Ampoule'=>0, 'Lampe de chevet'=>0,'Ordinateur'=>0, 'Télévision'=>0, 'Lave linge'=>0
+        ,'Réfrigirateur'=>0, 'Lave vaisselle'=>0,'Plaques électriques'=>0
+        ,'Hotte'=>0, 'Microndes'=>0, 'Machine à café'=>0, 'Grille pain'=>0
+        ,'Sèche linge'=>0,'Autre'=>0);
+        foreach($objectsArray as $objects)
+        {
+            foreach($objects as $object)
+            {
+                if(array_key_exists($object->getName(), $result))
+                {
+                    $result[$object->getName()] += $object->getQuantity()*$object->getUtilisation()*$object->getPower();
+                } else
+                {
+                    $result['Autre']  += $object->getQuantity()*$object->getUtilisation()*$object->getPower();
+                }
+            }
+        }
+        foreach ($result as $item=>$item_value)
+        {
+            $result[$item] = $item_value/$client_number;
+        }
+        return $result;
+    }
+
     public function calculateAverage($attribute,$clients)
     {
         $sum = 0;
         $count = 0;
-        $client = new Client();
         foreach($clients as $client){
             switch($attribute){
                 case "surface":
                     $sum += $client->getSurface();
                     $count++;
                     break;
+                case "foyer":
+                    $sum += $client->getFoyer();
+                    $count++;
+                    break;
+                case "piece":
+                    $sum += $client->getPiece();
+                    $count++;
+                    break;
+                case "eco":
+                    $sum += $client->getAmpoule();
+                    $count++;
+                    break;
             }
         }
-        return number_format($sum/$count,2);
+        if ($attribute == "eco")
+            return $count != 0?number_format($sum/$count,3):0;
+        return $count != 0?number_format($sum/$count,1):0;
     }
+
+    private function findRoomsByClientId(Client $client)
+    {
+        return $this->repository_room->findBy(array('clientId' => $client->getId()));
+    }
+
+    private function findObjectsByRoomId(Room $room)
+    {
+        return $this->repository_object->findBy(array('roomId' => $room->getId()));
+    }
+
 }

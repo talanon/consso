@@ -17,63 +17,158 @@
             </div>
         </div>
 
-    Nombre total du client: {{ client_number }} <br/>
-    <table>
-	  <tr>
-	    <td></td>
-		<td>Appartement</td>
-		<td>Maison</td>
-	  </tr>
-	  <tr>
-	    <td>Nombre du clients</td>
-		<td>{{ client_appartement_number }}</td>
-		<td>{{ client_maison_number }}</td>
-	  </tr>
-	  <tr>
-	    <td>Surface moyenne</td>
-		<td>{{ surface_appartement }}</td>
-		<td>{{ surface_maison }}</td>
-	  </tr>
-	</table>
-	<!--Div that will hold the pie chart-->
-    <div id="chart_div"></div>
-    <div id="chart_div1"></div>
+        <div class="content clearfix">
+            <div class="window">
+                <h4>Page Statistique</h4>
+                <div class="divider"></div>
+                <div class="row section">
+                    <h5>Statistique Globale</h5>
+                    <div class="col s10">
+                        <table class="centered bordered highlight">
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Nombre</th>
+                                    <th>Surface(/m²)</th>
+                                    <th>Foyer</th>
+                                    <th>Pièce</th>
+                                    <th>Ampoule eco</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Appratement</td>
+                                    <td>{{ client_appartement_number }}</td>
+                                    <td>{{ surface_appartement }}</td>
+                                    <td>{{ foyer_appartement }}</td>
+                                    <td>{{ piece_appartement }}</td>
+                                    <td>{{ eco_appartement }}%</td>
+                                </tr>
+                                <tr>
+                                    <td>Maison</td>
+                                    <td>{{ client_maison_number }}</td>
+                                    <td>{{ surface_maison }}</td>
+                                    <td>{{ foyer_maison }}</td>
+                                    <td>{{ piece_maison }}</td>
+                                    <td>{{ eco_maison }}%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="row section">
+                    <h5>Recherche Avancé</h5>
+                    <div class="input-field col s2 ">
+                        <span>Type du logement</span><br/><br/>
+                        <select id="type" class="browser-default">
+                            <option value="" disabled selected>Choisir le type</option>
+                            <option value="appartement">Appartement</option>
+                            <option value="maison">Maison</option>
+                        </select>
+                    </div>
+
+                    <div class="input-field col s2">
+                        <span>Nombre Surface</span><br/><br/>
+                        <input type="number" id="surface" min="1" max="100" />
+                    </div>
+
+                    <div class="input-field col s1">
+                        <br/><br/>
+                        <a id="commencer" class="waves-effect waves-light btn">Commencer</a>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+                <div class="row section">
+                    <h5>Résultat</h5>
+                    <!--Div that will hold the pie chart-->
+                    <div class="section">
+                        <h6>Quantités moyennes d'objet</h6>
+                        <div id="quantity_obj" style="width: 900px; height: 500px;"></div>
+                    </div>
+                    <div class="section">
+                        <h6>Electricité utilisé par jour(Wh)</h6>
+                        <div id="elec_used" style="width: 900px; height: 500px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 {% endblock %}
 
 {% block javascripts %}
     {% javascripts'@AppBundle/Resources/public/js/*' %}<script src="{{ asset_url }}"></script>{% endjavascripts %}
-     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-
-      // Load the Visualization API and the corechart package.
-      google.charts.load('current', {'packages':['corechart']});
-
-      // Set a callback to run when the Google Visualization API is loaded.
-      google.charts.setOnLoadCallback(drawClientTypeChart);
-
-      // Callback that creates and populates a data table,
-      // instantiates the pie chart, passes in the data and
-      // draws it.
-      function drawClientTypeChart() {
-        // Create the data table.
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Topping');
-        data.addColumn('number', 'Slices');
-        data.addRows([
-          ['Appartement', {{ client_appartement_number }}],
-          ['Maison', {{ client_maison_number }}]
-        ]);
-
-        // Set chart options
-        var options = {'title':'Nombre du clients',
-                       'width':400,
-                       'height':300};
-
-        // Instantiate and draw our chart, passing in some options.
-        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-        var chart1 = new google.visualization.PieChart(document.getElementById('chart_div1'));
-        chart.draw(data, options);
-        chart1.draw(data, options);
-      }
+        $(document).ready(function(){
+            $("#commencer").click(function(){
+                var type = $("#type").val();
+                var surface = $("#surface").val();
+                $.post("statistic/getData"
+                    ,{type:type, surface:surface}
+                    ,function(data){
+                        //alert(data.Ampoule);
+                        drawObjectQuantityChart(data.object_quantity);
+                        drawElecUsedChart(data.electricity_used);
+                    },"json");
+            });
+        });
     </script>
+    <script>
+
+    // Load the Visualization API and the corechart package.
+    google.charts.load('current', {'packages':['corechart']});
+
+    // Set a callback to run when the Google Visualization API is loaded.
+    //google.charts.setOnLoadCallback(drawClientTypeChart);
+
+    // Callback that creates and populates a data table,
+    // instantiates the pie chart, passes in the data and
+    // draws it.
+    function createTableData(data){
+        var tabData = google.visualization.arrayToDataTable([
+            ['Object Name', 'Quantité'],
+            ['Ampoule', data["Ampoule"]],['Lampe de chevet', data['Lampe de chevet']],
+            ['Ordinateur', data['Ordinateur']],['Télévision', data["Télévision"]],
+            ['Plaques électriques', data['Plaques électriques']],
+            ['Réfrigirateur', data['Réfrigirateur']], ['Lave linge', data['Lave linge']],
+            ['Hotte', data['Hotte']], ['Microndes', data['Microndes']],
+            ['Machine à café', data['Machine à café']],['Lave vaisselle', data['Lave vaisselle']],
+            ['Grille pain', data['Grille pain']],['Sèche linge', data['Sèche linge']], ['Autre', data['Autre']]
+        ]);
+        return tabData;
+    }
+    function drawElecUsedChart(data) {
+        var tabData = createTableData(data);
+        var options = {
+            pieSliceText: 'label',
+            slices: {  0: {offset: 0.1}
+            },
+        };
+        var chart = new google.visualization.PieChart(document.getElementById('elec_used'));
+        chart.draw(tabData, options);
+    }
+    function drawObjectQuantityChart(data) {
+        var tabData = createTableData(data);
+
+        var view = new google.visualization.DataView(tabData);
+        view.setColumns([0, 1,
+            { calc: "stringify",
+                sourceColumn: 1,
+                type: "string",
+                role: "annotation" }]);
+
+        var options = {
+            width: 900,
+            height: 500,
+            bar: {groupWidth: "95%"},
+            legend: { position: "none" }
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('quantity_obj'));
+        chart.draw(tabData, options);
+    }
+</script>
 {% endblock %}
