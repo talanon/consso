@@ -42,7 +42,10 @@ class ConsoService
                 $sum += $object->getUtilisation()*$object->getPower()*$object->getQuantity();
             }
         }
-        dump($sum/1000);
+        if($client->getChauffage()){
+            $sum += ( $client->getSurface() * 2.5 * 10 * 1.5 * 24 * 0.1593);
+        }
+        ///dump($sum/1000);
         return round(($sum/1000)*0.1593*30.5);
     }
 

@@ -129,44 +129,6 @@
                 </div>
             </div>
             <div class="colright">
-                <div class="price">
-                    <h1>Ma consommation mensuelle en kWh</h1>
-                    {% if chauffage == 0 %}
-                        {% set average =   4900 /12 %}
-                        {% set finaltotal = (30.5)*highttotal/1000  %}
-                    {% else %}
-                        {% set average =   (((28*surface)-(28*(surface/10)))/12)/0.1564 %}
-                        {% set finaltotal = ((30.5)*highttotal/1000)+(chauffage*24*30.5/1000)  %}
-                    {% endif %}
-                    {% set finalaverage = (((average/finaltotal)*100)-100)|round(1, 'floor') %}
-                    {% set finalaverage2 = (((finaltotal/average)*100)-100)|round(1, 'floor') %}
-                    <div class="actual">{{ finaltotal|round(1, 'floor') }} kWh{% if finaltotal>=average %}<span class="red_desc">+{{ finalaverage2 }}%</span>{% else %}<span class="green_desc">-{{ finalaverage }}%</span>{% endif %}</div>
-                </div>
-                <div class="price orange">
-                    <h1>Ma consommation mensuelle en €</h1>
-                    <div class="actual">{{ (finaltotal*0.1564)|round(1, 'floor') }} €{% if finaltotal>=average %}<span class="red_desc">+{{ finalaverage2 }}%</span>{% else %}<span class="green_desc">-{{ finalaverage }}%</span>{% endif %}</div>
-                </div>
-                <div class="price">
-                    <h1>Consomation mensuelle d'un foyer lambda</h1>
-                    <div class="actual clearfix">
-                        {{ average|round(1, 'floor') }} kWh - {{ (average*0.1564)|round(1, 'floor') }} €
-                    </div>
-                </div>
-                <div class="price">
-                    <h1>Comment réduire ma consommation ?</h1>
-                    <div class="actual clearfix">
-                        Pour avoir des solutions concrètes et personnalisés pour votre ménage.<br><br>
-                        <a href="/app_dev.php/solution" id="btn_start">COMMENCER</a>
-                    </div>
-                </div>
-                <div class="price">
-                    <h1>AIDE</h1>
-                    <div class="actual clearfix">
-                        Une fois la construction de votre tableau de bord achevé nous vous invitons à passer à la suite du contenu.
-                        En cliquant sur le bouton ci-dessous.<br><br>
-                        <button id="suite" type="button">suite</button>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="footer">
@@ -207,7 +169,7 @@
             var element1 = document.createElement("input");
 
             form.method = "POST";
-            form.action = "/app_dev.php/tableaudebord";
+            form.action = "/tableaudebord";
 
             element1.value=obj;
             element1.name="obj";

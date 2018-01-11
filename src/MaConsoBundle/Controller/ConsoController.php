@@ -64,7 +64,6 @@ Class ConsoController extends Controller
         $formService = $this->get('formService');
         $session = $this->get('session');
         $client = $formService->findClientByName($session->get('name'));
-        dump($client);
         $form = $this->createForm(ClientType::class, $client);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
@@ -149,6 +148,7 @@ Class ConsoController extends Controller
     {
         $repository_client = $this->getDoctrine()->getRepository("AppBundle:Client");
         $formService = $this->get('formService');
+        $consoService = $this->get('consoService');
         $session = $this->get('session');
         $predictable_room = ['Cuisine', 'Salle de bain', 'Chambre parentale', 'Chambre enfant', 'Salon', 'Bureau'];
 
@@ -184,9 +184,10 @@ Class ConsoController extends Controller
         $companies = $formService->findCompanies();
         if ($client->getChauffage()) {
             $hauteur = 2.5;
-            $diffTemperature = 0.54;
+            $diffTemperature = 3.6;
             $etatdulogement = 1.5; //1.5 ,1.6 -> 2
-            $chauffage = $client->getSurface() * $hauteur * $diffTemperature * $etatdulogement;
+            $chauffage = ($client->getSurface() * $hauteur) * $diffTemperature * $etatdulogement;
+            dump($chauffage);
             $surface = $client->getSurface();
         } else {
             $chauffage = 0;
@@ -195,7 +196,7 @@ Class ConsoController extends Controller
 
         if($client->getChauffage() == 1)
         {
-            $average = 13000/12;
+            $average = 9000/12;
         }
         else {
 
@@ -204,6 +205,7 @@ Class ConsoController extends Controller
 
         $form_obj = $this->createForm(AddObjType::class, null);
         $form_room = $this->createForm(AddRoomType::class, null);
+        $consomation = $consoService->computeObject($client);
 
         return $this->render('MaConsoBundle::configuration.html.twig',
             array(
@@ -217,6 +219,7 @@ Class ConsoController extends Controller
                 'surface' => $surface,
                 'form_obj' => $form_obj->createView(),
                 'form_room' => $form_room->createView(),
+                'consommation' => $consomation,
             ));
     }
 
