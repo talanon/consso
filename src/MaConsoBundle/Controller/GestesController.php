@@ -38,7 +38,8 @@ Class GestesController extends Controller
         return $this->render('MaConsoBundle::tips.html.twig',
             array(
                 'tips' => $tips,
-                'categories' => $array
+                'categories' => $array,
+                'index' => ''
                 )
         );
     }
@@ -63,7 +64,8 @@ Class GestesController extends Controller
         return $this->render('MaConsoBundle::tips.html.twig',
             array(
                 'tips' => $tips,
-                'categories' => $array
+                'categories' => $array,
+                'index' => $str
             )
         );
     }
