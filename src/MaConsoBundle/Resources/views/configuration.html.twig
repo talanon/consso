@@ -170,27 +170,27 @@
             </div>
 
             <div class="colright">
-                <div class="price">
-                    <h1>Ma consommation mensuelle en kWh</h1>
-                    {% if chauffage == 0 %}
-                        {% set finaltotal = (30.5)*highttotal/1000  %}
-                    {% else %}
-                        {% set finaltotal = ((30.5)*highttotal/1000)+(chauffage*24*30.5/1000)  %}
-                    {% endif %}
-                    {% set finalaverage = (((average/finaltotal)*100)-100)|round(1, 'floor') %}
-                    {% set finalaverage2 = (((finaltotal/average)*100)-100)|round(1, 'floor') %}
-                    <div class="actual">{{ finaltotal|round(1, 'floor') }} kWh{% if finaltotal>=average %}<span class="red_desc">+{{ finalaverage2 }}%</span>{% else %}<span class="green_desc">-{{ finalaverage }}%</span>{% endif %}</div>
-                </div>
+                {#<div class="price">#}
+                    {#<h1>Ma consommation mensuelle en kWh</h1>#}
+                    {#{% if chauffage == 0 %}#}
+                        {#{% set finaltotal = (30.5)*highttotal/1000  %}#}
+                    {#{% else %}#}
+                        {#{% set finaltotal = ((30.5)*highttotal/1000)+(chauffage*24*30.5/1000)  %}#}
+                    {#{% endif %}#}
+                    {#{% set finalaverage = (((average/finaltotal)*100)-100)|round(1, 'floor') %}#}
+                    {#{% set finalaverage2 = (((finaltotal/average)*100)-100)|round(1, 'floor') %}#}
+                    {#<div class="actual">{{ finaltotal|round(1, 'floor') }} kWh{% if finaltotal>=average %}<span class="red_desc">+{{ finalaverage2 }}%</span>{% else %}<span class="green_desc">-{{ finalaverage }}%</span>{% endif %}</div>#}
+                {#</div>#}
 
                 <div class="price orange">
                     <h1>Ma consommation mensuelle en €</h1>
-                    <div class="actual">{{ (finaltotal*0.1564)|round(1, 'floor') }} €{% if finaltotal>=average %}<span class="red_desc">+{{ finalaverage2 }}%</span>{% else %}<span class="green_desc">-{{ finalaverage }}%</span>{% endif %}</div>
+                    <div class="actual">{{ consommation }} €{% if consommation>=(average*0.1564) %}<span class="red_desc">+{{ ((consommation/(average*0.1564))*100)|round(1, 'floor')-100 }}%</span>{% else %}<span class="green_desc">-{{ ((average*0.1564)/(consommation)*100)|round(1, 'floor')-100 }}%</span>{% endif %}</div>
                 </div>
                 {% if chauffage > 0 %}
                 <div class="price">
                     <h1>Mon chauffage</h1>
                     <div class="actual clearfix">
-                        {{ chauffage }}Watt soit {{ (chauffage*24*30.5*0.1564/1000)|round(1, 'floor') }} € par mois
+                        {{ chauffage/1000 }}kWatth soit {{ ((chauffage/1000)*24*30)*0.1593|round(1, 'floor') }} € par mois
                     </div>
                 </div>
                 {% endif %}
@@ -204,7 +204,7 @@
                     <h1 style="background: #49b844">Comment réduire ma consommation ?</h1>
                     <div class="actual clearfix">
                         Pour avoir des solutions concrètes et personnalisés pour votre ménage.<br><br>
-                        <a href="/app_dev.php/solution" id="btn_start">COMMENCER</a>
+                        <a href="/solution" id="btn_start">COMMENCER</a>
                     </div>
                 </div>
             </div>
@@ -284,7 +284,7 @@
             var element1 = document.createElement("input");
 
             form.method = "POST";
-            form.action = "/app_dev.php/configuration";
+            form.action = "/configuration";
 
             element1.value=obj;
             element1.name="obj";

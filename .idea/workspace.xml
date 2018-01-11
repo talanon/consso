@@ -4,14 +4,33 @@
     <list default="true" id="a968e0db-9884-4c72-9ebe-3bf090599a4d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/public/css/materialize.css" afterPath="$PROJECT_DIR$/app/Resources/public/css/materialize.css" />
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/css/materialize.css" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/public/css/materialize.css" />
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/public/css/materialize.min.css" afterPath="$PROJECT_DIR$/app/Resources/public/css/materialize.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Client.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Client.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Gestes.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Gestes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Room.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Room.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/css/materialize.css" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/public/css/materialize.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Default/layout.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Default/layout.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MaConsoBundle/Controller/ConsoController.php" afterPath="$PROJECT_DIR$/src/MaConsoBundle/Controller/ConsoController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MaConsoBundle/Resources/views/Default/solution.html.twig" afterPath="$PROJECT_DIR$/src/MaConsoBundle/Resources/views/Default/solution.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MaConsoBundle/Resources/views/configuration.html.twig" afterPath="$PROJECT_DIR$/src/MaConsoBundle/Resources/views/configuration.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MaConsoBundle/Resources/views/statistic.html.twig" afterPath="$PROJECT_DIR$/src/MaConsoBundle/Resources/views/statistic.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MaConsoBundle/Service/ConsoService.php" afterPath="$PROJECT_DIR$/src/MaConsoBundle/Service/ConsoService.php" />
+>>>>>>> 71948e5257814f8c0f35dd07c8fdd677fab372d0
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/e3a5b2e.css" afterPath="$PROJECT_DIR$/web/css/e3a5b2e.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/e3a5b2e_consso_2.css" afterPath="$PROJECT_DIR$/web/css/e3a5b2e_consso_2.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/e3a5b2e_style_3.css" afterPath="$PROJECT_DIR$/web/css/e3a5b2e_style_3.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/fb1aa6f.css" afterPath="$PROJECT_DIR$/web/css/fb1aa6f.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/fb1aa6f_consso_2.css" afterPath="$PROJECT_DIR$/web/css/fb1aa6f_consso_2.css" />
+<<<<<<< HEAD
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/fb1aa6f_materialize_3.css" afterPath="$PROJECT_DIR$/web/css/fb1aa6f_materialize_3.css" />
+>>>>>>> 71948e5257814f8c0f35dd07c8fdd677fab372d0
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/fb1aa6f_style_4.css" afterPath="$PROJECT_DIR$/web/css/fb1aa6f_style_4.css" />
     </list>
+    <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +38,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
@@ -83,23 +103,41 @@
                 <marker date="1515516994846" expanded="true" signature="74:698" ph="{% block body ...%}" />
                 <marker date="1515516994846" expanded="true" signature="8025:8040" ph="{% block javascripts ...%}" />
               </folding>
+=======
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="consso" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
+      <file leaf-file-name="ConsoService.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Service/ConsoService.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="316">
+              <caret line="45" column="74" selection-start-line="45" selection-start-column="74" selection-end-line="45" selection-end-column="74" />
+              <folding />
+>>>>>>> 71948e5257814f8c0f35dd07c8fdd677fab372d0
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="services.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/services.yml">
+      <file leaf-file-name="ConsoController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Controller/ConsoController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="277">
+              <caret line="186" column="34" selection-start-line="186" selection-start-column="34" selection-end-line="186" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Room.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Room.php">
+      <file leaf-file-name="configuration.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Resources/views/configuration.html.twig">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="680">
               <caret line="40" column="44" lean-forward="false" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
               <folding>
@@ -164,6 +202,11 @@
                 <marker date="1515516994847" expanded="true" signature="7988:8413" ph="..." />
                 <marker date="1515516994847" expanded="true" signature="8155:8272" ph="..." />
               </folding>
+=======
+            <state relative-caret-position="288">
+              <caret line="192" column="79" selection-start-line="192" selection-start-column="79" selection-end-line="192" selection-end-column="79" />
+              <folding />
+>>>>>>> 71948e5257814f8c0f35dd07c8fdd677fab372d0
             </state>
           </provider>
         </entry>
@@ -205,13 +248,25 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/MaConsoBundle/Service/FormService.php" />
-        <option value="$PROJECT_DIR$/src/MaConsoBundle/Controller/ConsoController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Room.php" />
         <option value="$PROJECT_DIR$/src/MaConsoBundle/Controller/StatisticController.php" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/MaConsoBundle/Resources/views/statistic.html.twig" />
         <option value="$PROJECT_DIR$/src/MaConsoBundle/Service/StatisticService.php" />
         <option value="$PROJECT_DIR$/app/Resources/public/css/materialize.css" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/public/css/materialize.css" />
+=======
+        <option value="$PROJECT_DIR$/src/MaConsoBundle/Service/StatisticService.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/public/css/materialize.css" />
+        <option value="$PROJECT_DIR$/app/Resources/public/css/materialize.min.css" />
+        <option value="$PROJECT_DIR$/app/Resources/public/css/materialize.css" />
+        <option value="$PROJECT_DIR$/src/MaConsoBundle/Resources/views/statistic.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Default/layout.html.twig" />
+        <option value="$PROJECT_DIR$/src/MaConsoBundle/Resources/views/Default/solution.html.twig" />
+        <option value="$PROJECT_DIR$/src/MaConsoBundle/Service/ConsoService.php" />
+        <option value="$PROJECT_DIR$/src/MaConsoBundle/Resources/views/configuration.html.twig" />
+        <option value="$PROJECT_DIR$/src/MaConsoBundle/Controller/ConsoController.php" />
+>>>>>>> 71948e5257814f8c0f35dd07c8fdd677fab372d0
       </list>
     </option>
   </component>
@@ -264,8 +319,23 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
+<<<<<<< HEAD
     <option name="width" value="1936" />
     <option name="height" value="1056" />
+=======
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+>>>>>>> 71948e5257814f8c0f35dd07c8fdd677fab372d0
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -282,13 +352,117 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
       <pane id="ProjectPane" />
-      <pane id="Scratches" />
+=======
       <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="consso" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="consso" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="consso" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="consso" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="consso" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="consso" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="consso" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MaConsoBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="consso" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="consso" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MaConsoBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="consso" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="consso" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MaConsoBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+>>>>>>> 71948e5257814f8c0f35dd07c8fdd677fab372d0
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="SearchEverywhereHistoryKey" value="tableauAction&#9;null&#9;null" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -305,6 +479,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="a968e0db-9884-4c72-9ebe-3bf090599a4d" name="Default" comment="" />
@@ -313,11 +490,16 @@
       <option name="presentableId" value="Default" />
       <updated>1515502382977</updated>
       <workItem from="1515502430277" duration="689000" />
+<<<<<<< HEAD
       <workItem from="1515517106295" duration="283000" />
+=======
+      <workItem from="1515691233273" duration="4741000" />
+>>>>>>> 71948e5257814f8c0f35dd07c8fdd677fab372d0
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="4964000" />
   </component>
   <component name="ToolWindowManager">
@@ -329,18 +511,31 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+=======
+    <option name="totallyTimeSpent" value="9422000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2591508" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+>>>>>>> 71948e5257814f8c0f35dd07c8fdd677fab372d0
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -365,6 +560,14 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
   </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -373,6 +576,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Service/StatisticService.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1980">
@@ -444,13 +648,20 @@
             <marker date="1515516994847" expanded="true" signature="7988:8413" ph="..." />
             <marker date="1515516994847" expanded="true" signature="8155:8272" ph="..." />
           </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Service/FormService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5220">
+          <caret line="177" column="60" selection-start-line="177" selection-start-column="51" selection-end-line="177" selection-end-column="61" />
+          <folding />
+>>>>>>> 71948e5257814f8c0f35dd07c8fdd677fab372d0
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Service/StatisticService.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1320">
-          <caret line="52" column="13" lean-forward="false" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+          <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -458,30 +669,36 @@
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Object.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Service/ConsoService.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Controller/ConsoController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5070">
-          <caret line="169" column="40" lean-forward="false" selection-start-line="169" selection-start-column="31" selection-end-line="169" selection-end-column="40" />
+          <caret line="169" column="40" selection-start-line="169" selection-start-column="31" selection-end-line="169" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Controller/StatisticController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+<<<<<<< HEAD
             <element signature="e#6#84#0#PHP" expanded="false" />
+=======
+            <marker date="1515691125228" expanded="false" signature="9:82" ph=" Created by PhpStorm. ..." />
+            <marker date="1515691125228" expanded="true" signature="3547:3555" ph="{...}" />
+            <marker date="1515691125228" expanded="true" signature="3547:3559" ph="{...}" />
+>>>>>>> 71948e5257814f8c0f35dd07c8fdd677fab372d0
           </folding>
         </state>
       </provider>
@@ -489,24 +706,30 @@
     <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Resources/views/statistic.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2070">
+<<<<<<< HEAD
           <caret line="69" column="34" lean-forward="false" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
           <folding>
             <marker date="1515516994846" expanded="true" signature="74:698" ph="{% block body ...%}" />
             <marker date="1515516994846" expanded="true" signature="8025:8040" ph="{% block javascripts ...%}" />
           </folding>
+=======
+          <caret line="69" column="34" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
+          <folding />
+>>>>>>> 71948e5257814f8c0f35dd07c8fdd677fab372d0
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Service/FormService.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2580">
+<<<<<<< HEAD
           <caret line="86" column="5" lean-forward="false" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
           <folding>
             <element signature="e#41#72#0#PHP" expanded="false" />
@@ -546,13 +769,17 @@
             <marker date="1515516994847" expanded="true" signature="7988:8413" ph="..." />
             <marker date="1515516994847" expanded="true" signature="8155:8272" ph="..." />
           </folding>
+=======
+          <caret line="86" column="5" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
+          <folding />
+>>>>>>> 71948e5257814f8c0f35dd07c8fdd677fab372d0
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Service/StatisticService.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1320">
-          <caret line="52" column="13" lean-forward="false" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+          <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -560,30 +787,36 @@
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Object.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Service/ConsoService.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Controller/ConsoController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5070">
-          <caret line="169" column="40" lean-forward="false" selection-start-line="169" selection-start-column="31" selection-end-line="169" selection-end-column="40" />
+          <caret line="169" column="40" selection-start-line="169" selection-start-column="31" selection-end-line="169" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Controller/StatisticController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+<<<<<<< HEAD
             <element signature="e#6#84#0#PHP" expanded="false" />
+=======
+            <marker date="1515691125228" expanded="false" signature="9:82" ph=" Created by PhpStorm. ..." />
+            <marker date="1515691125228" expanded="true" signature="3547:3555" ph="{...}" />
+            <marker date="1515691125228" expanded="true" signature="3547:3559" ph="{...}" />
+>>>>>>> 71948e5257814f8c0f35dd07c8fdd677fab372d0
           </folding>
         </state>
       </provider>
@@ -591,24 +824,30 @@
     <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Resources/views/statistic.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2070">
+<<<<<<< HEAD
           <caret line="69" column="34" lean-forward="false" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
           <folding>
             <marker date="1515516994846" expanded="true" signature="74:698" ph="{% block body ...%}" />
             <marker date="1515516994846" expanded="true" signature="8025:8040" ph="{% block javascripts ...%}" />
           </folding>
+=======
+          <caret line="69" column="34" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
+          <folding />
+>>>>>>> 71948e5257814f8c0f35dd07c8fdd677fab372d0
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Service/FormService.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2580">
+<<<<<<< HEAD
           <caret line="86" column="5" lean-forward="false" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
           <folding>
             <element signature="e#41#72#0#PHP" expanded="false" />
@@ -648,13 +887,17 @@
             <marker date="1515516994847" expanded="true" signature="7988:8413" ph="..." />
             <marker date="1515516994847" expanded="true" signature="8155:8272" ph="..." />
           </folding>
+=======
+          <caret line="86" column="5" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
+          <folding />
+>>>>>>> 71948e5257814f8c0f35dd07c8fdd677fab372d0
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Service/StatisticService.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1320">
-          <caret line="52" column="13" lean-forward="false" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+          <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -662,30 +905,36 @@
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Object.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Service/ConsoService.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Controller/ConsoController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4620">
-          <caret line="169" column="40" lean-forward="false" selection-start-line="169" selection-start-column="31" selection-end-line="169" selection-end-column="40" />
+          <caret line="169" column="40" selection-start-line="169" selection-start-column="31" selection-end-line="169" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Controller/StatisticController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+<<<<<<< HEAD
             <element signature="e#6#84#0#PHP" expanded="false" />
+=======
+            <marker date="1515691125228" expanded="false" signature="9:82" ph=" Created by PhpStorm. ..." />
+            <marker date="1515691125228" expanded="true" signature="3547:3555" ph="{...}" />
+            <marker date="1515691125228" expanded="true" signature="3547:3559" ph="{...}" />
+>>>>>>> 71948e5257814f8c0f35dd07c8fdd677fab372d0
           </folding>
         </state>
       </provider>
@@ -693,24 +942,30 @@
     <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Resources/views/statistic.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2070">
+<<<<<<< HEAD
           <caret line="69" column="34" lean-forward="false" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
           <folding>
             <marker date="1515516994846" expanded="true" signature="74:698" ph="{% block body ...%}" />
             <marker date="1515516994846" expanded="true" signature="8025:8040" ph="{% block javascripts ...%}" />
           </folding>
+=======
+          <caret line="69" column="34" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
+          <folding />
+>>>>>>> 71948e5257814f8c0f35dd07c8fdd677fab372d0
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Service/FormService.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2490">
+<<<<<<< HEAD
           <caret line="86" column="5" lean-forward="false" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
           <folding>
             <element signature="e#41#72#0#PHP" expanded="false" />
@@ -750,103 +1005,134 @@
             <marker date="1515516994847" expanded="true" signature="7988:8413" ph="..." />
             <marker date="1515516994847" expanded="true" signature="8155:8272" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Default/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+=======
+          <caret line="86" column="5" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
+          <folding />
+>>>>>>> 71948e5257814f8c0f35dd07c8fdd677fab372d0
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Resources/views/tableau.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1110">
-          <caret line="37" column="45" lean-forward="false" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
+          <caret line="37" column="45" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Resources/views/Default/layout2.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
-          <caret line="115" column="10" lean-forward="false" selection-start-line="115" selection-start-column="10" selection-end-line="115" selection-end-column="10" />
+          <caret line="115" column="10" selection-start-line="115" selection-start-column="10" selection-end-line="115" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Form/ResolvedFormTypeInterface.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
-          <caret line="77" column="20" lean-forward="false" selection-start-line="77" selection-start-column="20" selection-end-line="77" selection-end-column="20" />
+          <caret line="77" column="20" selection-start-line="77" selection-start-column="20" selection-end-line="77" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Form/FormFactory.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
-          <caret line="88" column="20" lean-forward="false" selection-start-line="88" selection-start-column="20" selection-end-line="88" selection-end-column="20" />
+          <caret line="88" column="20" selection-start-line="88" selection-start-column="20" selection-end-line="88" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/materialize_layout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1949">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/ClientType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
-          <caret line="27" column="27" lean-forward="false" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
+          <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Resources/views/form.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="8" column="59" lean-forward="false" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
+          <caret line="8" column="59" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/var/cache/prod/twig/b8/b8db4bc532eed58e52ff28538475ef4f62c58215ef51c27fadafcba220ef4d2a.php" />
     <entry file="file://$PROJECT_DIR$/app/Resources/public/js/materialize.js">
+<<<<<<< HEAD
+=======
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
-          <caret line="4825" column="2" lean-forward="false" selection-start-line="4825" selection-start-column="2" selection-end-line="4825" selection-end-column="2" />
+          <caret line="4825" column="2" selection-start-line="4825" selection-start-column="2" selection-end-line="4825" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+>>>>>>> 71948e5257814f8c0f35dd07c8fdd677fab372d0
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+=======
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Object.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1980">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Controller/ConsoController.php">
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Client.php">
+>>>>>>> 71948e5257814f8c0f35dd07c8fdd677fab372d0
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="138" column="51" lean-forward="false" selection-start-line="138" selection-start-column="38" selection-end-line="138" selection-end-column="51" />
+        <state relative-caret-position="0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <marker date="1515691213755" expanded="true" signature="73:179" ph=" ..." />
+            <marker date="1515691213755" expanded="true" signature="194:7891" ph="{...}" />
+            <marker date="1515691213755" expanded="true" signature="204:338" ph=" @var int ..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Service/ConsoService.php">
+    <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Controller/StatisticController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="20" column="52" lean-forward="false" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
+        <state relative-caret-position="697">
+          <caret line="87" column="1" selection-start-line="87" selection-start-column="1" selection-end-line="87" selection-end-column="1" />
+          <folding>
+            <marker date="1515691125228" expanded="false" signature="9:82" ph=" Created by PhpStorm. ..." />
+            <marker date="1515691125228" expanded="true" signature="3547:3555" ph="{...}" />
+            <marker date="1515691125228" expanded="true" signature="3547:3559" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Room.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="47" column="6" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Service/FormService.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="1734">
           <caret line="107" column="25" lean-forward="false" selection-start-line="107" selection-start-column="20" selection-end-line="107" selection-end-column="33" />
           <folding>
@@ -887,19 +1173,25 @@
             <marker date="1515516994847" expanded="true" signature="7988:8413" ph="..." />
             <marker date="1515516994847" expanded="true" signature="8155:8272" ph="..." />
           </folding>
+=======
+        <state relative-caret-position="1768">
+          <caret line="107" column="25" selection-start-line="107" selection-start-column="25" selection-end-line="107" selection-end-column="25" />
+          <folding />
+>>>>>>> 71948e5257814f8c0f35dd07c8fdd677fab372d0
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/services.yml">
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/public/css/materialize.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="118">
+          <caret line="1430" column="27" selection-start-line="1430" selection-start-column="27" selection-end-line="1430" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Room.php">
+    <entry file="file://$PROJECT_DIR$/app/Resources/public/css/materialize.min.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="680">
           <caret line="40" column="44" lean-forward="false" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
           <folding>
@@ -917,40 +1209,90 @@
             <marker date="1515516994843" expanded="true" signature="1649:1715" ph="{...}" />
             <marker date="1515516994843" expanded="true" signature="1724:1775" ph=" Get total ..." />
           </folding>
+=======
+        <state relative-caret-position="-2849">
+          <caret line="5" column="18727" selection-start-line="5" selection-start-column="18727" selection-end-line="5" selection-end-column="18727" />
+          <folding />
+>>>>>>> 71948e5257814f8c0f35dd07c8fdd677fab372d0
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Client.php">
+    <entry file="file://$PROJECT_DIR$/app/Resources/public/css/materialize.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="118">
+          <caret line="1430" column="27" selection-start-line="1430" selection-start-column="27" selection-end-line="1430" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Controller/StatisticController.php">
+    <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Service/StatisticService.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="697">
           <caret line="87" column="1" lean-forward="false" selection-start-line="87" selection-start-column="1" selection-end-line="87" selection-end-column="1" />
           <folding>
             <element signature="e#6#84#0#PHP" expanded="false" />
           </folding>
+=======
+        <state relative-caret-position="452">
+          <caret line="190" column="1" selection-start-line="190" selection-start-column="1" selection-end-line="190" selection-end-column="1" />
+          <folding />
+>>>>>>> 71948e5257814f8c0f35dd07c8fdd677fab372d0
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Resources/views/statistic.html.twig">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="714">
           <caret line="185" column="14" lean-forward="false" selection-start-line="185" selection-start-column="14" selection-end-line="185" selection-end-column="14" />
           <folding>
             <marker date="1515516994846" expanded="true" signature="74:698" ph="{% block body ...%}" />
             <marker date="1515516994846" expanded="true" signature="8025:8040" ph="{% block javascripts ...%}" />
           </folding>
+=======
+        <state relative-caret-position="126">
+          <caret line="40" column="45" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
+          <folding />
+>>>>>>> 71948e5257814f8c0f35dd07c8fdd677fab372d0
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Service/StatisticService.php">
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Default/layout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="57" column="40" selection-start-line="57" selection-start-column="40" selection-end-line="57" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Resources/views/Default/solution.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="130" column="34" selection-start-line="130" selection-start-column="34" selection-end-line="130" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Resources/views/configuration.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="192" column="79" selection-start-line="192" selection-start-column="79" selection-end-line="192" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Service/ConsoService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="45" column="74" selection-start-line="45" selection-start-column="74" selection-end-line="45" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MaConsoBundle/Controller/ConsoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="434">
           <caret line="169" column="10" lean-forward="false" selection-start-line="169" selection-start-column="10" selection-end-line="169" selection-end-column="10" />
           <folding />
@@ -969,6 +1311,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="1430" column="27" lean-forward="false" selection-start-line="1430" selection-start-column="27" selection-end-line="1430" selection-end-column="27" />
+=======
+        <state relative-caret-position="277">
+          <caret line="186" column="34" selection-start-line="186" selection-start-column="34" selection-end-line="186" selection-end-column="34" />
+>>>>>>> 71948e5257814f8c0f35dd07c8fdd677fab372d0
           <folding />
         </state>
       </provider>
