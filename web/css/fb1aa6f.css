@@ -88,7 +88,9 @@ table {
     width: 150px;
     animation: type 4s steps(60, end);
 }
-
+#code {
+    width: 50px;
+}
 /*span{
     animation: blink 1s infinite;
 }*/
@@ -9620,7 +9622,6 @@ ul#navigation li {
     background: white;
     font-family: Calibri Light;
     padding: 10px;
-    height: 80px;
 }
 .red_desc, .green_desc{
     float:right;
@@ -10207,4 +10208,8 @@ ul#menu li div.white_up {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+#code {
+    width:50px;
 }

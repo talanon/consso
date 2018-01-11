@@ -35,7 +35,9 @@
     width: 150px;
     animation: type 4s steps(60, end);
 }
-
+#code {
+    width: 50px;
+}
 /*span{
     animation: blink 1s infinite;
 }*/
