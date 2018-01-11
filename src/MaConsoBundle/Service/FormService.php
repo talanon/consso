@@ -123,7 +123,7 @@ Class FormService
             switch ($room->getName()) {
                 case "Cuisine":
                     if ($client->getAmpoule()) {
-                        $this->addObj($room->getId(), 'Ampoule', 1, 20, 5);
+                        $this->addObj($room->getId(), 'Ampoule', 1, 10, 5);
                     } else {
                         $this->addObj($room->getId(), 'Ampoule', 1, 60, 5);
                     }
@@ -174,7 +174,11 @@ Class FormService
                     $this->addObj($room->getId(), 'Radio reveil', 1, 10, 24);
                     break;
                 case "Salon":
-                    $this->addObj($room->getId(), 'Ampoule', 2, 60, 5);
+                    if ($client->getAmpoule()) {
+                        $this->addObj($room->getId(), 'Ampoule', 1, 10, 4);
+                    } else {
+                        $this->addObj($room->getId(), 'Ampoule', 1, 60, 4);
+                    }
                     $this->addObj($room->getId(), 'Télévision', 1, 200, 4);
                     $this->addObj($room->getId(), 'Sono', 1, 80, 4);
                     $this->addObj($room->getId(), 'Box internet', 1, 5, 24);

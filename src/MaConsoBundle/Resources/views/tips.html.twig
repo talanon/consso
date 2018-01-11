@@ -19,17 +19,17 @@
 
         </div>
         <div class="content clearfix">
-            <div class="window">
-                <div class="categories">
-                    <h1>Les catégories</h1>
-                    {% for category in categories %}
-                        <a href="/les-bons-gestes/{{ category }}"><div class="l2-block">{{ category }}</div></a>
-                    {% endfor %}
-                </div>
+            <div class="categories" style="float: left;">
+                <h1>Les catégories</h1>
+                {% for category in categories %}
+                    <a href="/les-bons-gestes/{{ category }}"><div>{{ category }}</div></a>
+                {% endfor %}
+            </div>
+            <div class="window" style="float: right;width: 75%;">
                 <div class="tips">
                     <h1>Les conseils</h1>
                 {% for tip in tips %}
-                    <div class="l2-block">{{ tip.description }}</div>
+                    <div class="l2-block" style="width: 100%;margin: 10px;float: left;background: #d7dcd7;padding: 5px;">{{ tip.description }}</div>
                 {% endfor %}
                 </div>
                 <div class="clearfix"></div>

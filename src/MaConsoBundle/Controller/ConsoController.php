@@ -184,10 +184,9 @@ Class ConsoController extends Controller
         $companies = $formService->findCompanies();
         if ($client->getChauffage()) {
             $hauteur = 2.5;
-            $diffTemperature = 3.6;
+            $diffTemperature = 2.75;
             $etatdulogement = 1.5; //1.5 ,1.6 -> 2
             $chauffage = ($client->getSurface() * $hauteur) * $diffTemperature * $etatdulogement;
-            dump($chauffage);
             $surface = $client->getSurface();
         } else {
             $chauffage = 0;

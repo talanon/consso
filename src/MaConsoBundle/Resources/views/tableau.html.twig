@@ -54,12 +54,9 @@
                         <ul>
                             <li>
                                 <a href="/les-bons-gestes"><h2> > Accéder à tous nos conseils</h2></a>
-                                <p>Une liste de tous nos conseils filtrable selon certains critère.</p>
+
                             </li>
-                            <li>
-                                <a href="#"><h2> > Déposer un conseil</h2></a>
-                                <p>Faite bénéficer les consommateurs de vos bons conseils.</p>
-                            </li>
+
                         </ul>
                     </div>
                 </div>
@@ -98,7 +95,7 @@
                             {% elseif room.name == 'Salle de bain' and room.total>=2.5 %}
                                 <p>Attention ! Votre salle de bain semble consommer plus que la normale.</p>
                                 {% set alert = alert + 1 %}
-                            {% elseif room.name == 'Salon' and room.total>=1.50 %}
+                            {% elseif room.name == 'Salon' and room.total>=2 %}
                                 <p>Attention ! Votre salon semble consommer plus que la normale.</p>
                                 {% set alert = alert + 1 %}
                             {% elseif room.name == 'Chambre parentale' and room.total>=0.75 %}

@@ -24,31 +24,6 @@
         </div>
         <div class="clearfix">
 
-            <div id="myModal" class="modal">
-
-                <!-- Modal content -->
-                <div class="modal-content">
-                    <h1>Ajouter ou modifier une pièce <span class="close">&times;</span></h1>
-                    <form class="clearfix" name="form_room" method="post" id="myForm">
-                        <br><br>
-                        <label>Le nom :</label><input type="text" name="name" id="myName">
-                        <br><br><br><hr /><br>
-                        1.
-                        <input type="text" id="quantity_0" name="quantities[]" placeholder="Quantité" value="1">
-                        <input type="text" id="name_0" name="names[]" placeholder="Nom" value="Ampoule">
-                        <input type="text" id="power_0" name="powers[]" placeholder="Puissance" value="60">
-                        <input type="text" id="use_0" name="uses[]" placeholder="Utilisation par heure" value="2">
-
-                        <br>
-                        <div id="zone"></div>
-                        <button type="button" id="add_object">Ajouter un objet</button>
-                        <input type="submit" value="valider" name="submit">
-
-                    </form>
-                </div>
-
-            </div>
-
             <div class="colleft">
                 {% for company in companies %}
                     <div class="price">
@@ -104,17 +79,6 @@
                     </div>
                 </div>
             </div>
-            {% set i=0 %}
-            {% set total=0 %}
-            {% set highttotal=0 %}
-            {% for room in rooms %}
-                {% for object in objects[i] %}
-                    {% set total = total + (object.power*object.utilisation) %}
-                    {% set highttotal = highttotal + (object.power*object.utilisation) %}
-                {% endfor %}
-                {% set total=0 %}
-                {% set i = i+1 %}
-            {% endfor %}
             <div class="cdlt">
                 <div class="solution">
                     <h1>Mes ampoules</h1>
