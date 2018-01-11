@@ -48,7 +48,7 @@ Class StatisticService
         if(!empty($type_logement))
         {
             $query->andWhere('c.logement = :logement_type')
-                  ->setParameter('logement_type',$type_logement);
+                ->setParameter('logement_type',$type_logement);
         }
         $query = $query->getQuery();
         $clients = $query->getResult();
@@ -68,7 +68,7 @@ Class StatisticService
         }else
         {
             $query->where('c.logement = :type_logement')
-                  ->setParameter('type_logement',$type_logement);
+                ->setParameter('type_logement',$type_logement);
             if(!empty($type))
             {
                 $query->andWhere('c.'.$type.'= :nombre')
@@ -98,9 +98,9 @@ Class StatisticService
     public function getObjectsQuantityStat($objectsArray,$client_number)
     {
         $result = array('Ampoule'=>0, 'Lampe de chevet'=>0,'Ordinateur'=>0, 'Télévision'=>0, 'Lave linge'=>0
-                        ,'Réfrigirateur'=>0, 'Lave vaisselle'=>0,'Plaques électriques'=>0
-                        ,'Hotte'=>0, 'Microndes'=>0, 'Machine à café'=>0, 'Grille pain'=>0
-                        ,'Sèche linge'=>0, 'Autre'=>0);
+        ,'Réfrigirateur'=>0, 'Lave vaisselle'=>0,'Plaques électriques'=>0
+        ,'Hotte'=>0, 'Microndes'=>0, 'Machine à café'=>0, 'Grille pain'=>0
+        ,'Sèche linge'=>0, 'Autre'=>0);
         if($client_number == 0)
             return $result;
         foreach($objectsArray as $objects)
@@ -171,9 +171,13 @@ Class StatisticService
                     $sum += $client->getAmpoule();
                     $count++;
                     break;
+                case "estimation":
+                    $sum += $client->getHasVoted();
+                    $count++;
+                    break;
             }
         }
-        if ($attribute == "eco")
+        if ($attribute == "eco" || $attribute == "estimation")
             return $count != 0?number_format($sum/$count,3):0;
         return $count != 0?number_format($sum/$count,1):0;
     }

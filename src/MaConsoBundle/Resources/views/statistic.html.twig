@@ -9,7 +9,7 @@
             <div class="left"><a href="/"><div id="logo">CONSSO.FR</div></a></div>
             <div class="right">
                 <ul id="navigation" class="clearfix">
-                {% if client is defined %}<a href="/logout"><li>Se déconnecter</li></a>{% endif %}
+                    {% if client is defined %}<a href="/logout"><li>Se déconnecter</li></a>{% endif %}
                     <a href=""><li>A propos</li></a>
                     <a href=""><li>Références</li></a>
                     <a href=""><li>Objectifs</li></a>
@@ -27,32 +27,35 @@
                     <div class="col s10">
                         <table class="centered bordered highlight">
                             <thead>
-                                <tr>
-                                    <th>Type</th>
-                                    <th>Nombre</th>
-                                    <th>Surface(/m²)</th>
-                                    <th>Foyer</th>
-                                    <th>Pièce</th>
-                                    <th>Ampoule eco</th>
-                                </tr>
+                            <tr>
+                                <th>Type</th>
+                                <th>Nombre</th>
+                                <th>Surface(/m²)</th>
+                                <th>Foyer</th>
+                                <th>Pièce</th>
+                                <th>Ampoule eco</th>
+                                <th>Ratio d'estimation</th>
+                            </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Appartement</td>
-                                    <td>{{ client_appartement_number }}</td>
-                                    <td>{{ surface_appartement }}</td>
-                                    <td>{{ foyer_appartement }}</td>
-                                    <td>{{ piece_appartement }}</td>
-                                    <td>{{ eco_appartement }}%</td>
-                                </tr>
-                                <tr>
-                                    <td>Maison</td>
-                                    <td>{{ client_maison_number }}</td>
-                                    <td>{{ surface_maison }}</td>
-                                    <td>{{ foyer_maison }}</td>
-                                    <td>{{ piece_maison }}</td>
-                                    <td>{{ eco_maison }}%</td>
-                                </tr>
+                            <tr>
+                                <td>Appratement</td>
+                                <td>{{ client_appartement_number }}</td>
+                                <td>{{ surface_appartement }}</td>
+                                <td>{{ foyer_appartement }}</td>
+                                <td>{{ piece_appartement }}</td>
+                                <td>{{ eco_appartement }}%</td>
+                                <td>{{ estimation_appartement }}%</td>
+                            </tr>
+                            <tr>
+                                <td>Maison</td>
+                                <td>{{ client_maison_number }}</td>
+                                <td>{{ surface_maison }}</td>
+                                <td>{{ foyer_maison }}</td>
+                                <td>{{ piece_maison }}</td>
+                                <td>{{ eco_maison }}%</td>
+                                <td>{{ estimation_maison }}%</td>
+                            </tr>
                             </tbody>
                         </table>
                     </div>
@@ -130,57 +133,57 @@
     </script>
     <script>
 
-    // Load the Visualization API and the corechart package.
-    google.charts.load('current', {'packages':['corechart']});
+        // Load the Visualization API and the corechart package.
+        google.charts.load('current', {'packages':['corechart']});
 
-    // Set a callback to run when the Google Visualization API is loaded.
-    //google.charts.setOnLoadCallback(drawClientTypeChart);
+        // Set a callback to run when the Google Visualization API is loaded.
+        //google.charts.setOnLoadCallback(drawClientTypeChart);
 
-    // Callback that creates and populates a data table,
-    // instantiates the pie chart, passes in the data and
-    // draws it.
-    function createTableData(data){
-        var tabData = google.visualization.arrayToDataTable([
-            ['Object Name', 'Quantité'],
-            ['Ampoule', data["Ampoule"]],['Lampe de chevet', data['Lampe de chevet']],
-            ['Ordinateur', data['Ordinateur']],['Télévision', data["Télévision"]],
-            ['Plaques électriques', data['Plaques électriques']],
-            ['Réfrigirateur', data['Réfrigirateur']], ['Lave linge', data['Lave linge']],
-            ['Hotte', data['Hotte']], ['Microndes', data['Microndes']],
-            ['Machine à café', data['Machine à café']],['Lave vaisselle', data['Lave vaisselle']],
-            ['Grille pain', data['Grille pain']],['Sèche linge', data['Sèche linge']], ['Autre', data['Autre']]
-        ]);
-        return tabData;
-    }
-    function drawElecUsedChart(data) {
-        var tabData = createTableData(data);
-        var options = {
-            pieSliceText: 'label',
-            slices: {  0: {offset: 0.1}
-            },
-        };
-        var chart = new google.visualization.PieChart(document.getElementById('elec_used'));
-        chart.draw(tabData, options);
-    }
-    function drawObjectQuantityChart(data) {
-        var tabData = createTableData(data);
+        // Callback that creates and populates a data table,
+        // instantiates the pie chart, passes in the data and
+        // draws it.
+        function createTableData(data){
+            var tabData = google.visualization.arrayToDataTable([
+                ['Object Name', 'Quantité'],
+                ['Ampoule', data["Ampoule"]],['Lampe de chevet', data['Lampe de chevet']],
+                ['Ordinateur', data['Ordinateur']],['Télévision', data["Télévision"]],
+                ['Plaques électriques', data['Plaques électriques']],
+                ['Réfrigirateur', data['Réfrigirateur']], ['Lave linge', data['Lave linge']],
+                ['Hotte', data['Hotte']], ['Microndes', data['Microndes']],
+                ['Machine à café', data['Machine à café']],['Lave vaisselle', data['Lave vaisselle']],
+                ['Grille pain', data['Grille pain']],['Sèche linge', data['Sèche linge']], ['Autre', data['Autre']]
+            ]);
+            return tabData;
+        }
+        function drawElecUsedChart(data) {
+            var tabData = createTableData(data);
+            var options = {
+                pieSliceText: 'label',
+                slices: {  0: {offset: 0.1}
+                },
+            };
+            var chart = new google.visualization.PieChart(document.getElementById('elec_used'));
+            chart.draw(tabData, options);
+        }
+        function drawObjectQuantityChart(data) {
+            var tabData = createTableData(data);
 
-        var view = new google.visualization.DataView(tabData);
-        view.setColumns([0, 1,
-            { calc: "stringify",
-                sourceColumn: 1,
-                type: "string",
-                role: "annotation" }]);
+            var view = new google.visualization.DataView(tabData);
+            view.setColumns([0, 1,
+                { calc: "stringify",
+                    sourceColumn: 1,
+                    type: "string",
+                    role: "annotation" }]);
 
-        var options = {
-            width: 900,
-            height: 500,
-            bar: {groupWidth: "95%"},
-            legend: { position: "none" }
-        };
+            var options = {
+                width: 900,
+                height: 500,
+                bar: {groupWidth: "95%"},
+                legend: { position: "none" }
+            };
 
-        var chart = new google.visualization.ColumnChart(document.getElementById('quantity_obj'));
-        chart.draw(tabData, options);
-    }
-</script>
+            var chart = new google.visualization.ColumnChart(document.getElementById('quantity_obj'));
+            chart.draw(tabData, options);
+        }
+    </script>
 {% endblock %}

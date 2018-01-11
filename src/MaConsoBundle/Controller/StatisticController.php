@@ -42,6 +42,9 @@ class StatisticController extends Controller
         $eco_appartement = $statisticService->calculateAverage('eco', $clients_appartement);
         $eco_maison = $statisticService->calculateAverage('eco', $clients_maison);
 
+        $estimation_appartement = $statisticService->calculateAverage('estimation', $clients_appartement);
+        $estimation_maison = $statisticService->calculateAverage('estimation', $clients_maison);
+
         return $this->render('MaConsoBundle::statistic.html.twig', array(
                 'client_number' => $client_number,
                 'client_appartement_number' => $clients_appartement_number,
@@ -53,7 +56,9 @@ class StatisticController extends Controller
                 'piece_appartement' => $piece_appartement,
                 'piece_maison' => $piece_maison,
                 'eco_appartement' => $eco_appartement * 100,
-                'eco_maison' => $eco_maison * 100
+                'eco_maison' => $eco_maison * 100,
+                'estimation_appartement' =>$estimation_appartement * 100,
+                'estimation_maison' =>$estimation_maison * 100
             )
         );
     }
